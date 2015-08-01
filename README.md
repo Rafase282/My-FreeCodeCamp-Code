@@ -17,7 +17,7 @@ Rafael Rodriguez
 * Bonfire: [Factorialize a Number] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/04%20Bonfire%20Factorialize%20a%20Number.js)
 * Bonfire: [Check for Palindromes] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/05%20Bonfire%20Check%20for%20Palindromes.js)
 * Bonfire: [Find the Longest Word in a String] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/06%20Bonfire%20Find%20the%20Longest%20Word%20in%20a%20String.js)
-* Bonfire: Title Case a Sentence
+* Bonfire: [Title Case a Sentence] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/07%20Bonfire%20Title%20Case%20a%20Sentence.js)
 * Bonfire: Return Largest Numbers in Arrays
 * Bonfire: Confirm the Ending
 * Bonfire: Repeat a string repeat a string
