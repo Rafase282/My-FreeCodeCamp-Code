@@ -1,7 +1,7 @@
-# My-FreeCodeCamp-Code
+# My Work From FreeCodeCamp
 
-Here I will be posting all the code I come up with from Chalenges, BornFires, etc.
-It will be a way to keep track of my work, and also get some practice with github.
+This is a collection of the code I have written myself or during pair programming. 
+It will help me keep a clean record, and also as practice for working with GitHub.
 
 **Contact me at:** rafase282@gmail.com
 <br>
