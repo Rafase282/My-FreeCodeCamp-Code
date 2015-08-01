@@ -18,7 +18,8 @@ Arithmetic Operators
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 */
+http://www.freecodecamp.com/rafase282 
+*/
 
 function factorialize(num) {
   var factorial = 1;

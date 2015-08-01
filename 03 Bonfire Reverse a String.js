@@ -15,7 +15,8 @@ Global String Object String.split() Array.reverse() Array.join()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 */
+http://www.freecodecamp.com/rafase282 
+*/
 
 function reverseString(str) {
 	// Create new variable, split old string character by character, reverse them, then join them

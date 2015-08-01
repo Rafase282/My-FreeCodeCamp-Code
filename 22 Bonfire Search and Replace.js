@@ -21,7 +21,8 @@ Array.splice() String.replace() Array.join()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 */
+http://www.freecodecamp.com/rafase282 
+*/
 
 function replace(str, before, after) {
   // Find index where before is on string
