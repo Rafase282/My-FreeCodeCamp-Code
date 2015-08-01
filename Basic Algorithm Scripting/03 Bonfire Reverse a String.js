@@ -1,5 +1,5 @@
 /* Bonfire: Reverse a String 
-Difficulty 1/5
+Difficulty: 1/5
 
 Reverse the provided string.
 

@@ -1,4 +1,5 @@
-/* Bonfire: Check for Palindromes Difficulty 1/5
+/* Bonfire: Check for Palindromes 
+Difficulty: 1/5
 
 Return true if the given string is a palindrome. Otherwise, return false.
 

@@ -1,0 +1,36 @@
+/* Bonfire: Title Case a Sentence
+Difficulty: 1/5
+
+Return the provided string with the first letter of each word capitalized.
+
+For the purpose of this exercise, you should also capitalize connecting words like 'the' and 'of'.
+
+Remember to use RSAP if you get stuck. Try to pair program. Write your own code.
+
+Here are some helpful links:
+
+String.charAt()
+
+Code by Rafael Rodriguez
+rafase282@gmail.com
+http://www.freecodecamp.com/rafase282 
+*/
+
+String.prototype.replaceAt = function(index, character) {
+	// Returns the new modified character
+    return this.substr(0, index) + character + this.substr(index+character.length);
+};
+
+
+function titleCase(str) {
+	// SPlit string by whitespace
+	var newTitle = str.split(' ');
+	var updatedTitle = [];
+	// Turn to lowercase, then used the prototype replace function.
+	for (var st in newTitle) {
+		updatedTitle[st] = newTitle[st].toLowerCase().replaceAt(0, newTitle[st].charAt(0).toUpperCase());
+	}
+	return updatedTitle.join(' ');
+}
+
+titleCase("I'm a little tea pot");

@@ -1,5 +1,5 @@
 /* Bonfire: Factorialize a Number 
-Difficulty 1/5
+Difficulty: 1/5
 
 Return the factorial of the provided integer.
 
