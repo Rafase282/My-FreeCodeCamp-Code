@@ -1,0 +1,22 @@
+/* Bonfire: Slasher Flick
+Difficulty: 1/5
+
+Return the remaining elements of an array after chopping off n elements from the head.
+
+Remember to use RSAP if you get stuck. Try to pair program. Write your own code.
+
+Here are some helpful links:
+
+Array.slice() Array.splice()
+
+Code by Rafael Rodriguez
+rafase282@gmail.com
+http://www.freecodecamp.com/rafase282 
+*/
+
+function slasher(arr, howMany) {
+  // Returns the arry with nth element removed from the begining.
+  return arr.slice(howMany);
+}
+
+slasher([1, 2, 3], 2);

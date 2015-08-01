@@ -19,8 +19,8 @@ http://www.freecodecamp.com/rafase282
 var convert = function (num){
     
     // Create arrays with default conversion with matching indices.
-    var decimalValue = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
-    var romanNumeral = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M']
+    var decimalValue = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
+    var romanNumeral = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M'];
     
     // Create a copy of num to work on and an empty string variable for the final roman number
     var numCopy = num;

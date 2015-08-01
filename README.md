@@ -12,7 +12,7 @@ Rafael Rodriguez
 ## <strong>Basic Algorithm Scripting </strong>
 
 * Waypoint: Pair Program on Bonfires It was jsut information.
-* Bonfire: Meet Bonfire It was just about how to use the bornfires.
+* Bonfire: [Meet Bonfire It] ()
 * Bonfire: [Reverse a String] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/03%20Bonfire%20Reverse%20a%20String.js)
 * Bonfire: [Factorialize a Number] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/04%20Bonfire%20Factorialize%20a%20Number.js)
 * Bonfire: [Check for Palindromes] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/05%20Bonfire%20Check%20for%20Palindromes.js)
@@ -21,8 +21,8 @@ Rafael Rodriguez
 * Bonfire: [Return Largest Numbers in Arrays] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/08%20Bonfire%20Return%20Largest%20Numbers%20in%20Arrays.js)
 * Bonfire: [Confirm the Ending] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/09%20Bonfire%20Confirm%20the%20Ending.js)
 * Bonfire: [Repeat a string repeat a string] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/10%20Bonfire%20Repeat%20a%20string%20repeat%20a%20string.js)
-* Bonfire: [Truncate a string] ()
-* Bonfire: [Chunky Monkey] ()
+* Bonfire: [Truncate a string] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/11%20Bonfire%20Truncate%20a%20string.js)
+* Bonfire: [Chunky Monkey] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/12%20Bonfire%20Chunky%20Monkey.js)
 * Bonfire: [Slasher Flick] ()
 * Bonfire: [Mutations] ()
 * Bonfire: [Falsey Bouncer] ()
