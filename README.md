@@ -13,7 +13,7 @@ Rafael Rodriguez
 
 * Waypoint: Pair Program on Bonfires 
 * Bonfire: Meet Bonfire 
-* Bonfire: Reverse a String
+* Bonfire: [Reverse a String] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/03%20Bonfire%20Reverse%20a%20String.js)
 * Bonfire: Factorialize a Number
 * Bonfire: Check for Palindromes
 * Bonfire: Find the Longest Word in a String
