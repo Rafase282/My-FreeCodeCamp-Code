@@ -1,4 +1,5 @@
-/* Bonfire: Search and Replace Difficulty: 2/5
+/* Bonfire: Search and Replace 
+Difficulty: 2/5
 
 Perform a search and replace on the sentence using the arguments provided and return the new
 sentence.
@@ -18,7 +19,9 @@ Here are some helpful links:
 
 Array.splice() String.replace() Array.join()
 
-Code by Rafael Rodriguez rafase282@gmail.com http://www.freecodecamp.com/rafase282 */
+Code by Rafael Rodriguez
+rafase282@gmail.com
+http://www.freecodecamp.com/rafase282 */
 
 function replace(str, before, after) {
   // Find index where before is on string
