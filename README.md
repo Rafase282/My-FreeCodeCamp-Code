@@ -3,17 +3,17 @@
 <p>Here I will be posting all the code I come up with from Chalenges, BornFires, etc.
 It will be a way to keep track of my work, and also get some practice with github. </p>
 
-<p>Contact me at rafase282@gmail.com
+<strong>Contact me at:</strong> rafase282@gmail.com
 <br>
 http://www.freecodecamp.com/rafase282
 <br>
-Rafael Rodriguez</p>
+Rafael Rodriguez
 
 <h2> <strong>Basic Algorithm Scripting </strong> </h2>
 
 <li>
-<ol> Waypoint: Pair Program on Bonfires</ol>
-<ol> Bonfire: Meet Bonfire</ol>
+<ol> Waypoint: Pair Program on Bonfires </ol>
+<ol> Bonfire: Meet Bonfire </ol>
 <ol> Bonfire: Reverse a String</ol>
 <ol> Bonfire: Factorialize a Number</ol>
 <ol> Bonfire: Check for Palindromes</ol>
