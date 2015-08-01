@@ -11,8 +11,8 @@ Rafael Rodriguez
 
 ## <strong>Basic Algorithm Scripting </strong>
 
-* Waypoint: Pair Program on Bonfires 
-* Bonfire: Meet Bonfire 
+* Waypoint: Pair Program on Bonfires It was jsut information.
+* Bonfire: Meet Bonfire It was just about how to use the bornfires.
 * Bonfire: [Reverse a String] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/03%20Bonfire%20Reverse%20a%20String.js)
 * Bonfire: [Factorialize a Number] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/04%20Bonfire%20Factorialize%20a%20Number.js)
 * Bonfire: [Check for Palindromes] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/05%20Bonfire%20Check%20for%20Palindromes.js)
@@ -20,7 +20,7 @@ Rafael Rodriguez
 * Bonfire: [Title Case a Sentence] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/07%20Bonfire%20Title%20Case%20a%20Sentence.js)
 * Bonfire: [Return Largest Numbers in Arrays] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/08%20Bonfire%20Return%20Largest%20Numbers%20in%20Arrays.js)
 * Bonfire: [Confirm the Ending] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/09%20Bonfire%20Confirm%20the%20Ending.js)
-* Bonfire: Repeat a string repeat a string
+* Bonfire: [Repeat a string repeat a string] ()
 * Bonfire: Truncate a string
 * Bonfire: Chunky Monkey
 * Bonfire: Slasher Flick
