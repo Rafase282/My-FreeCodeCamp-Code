@@ -14,9 +14,9 @@ Rafael Rodriguez
 * Waypoint: Pair Program on Bonfires 
 * Bonfire: Meet Bonfire 
 * Bonfire: [Reverse a String] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/03%20Bonfire%20Reverse%20a%20String.js)
-* Bonfire: Factorialize a Number
-* Bonfire: Check for Palindromes
-* Bonfire: Find the Longest Word in a String
+* Bonfire: [Factorialize a Number] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/04%20Bonfire%20Factorialize%20a%20Number.js)
+* Bonfire: [Check for Palindromes] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/05%20Bonfire%20Check%20for%20Palindromes.js)
+* Bonfire: [Find the Longest Word in a String] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/06%20Bonfire%20Find%20the%20Longest%20Word%20in%20a%20String.js)
 * Bonfire: Title Case a Sentence
 * Bonfire: Return Largest Numbers in Arrays
 * Bonfire: Confirm the Ending
@@ -31,8 +31,8 @@ Rafael Rodriguez
 * Bonfire: Where do I belong
 * Bonfire: Sum All Numbers in a Range
 * Bonfire: Diff Two Arrays
-* Bonfire: Roman Numeral Converter
-* Bonfire: Search and Replace
+* Bonfire: [Roman Numeral Converter] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/21%20Bonfire%20Roman%20Numeral%20Converter.js)
+* Bonfire: [Search and Replace] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/22%20Bonfire%20Search%20and%20Replace.js)
 * Bonfire: Pig Latin
 * Bonfire: DNA Pairing
 * Bonfire: Missing letters
