@@ -20,3 +20,8 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
 
+function pair(str) {
+ return str;
+}
+
+pair("GCG");
