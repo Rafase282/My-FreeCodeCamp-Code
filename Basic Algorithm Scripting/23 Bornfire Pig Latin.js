@@ -24,17 +24,22 @@ http://www.freecodecamp.com/rafase282
 */
 
 function translate(str) {
+    // Create variables to be used
     var pigLatin = '';
-    // User regular expression to check if the first character is a vowel, upper or lowercase.
-    if (str[0].match(/[aeiou]/gi)){
-    	// if true, add 'way' at the end and store it.
+    var regex = /[aeiou]/gi;
+    // Check if the first character is a vowel
+    if (str[0].match(regex)){
         pigLatin = str + 'way';
     } else {
-    	// Otherwise take the string withotu the first character, and add it to the end and 'ay'
-        pigLatin = str.substr(1) + str.substr(0,1) + 'ay';
+        // Find how many consonants before the firs vowel.
+        var vowelIndice = str.indexOf(str.match(regex)[0]);
+        // Take the string from the first vowel to the last char
+        // then add the consonants that were previously omitted and add the ending.
+        pigLatin = str.substr(vowelIndice) + str.substr(0,vowelIndice) + 'ay';
     }
     return pigLatin;
 }
 
 console.log(translate("consonant"));
-console.log(translate("Agricultura"));
+console.log(translate("Ugricultura"));
+console.log(translate("glove"));
