@@ -33,8 +33,8 @@ Rafael Rodriguez
 * Bonfire: [Diff Two Arrays] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/20%20Bonfire%20Diff%20Two%20Arrays.js)
 * Bonfire: [Roman Numeral Converter] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/21%20Bonfire%20Roman%20Numeral%20Converter.js)
 * Bonfire: [Search and Replace] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/22%20Bonfire%20Search%20and%20Replace.js)
-* Bonfire: [Pig Latin] ()
-* Bonfire: [DNA Pairing] ()
+* Bonfire: [Pig Latin] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/23%20Bornfire%20Pig%20Latin.js)
+* Bonfire: [DNA Pairing] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/24%20Bonfire%20DNA%20Pairing.js)
 * Bonfire: Missing letters
 * Bonfire: Boo who
 * Bonfire: Sorted Union
