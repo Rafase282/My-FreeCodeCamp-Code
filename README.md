@@ -44,7 +44,7 @@ Blog/site: https://rafase282.wordpress.com/
 * Bonfire: [Boo who] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/26%20Bonfire%20Boo%20who.js)
 * Bonfire: [Sorted Union] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/27%20Bonfire%20Sorted%20Union.js)
 * Bonfire: [Convert HTML Entities] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/28%20Bonfire%20Convert%20HTML%20Entities.js)
-* Bonfire: [Spinal Tap Case]()
+* Bonfire: [Spinal Tap Case](https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/29%20Bonfire%20Spinal%20Tap%20Case.js)
 * Bonfire: [Sum All Odd Fibonacci Numbers]
 * Bonfire: [Sum All Primes]
 * Bonfire: [Smallest Common Multiple]
