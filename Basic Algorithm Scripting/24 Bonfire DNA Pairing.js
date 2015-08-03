@@ -21,7 +21,30 @@ http://www.freecodecamp.com/rafase282
 */
 
 function pair(str) {
- return str;
+    // Return each strand as an array of two elements, the original and the pair.
+    var paired = [];
+    // Function to check with strand to pair.
+    var search = function (char) {
+        switch (char){
+            case 'A': 
+                paired.push(['A','T']);
+                break;
+            case 'T': 
+                paired.push(['T','A']);
+                break;
+            case 'C':
+                paired.push(['C','G']);
+                break;
+            case 'G':
+                paired.push(['G','C']);
+                break;
+        }
+    };
+    // Loops through the input and pair.
+    for (var char in str) {
+        search(str[char]);
+    }
+ return paired;
 }
 
 pair("GCG");

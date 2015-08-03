@@ -35,9 +35,9 @@ Rafael Rodriguez
 * Bonfire: [Search and Replace] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/22%20Bonfire%20Search%20and%20Replace.js)
 * Bonfire: [Pig Latin] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/23%20Bornfire%20Pig%20Latin.js)
 * Bonfire: [DNA Pairing] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/24%20Bonfire%20DNA%20Pairing.js)
-* Bonfire: Missing letters
-* Bonfire: Boo who
-* Bonfire: Sorted Union
+* Bonfire: [Missing letters] ()
+* Bonfire: [Boo who] ()
+* Bonfire: [Sorted Union] ()
 * Bonfire: Convert HTML Entities
 * Bonfire: Spinal Tap Case
 * Bonfire: Sum All Odd Fibonacci Numbers
