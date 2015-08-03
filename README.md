@@ -38,7 +38,7 @@ Rafael Rodriguez
 * Bonfire: [Missing letters] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/25%20Bonfire%20Missing%20letters.js)
 * Bonfire: [Boo who] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/26%20Bonfire%20Boo%20who.js)
 * Bonfire: [Sorted Union] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/27%20Bonfire%20Sorted%20Union.js)
-* Bonfire: [Convert HTML Entities]
+* Bonfire: [Convert HTML Entities] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/28%20Bonfire%20Convert%20HTML%20Entities.js)
 * Bonfire: [Spinal Tap Case]
 * Bonfire: [Sum All Odd Fibonacci Numbers]
 * Bonfire: [Sum All Primes]
