@@ -25,3 +25,5 @@ function spinalCase(str) {
 
 //spinalCase('The_Andy_Griffith_Show');
 spinalCase('thisIsSpinalTap');
+
+// http://stackoverflow.com/questions/18379254/regex-to-split-camel-case
