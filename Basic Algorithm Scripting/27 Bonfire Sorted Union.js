@@ -24,7 +24,23 @@ http://www.freecodecamp.com/rafase282
 */
 
 function unite(arr1, arr2, arr3) {
-  return arr1;
+	// Creates an empty array to store our final result.
+    var finalArray = [];
+    // Loop through the arguments object to truly made the program work with two or more arrays
+    // instead of 3.
+    for (var argument in arguments){
+        var arrayArgument = arguments[argument];
+        // Loops through the array at hand
+        for (var index in arrayArgument){
+            var indexValue = arrayArgument[index];
+            // Checks if the value is already on the final array.
+            if (finalArray.indexOf(indexValue) < 0){
+                finalArray.push(indexValue);
+            }
+        }
+    }
+  return finalArray;
 }
 
-unite([1, 2, 3], [5, 2, 1, 4], [2, 1]);
+//unite([1, 2, 3], [5, 2, 1, 4], [2, 1]); //[ 1, 3, 2, 5, 4 ]
+unite([1, 3, 2], [1, [5]], [2, [4]]);  //[ 1, 3, 2, [ 5 ], [ 4 ] ]
