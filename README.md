@@ -35,17 +35,17 @@ Rafael Rodriguez
 * Bonfire: [Search and Replace] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/22%20Bonfire%20Search%20and%20Replace.js)
 * Bonfire: [Pig Latin] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/23%20Bornfire%20Pig%20Latin.js)
 * Bonfire: [DNA Pairing] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/24%20Bonfire%20DNA%20Pairing.js)
-* Bonfire: [Missing letters] ()
-* Bonfire: [Boo who] ()
-* Bonfire: [Sorted Union] ()
-* Bonfire: Convert HTML Entities
-* Bonfire: Spinal Tap Case
-* Bonfire: Sum All Odd Fibonacci Numbers
-* Bonfire: Sum All Primes
-* Bonfire: Smallest Common Multiple
-* Bonfire: Finders Keepers
-* Bonfire: Drop it
-* Bonfire: Steamroller
-* Bonfire: Binary Agents
-* Bonfire: Everything Be True
-* Bonfire: Arguments Optional
+* Bonfire: [Missing letters] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/25%20Bonfire%20Missing%20letters.js)
+* Bonfire: [Boo who] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/26%20Bonfire%20Boo%20who.js)
+* Bonfire: [Sorted Union] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/27%20Bonfire%20Sorted%20Union.js)
+* Bonfire: [Convert HTML Entities]
+* Bonfire: [Spinal Tap Case]
+* Bonfire: [Sum All Odd Fibonacci Numbers]
+* Bonfire: [Sum All Primes]
+* Bonfire: [Smallest Common Multiple]
+* Bonfire: [Finders Keepers]
+* Bonfire: [Drop it]
+* Bonfire: [Steamroller]
+* Bonfire: [Binary Agents]
+* Bonfire: [Everything Be True]
+* Bonfire: [Arguments Optional]
