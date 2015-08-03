@@ -3,11 +3,13 @@
 This is a collection of the code I have written myself or during pair programming. 
 It will help me keep a clean record, and also as practice for working with GitHub.
 
-**Contact me at:** rafase282@gmail.com
-<br>
-http://www.freecodecamp.com/rafase282
-<br>
-Rafael Rodriguez
+##Contact me
+
+**Rafael Rodriguez**
+My E-mail: rafase282@gmail.com
+FreeCodeCamp Profile: http://www.freecodecamp.com/rafase282
+Blog/site: https://rafase282.wordpress.com/
+
 
 ## <strong>Basic Algorithm Scripting </strong>
 
