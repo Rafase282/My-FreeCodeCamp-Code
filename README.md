@@ -6,8 +6,11 @@ It will help me keep a clean record, and also as practice for working with GitHu
 ##Contact me
 
 **Rafael Rodriguez**
+<br>
 My E-mail: rafase282@gmail.com
+<br>
 FreeCodeCamp Profile: http://www.freecodecamp.com/rafase282
+<br>
 Blog/site: https://rafase282.wordpress.com/
 
 
