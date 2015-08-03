@@ -17,6 +17,7 @@ http://www.freecodecamp.com/rafase282
 
 function convert(str) {
   // &colon;&rpar;
+  vart temp = str.split(' ');
   return str;
 }
 
