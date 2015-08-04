@@ -16,13 +16,27 @@ Here are some helpful links:
 
 Remainder
 
-Code by Rafael Rodriguez
+Code by Rafael Rodriguez (rafase282) and Louis Heimel (galaxyhitcher)
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
 
 function sumFibs(num) {
-  return num;
+    var prev = 0;
+    var curr = 1;
+    var res = 0;
+    while (curr <= num) {
+        if (curr%2 !== 0) {
+            res += curr;
+        }
+        var temp = curr + prev;
+        prev = curr;
+        curr = temp;
+    }
+    
+    
+    
+    return res;
 }
 
-sumFibs(4);
+sumFibs(75025);
