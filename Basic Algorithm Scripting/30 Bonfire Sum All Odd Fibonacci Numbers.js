@@ -22,21 +22,24 @@ http://www.freecodecamp.com/rafase282
 */
 
 function sumFibs(num) {
-    var prev = 0;
-    var curr = 1;
-    var res = 0;
-    while (curr <= num) {
-        if (curr%2 !== 0) {
-            res += curr;
+	// Create variable to keep Record
+    var prevNumber = 0;
+    var currNumber = 1;
+    var result = 0;
+    // Makes sure we do not go over the original number
+    while (currNumber <= num) {
+    	// CHecks for odd fibonacci numbers
+        if (currNumber % 2 !== 0) {
+        	// Add them to the return variable
+            result += currNumber;
         }
-        var temp = curr + prev;
-        prev = curr;
-        curr = temp;
+        // Complete the fibonnaci circle by rotating values.
+        var added = currNumber + prevNumber;
+        prevNumber = currNumber;
+        currNumber = added;
     }
     
-    
-    
-    return res;
+    return result;
 }
 
 sumFibs(75025);

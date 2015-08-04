@@ -46,7 +46,7 @@ Blog/site: https://rafase282.wordpress.com/
 * Bonfire: [Convert HTML Entities] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/28%20Bonfire%20Convert%20HTML%20Entities.js)
 * Bonfire: [Spinal Tap Case](https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/29%20Bonfire%20Spinal%20Tap%20Case.js)
 * Bonfire: [Sum All Odd Fibonacci Numbers] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/30%20Bonfire%20Sum%20All%20Odd%20Fibonacci%20Numbers.js)
-* Bonfire: [Sum All Primes]
+* Bonfire: [Sum All Primes] ()
 * Bonfire: [Smallest Common Multiple]
 * Bonfire: [Finders Keepers]
 * Bonfire: [Drop it]
