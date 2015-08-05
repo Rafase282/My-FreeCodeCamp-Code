@@ -15,13 +15,34 @@ Here are some helpful links:
 
 For Loops Array.push()
 
-Code by Rafael Rodriguez (rafase282) and Louis Heimel (galaxyhitcher)
-rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+Code by Rafael Rodriguez (rafase282) using implementation form here
+http://stackoverflow.com/questions/11966520/how-to-find-prime-numbers-between-0-100
+rafase282@gmail.com 
+http://www.freecodecamp.com/rafase282  
 */
 
 function sumPrimes(num) {
-  return num;
+    var res = 0;
+    // FUnction to get the primes up to max in an array
+    function getPrimes(max) {
+        var sieve = [], i, j, primes = [];
+        for (i = 2; i <= max; ++i) {
+            if (!sieve[i]) {
+                // i has not been marked -- it is prime
+                primes.push(i);
+                for (j = i << 1; j <= max; j += i) {
+                    sieve[j] = true;
+                }
+            }
+        }
+    return primes;
+    }
+    // Add the primes
+    var primes = getPrimes(num);
+    for (var p in primes) {
+        res+= primes[p];
+    }
+return res;
 }
 
-sumPrimes(10);
+sumPrimes(977);
