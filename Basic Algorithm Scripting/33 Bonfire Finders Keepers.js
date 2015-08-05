@@ -10,14 +10,26 @@ Here are some helpful links:
 
 Array.some()
 
-Code by Rafael Rodriguez
+Code by Rafael Rodriguez & Ronald (https://github.com/ronstarcool)
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
 
 function find(arr, func) {
-  var num = 0;
+	// Make num undefined by default
+    var num;
+    // Loop thorugh the array and use the function to check
+    for (var a in arr) {
+        if (func(arr[a])){
+        	// Store the first case and break the loop
+            num = arr[a];
+            return num;
+        }
+    }
+  // otherwise return undefined
   return num;
 }
 
 find([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+
+//Implementation using Arry.some() needed.
