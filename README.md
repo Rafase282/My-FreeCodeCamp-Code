@@ -51,6 +51,6 @@ Blog/site: https://rafase282.wordpress.com/
 * Bonfire: [Finders Keepers] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/33%20Bonfire%20Finders%20Keepers.js)
 * Bonfire: [Drop it] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/34%20Bonfire%20Drop%20it.js)
 * Bonfire: [Steamroller] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/35%20Bonfire%20Steamroller.js)
-* Bonfire: [Binary Agents]
+* Bonfire: [Binary Agents] ()
 * Bonfire: [Everything Be True]
 * Bonfire: [Arguments Optional]

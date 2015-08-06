@@ -15,26 +15,23 @@ http://www.freecodecamp.com/rafase282
 */
 
 function steamroller(arr) {
-  // I'm a steamroller, baby
-  return arr;
+	var flattenedArray = [];
+	// Create function that adds an element if it is not an array.
+	// If it is an array, then loops through it and uses recursion on that array.
+	var flatten = function (arg) {
+		if (!Array.isArray(arg)){
+			flattenedArray.push(arg);
+		} else {
+			for (var a in arg) {
+				flatten(arg[a]);
+			}
+		}
+	};
+	// Call the function for each element in the array
+	arr.forEach(flatten);
+	return flattenedArray;
 }
 
-steamroller([1, [2], [3, [[4]]]]);
+steamroller([1, [], [3, [[4]]]]);
 
-/* Code from Max Helmetag (https://github.com/mhelmetag)
 
-function drop(arr, func) {
-  // Drop them elements.
-  var times = arr.length;
-  for (var i = 0; i < times; i++) {
-    if (func(arr[0])) {
-      break;
-    } else {
-      arr.shift();
-    }
-  }
-  return arr;
-}
-
-drop([1, 2, 3], function(n) {return n < 3; });
-*/
