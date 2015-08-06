@@ -1,27 +1,25 @@
-/* Bonfire: Drop it
+/* Bonfire: Steamroller
 Difficulty: 2/5
 
-Drop the elements of an array (first argument), starting from the front, until the predicate (second
-argument) returns true.
+Flatten a nested array. You must account for varying levels of nesting.
 
 Remember to use RSAP if you get stuck. Try to pair program. Write your own code.
 
 Here are some helpful links:
 
-Arguments object
-Array.shift()
+Array.isArray()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
 
-function drop(arr, func) {
-  // Using Array.protptype.filter() which makes it pretty easy.
-  return arr.filter(func);
+function steamroller(arr) {
+  // I'm a steamroller, baby
+  return arr;
 }
 
-drop([1, 2, 3], function(n) {return n < 3; });
+steamroller([1, [2], [3, [[4]]]]);
 
 /* Code from Max Helmetag (https://github.com/mhelmetag)
 
