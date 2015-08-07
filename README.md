@@ -74,7 +74,7 @@ It will help me keep a clean record, and also as practice for working with GitHu
 
 ## <strong>Advanced Algorithm Scripting</strong>
 
-* Bonfire: [Validate US Telephone Numbers]()
+* Bonfire: [Validate US Telephone Numbers](https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Advanced%20Algorithm%20Scripting/1%20Bonfire%20Validate%20US%20Telephone%20Numbers.js)
 * Bonfire: [Symmetric Difference]
 * Bonfire: [Exact Change]
 * Bonfire: [Inventory Update]
