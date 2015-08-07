@@ -6,13 +6,12 @@ It will help me keep a clean record, and also as practice for working with GitHu
 ##Contact me
 
 **Rafael Rodriguez**
-<br>
-My E-mail: rafase282@gmail.com
-<br>
-FreeCodeCamp Profile: http://www.freecodecamp.com/rafase282
-<br>
-Blog/site: https://rafase282.wordpress.com/
 
+* My E-mail: rafase282@gmail.com
+* FreeCodeCamp Profile: http://www.freecodecamp.com/rafase282
+* CodePed Profile: http://codepen.io/Rafase282/
+* Blog/site: https://rafase282.wordpress.com/
+* LinkedIn: https://www.linkedin.com/in/rafase282
 
 ## <strong>Basic Algorithm Scripting </strong>
 
