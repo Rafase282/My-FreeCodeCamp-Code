@@ -68,12 +68,13 @@ It will help me keep a clean record, and also as practice for working with GitHu
 
 ##<strong>Intermediate Algorithm Scripting</strong>
 
-* Bonfire: [Make a Person]
+* Bonfire: [Make a Person](https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Intermediate%20Algorithm%20Scripting/1%20Bonfire%20Make%20a%20Person.js)
 * Bonfire: [Map the Debris]
 * Bonfire: [Pairwise]
 
-## <strong>Bonfire: Validate US Telephone Numbers</strong>
+## <strong>Advanced Algorithm Scripting</strong>
 
+* Bonfire: [Validate US Telephone Numbers]()
 * Bonfire: [Symmetric Difference]
 * Bonfire: [Exact Change]
 * Bonfire: [Inventory Update]
