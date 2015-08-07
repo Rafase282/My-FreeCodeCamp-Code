@@ -16,7 +16,7 @@ Here are some helpful links:
 Global Function Object
 Arguments object
 
-Code by Rafael Rodriguez
+Code by Rafael Rodriguez & https://github.com/mildused
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
