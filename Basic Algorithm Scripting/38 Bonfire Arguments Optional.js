@@ -16,18 +16,18 @@ Here are some helpful links:
 Global Function Object
 Arguments object
 
-Code by Rafael Rodriguez & https://github.com/mildused
+Code by Rafael Rodriguez & https://github.com/mildused & https://github.com/ozydesign
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
 
 function add() {
-	// Function to check if a number is actually a number
-	// and return undefined otherwise.
+    // Function to check if a number is actually a number
+    // and return undefined otherwise.
     var checkNum = function (num) {
-        if (typeof num !== 'number')
+        if (typeof num !== 'number'){
             return undefined;
-        else
+        }else
             return num;
     };
 
@@ -41,14 +41,24 @@ function add() {
             return undefined;
         } else {return a + b;}
     } else {
-    	// If only one parameter was found, returns a new function that expects two
-        return function(arg2) {
-            if (a === undefined || arg2 === undefined) {
-                return undefined;
-            } else {return a + arg2;}
-            
-        };
+        // If only one parameter was found, returns a new function that expects two
+        // Store first argument before entering the new function scope
+        var c = arguments[0];
+        // Check the number again, must be outside the function to about returning an object
+        // instead of undefined.
+        if(checkNum(c)){
+            // Return function that expect a second argument.
+            return function(arg2) {
+                // Check for non-numbers
+                if (c === undefined || checkNum(arg2) === undefined) {
+                    return undefined;
+                }else {
+                    // if numbers then add them.
+                    return c + arg2;
+                }
+            };
+        }
     }
 }
 
-add(3,4);
+add(2,3);
