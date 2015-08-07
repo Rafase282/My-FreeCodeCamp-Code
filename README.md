@@ -55,6 +55,18 @@ Blog/site: https://rafase282.wordpress.com/
 * Bonfire: [Everything Be True](https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/37%20Bonfire%20Everything%20Be%20True.js)
 * Bonfire: [Arguments Optional] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Basic%20Algorithm%20Scripting/38%20Bonfire%20Arguments%20Optional.js)
 
+## <strong>Object Oriented JavaScript</strong>
+
+* Waypoint: [Scope Your Variables]
+* Waypoint: [Reference your Current Object with This]
+* Waypoint: [Traverse the Prototype Chain]
+* Waypoint: [Reuse Code with Decorators]
+* Waypoint: [Build Objects with Functional Classes]
+* Waypoint: [Build Objects with Prototypal Classes]
+* Waypoint: [Understand Pseudoclassical Patterns]
+* Waypoint: [Subclass one Object to Another]
+* Waypoint: [Use Pseudoclassical Subclasses]
+
 ##<strong>Intermediate Algorithm Scripting</strong>
 
 * Bonfire: [Make a Person]
