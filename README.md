@@ -57,14 +57,14 @@ Blog/site: https://rafase282.wordpress.com/
 
 ##<strong>Intermediate Algorithm Scripting</strong>
 
-*Bonfire: [Make a Person]
-*Bonfire: [Map the Debris]
-*Bonfire: [Pairwise]
+* Bonfire: [Make a Person]
+* Bonfire: [Map the Debris]
+* Bonfire: [Pairwise]
 
 ## <strong>Bonfire: Validate US Telephone Numbers</strong>
 
-*Bonfire: [Symmetric Difference]
-*Bonfire: [Exact Change]
-*Bonfire: [Inventory Update]
-*Bonfire: [No repeats please]
-*Bonfire: [Friendly Date Ranges]
+* Bonfire: [Symmetric Difference]
+* Bonfire: [Exact Change]
+* Bonfire: [Inventory Update]
+* Bonfire: [No repeats please]
+* Bonfire: [Friendly Date Ranges]
