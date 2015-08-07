@@ -22,6 +22,8 @@ http://www.freecodecamp.com/rafase282
 */
 
 function add() {
+	// Function to check if a number is actually a number
+	// and return undefined otherwise.
     var checkNum = function (num) {
         if (typeof num !== 'number')
             return undefined;
@@ -29,6 +31,9 @@ function add() {
             return num;
     };
 
+    // Check if we have two parameters, check if they are numbers
+    // handle the case where one is not
+    // returns the addition.
     if (arguments.length > 1) {
         var a = checkNum(arguments[0]);
         var b = checkNum(arguments[1]);
@@ -36,6 +41,7 @@ function add() {
             return undefined;
         } else {return a + b;}
     } else {
+    	// If only one parameter was found, returns a new function that expects two
         return function(arg2) {
             if (a === undefined || arg2 === undefined) {
                 return undefined;
@@ -45,4 +51,4 @@ function add() {
     }
 }
 
-add('3',4);
+add(3,4);
