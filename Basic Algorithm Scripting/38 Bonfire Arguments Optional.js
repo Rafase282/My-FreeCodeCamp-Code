@@ -22,7 +22,27 @@ http://www.freecodecamp.com/rafase282
 */
 
 function add() {
-  return false;
+    var checkNum = function (num) {
+        if (typeof num !== 'number')
+            return undefined;
+        else
+            return num;
+    };
+
+    if (arguments.length > 1) {
+        var a = checkNum(arguments[0]);
+        var b = checkNum(arguments[1]);
+        if (a === undefined || b === undefined) {
+            return undefined;
+        } else {return a + b;}
+    } else {
+        return function(arg2) {
+            if (a === undefined || arg2 === undefined) {
+                return undefined;
+            } else {return a + arg2;}
+            
+        };
+    }
 }
 
-add(2,3);
+add('3',4);

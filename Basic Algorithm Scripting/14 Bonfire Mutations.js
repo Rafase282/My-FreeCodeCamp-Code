@@ -29,7 +29,7 @@ function mutation(arr) {
 	var first = arr[0].toLowerCase().split('');
 	var second = arr[1].toLowerCase().split('');
 	var temp = 0;
-	// Check ever character and if the index is found add one
+	// Check every character and if the index is found add one
 	for (var s in second){
 		if (first.indexOf(second[s]) > -1) {
 			temp+= 0;
