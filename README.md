@@ -80,3 +80,15 @@ It will help me keep a clean record, and also as practice for working with GitHu
 * Bonfire: [Inventory Update]
 * Bonfire: [No repeats please]
 * Bonfire: [Friendly Date Ranges]
+
+## Front End Development Projects
+
+* Waypoint: Get Set for Ziplines
+* Zipline: Build a Random Quote Machine
+* Zipline: Show the Local Weather
+* Zipline: Use the Twitch.tv JSON API
+* Zipline: Stylize Stories on Camper News
+* Zipline: Wikipedia Viewer
+* Zipline: Build a Pomodoro Clock
+* Zipline: Build a JavaScript Calculator
+* Zipline: Build a Tic Tac Toe Game
