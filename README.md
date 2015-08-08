@@ -56,15 +56,15 @@ It will help me keep a clean record, and also as practice for working with GitHu
 
 ## <strong>Object Oriented JavaScript</strong>
 
-* Waypoint: [Scope Your Variables]
-* Waypoint: [Reference your Current Object with This]
-* Waypoint: [Traverse the Prototype Chain]
-* Waypoint: [Reuse Code with Decorators]
-* Waypoint: [Build Objects with Functional Classes]
-* Waypoint: [Build Objects with Prototypal Classes]
-* Waypoint: [Understand Pseudoclassical Patterns]
-* Waypoint: [Subclass one Object to Another]
-* Waypoint: [Use Pseudoclassical Subclasses]
+* Waypoint: Scope Your Variables
+* Waypoint: Reference your Current Object with This
+* Waypoint: Traverse the Prototype Chain
+* Waypoint: Reuse Code with Decorators
+* Waypoint: Build Objects with Functional Classes
+* Waypoint: Build Objects with Prototypal Classes
+* Waypoint: Understand Pseudoclassical Patterns
+* Waypoint: Subclass one Object to Another
+* Waypoint: Use Pseudoclassical Subclasses
 
 ##<strong>Intermediate Algorithm Scripting</strong>
 
