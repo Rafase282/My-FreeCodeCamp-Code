@@ -58,7 +58,7 @@ It will help me keep a clean record, and also as practice for working with GitHu
 
 * Waypoint: Scope Your Variables
 * Waypoint: Reference your Current Object with This
-* Waypoint: Traverse the Prototype Chain
+* Waypoint: [Traverse the Prototype Chain](https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki/Waypoint:-Traverse-the-Prototype-Chain)
 * Waypoint: Reuse Code with Decorators
 * Waypoint: Build Objects with Functional Classes
 * Waypoint: Build Objects with Prototypal Classes
