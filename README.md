@@ -69,7 +69,7 @@ It will help me keep a clean record, and also as practice for working with GitHu
 ##<strong>Intermediate Algorithm Scripting</strong>
 
 * Bonfire: [Make a Person](https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Intermediate%20Algorithm%20Scripting/1%20Bonfire%20Make%20a%20Person.js)
-* Bonfire: [Map the Debris]
+* Bonfire: [Map the Debris] (https://github.com/Rafase282/My-FreeCodeCamp-Code/blob/master/Intermediate%20Algorithm%20Scripting/2%20Bonfire%20Map%20the%20Debris.js)
 * Bonfire: [Pairwise]
 
 ## <strong>Advanced Algorithm Scripting</strong>
