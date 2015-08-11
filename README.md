@@ -1,7 +1,7 @@
 # My Work From FreeCodeCamp
 
 This is a collection of the code I have written myself or during pair programming. 
-It will help me keep a clean record, and also as practice for working with GitHub.
+It will help me keep a clean record, and also as practice for working with GitHub. Please refer to the wiki for more information on each part as they are available.
 
 ##Contact me
 
