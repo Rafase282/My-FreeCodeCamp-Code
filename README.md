@@ -18,3 +18,12 @@ I will try to keep everythign updated. If you are also part of the camp or would
 
 * The [Wiki](https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki)
 * The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
+
+## Code Status:
+
+I have complated all the coding up to [Make A person.](https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki/Bonfire-Make-a-Person)
+I'm Currently working on the next [one.](https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki/Bonfire-Map-the-Debris)
+
+## Wiki Status:
+
+Since I practically started the wiki a few days ago and just today I came up with what I wanted to do with it, I have added some basic pages, particularly for the Bornfires but more explanation should be added and more content covered.
