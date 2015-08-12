@@ -23,10 +23,9 @@ http://www.freecodecamp.com/rafase282
 */
 
 var Person = function(firstAndLast) {
-	// Instead of creating new functions, create them using this
     
-    this.fullName = firstAndLast;
-    var arr = this.fullName.split(' ');
+    var fullName = firstAndLast;
+    var arr = fullName.split(' ');
     
     this.getFirstName = function() {
         return arr[0];
@@ -35,7 +34,7 @@ var Person = function(firstAndLast) {
         return arr[1];
     };
     this.getFullName = function() {
-        return firstAndLast;
+        return fullName;
     };
     this.setFirstName = function(first) {
         arr[0] = first;
@@ -44,7 +43,7 @@ var Person = function(firstAndLast) {
         arr[1] = last;
     };
     this.setFullName = function(firstAndLast) {
-        fullname = firstAndLast;
+        fullName = firstAndLast;
     };
 };
 
