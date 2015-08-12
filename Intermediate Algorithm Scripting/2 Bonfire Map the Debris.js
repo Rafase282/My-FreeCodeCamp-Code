@@ -23,9 +23,14 @@ http://www.freecodecamp.com/rafase282
 */
 
 function orbitalPeriod(arr) {
-  var GM = 398600.4418;
-  var earthRadius = 6367.4447;
-  return arr;
+	var GM = 398600.4418;
+	var earthRadius = 6367.4447;
+	var a = 2 * Math.PI;
+	var c = Math.pow(earthRadius + arr[0].avgAlt ,3);
+	var b = Math.sqrt(c/GM);
+	var orbPeriod = Math.ceil(a * b);
+	// Change the object keys
+	delete arr[0].avgAlt;
+	arr[0].orbitalPeriod = orbPeriod;
+	return arr;
 }
-
-orbitalPeriod([{name : "sputkin", avgAlt : 35873.5553}]);
