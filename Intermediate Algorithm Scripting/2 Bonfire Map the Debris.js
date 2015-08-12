@@ -17,7 +17,7 @@ Here are some helpful links:
 
 Math.pow()
 
-Code by Rafael Rodriguez
+Code by Rafael Rodriguez & https://github.com/ozydesign
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282 
 */
