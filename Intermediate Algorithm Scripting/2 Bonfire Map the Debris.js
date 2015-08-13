@@ -41,3 +41,4 @@ function orbitalPeriod(arr) {
 	}
 	return newArr;
 }
+orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]);
