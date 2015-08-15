@@ -27,6 +27,7 @@ http://www.freecodecamp.com/rafase282
 
 function telephoneCheck(str) {
   // Good luck!
+  // will complete soon!
   return true;
 }
 
