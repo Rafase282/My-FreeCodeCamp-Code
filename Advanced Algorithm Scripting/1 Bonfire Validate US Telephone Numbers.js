@@ -27,7 +27,7 @@ http://www.freecodecamp.com/rafase282
 
 function telephoneCheck(str) {
   // Good luck!
-  // oh lord, again?
+  // oh lord, again?dsd
   return true;
 }
 
