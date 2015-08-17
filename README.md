@@ -15,7 +15,7 @@ I will try to keep everything updated. If you are also part of the camp or would
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-I have completed all the coding up to [Make A person.](https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki/Bonfire-Make-a-Person) I'm Currently working on the next [one.](https://github.com/Rafase282/My-FreeCodeCamp-Code/wiki/Bonfire-Map-the-Debris)
+Since the map changed, the order of the programs has also changed. Just check the wiki for the programs that have been completed and documented already.
 
 ## Wiki Status:
 8/17/2015: I just updated the wiki to reflect the new map, removed unfinished pages and kept one that is no longer part of the new map.
