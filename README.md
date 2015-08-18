@@ -18,6 +18,7 @@ I will try to keep everything updated. If you are also part of the camp or would
 Since the map changed, the order of the programs has also changed. Just check the wiki for the programs that have been completed and documented already.
 
 ## Wiki Status:
-8/17/2015: I just updated the wiki to reflect the new map, removed unfinished pages and kept one that is no longer part of the new map.
+I'm currently working on the **Responsive Design with Bootstrap** Tree.
 
-I still need to work on the rest. I'm planning on starting over to go over old material and also take the time to create new pages for the old material.
+Completed:
+1. HTML5 and CSS
