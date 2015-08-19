@@ -18,9 +18,10 @@ I will try to keep everything updated. If you are also part of the camp or would
 Since the map changed, the order of the programs has also changed. Just check the wiki for the programs that have been completed and documented already.
 
 ## Wiki Status:
-I'm currently working on the **Basic JavaScript** Tree.
+I'm currently working on the **Basic Algorithm Scripting** Tree.
 
 Completed:
 1. HTML5 and CSS
 2. Responsive Design with Bootstrap
 3. jQuery
+4. Basic JavaScript
