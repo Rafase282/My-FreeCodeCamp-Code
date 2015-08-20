@@ -22,9 +22,7 @@ http://www.freecodecamp.com/rafase282
 */
 
 function palindrome(str) {
-  // Use regular expression to replace anything that is not part of the alphabet.
   str = str.replace(/[^a-zA-Z]/g,'').toLowerCase();
-  // Check if the string is the exact same as the string splitted, reversed, and joined back.
   if (str === str.split('').reverse().join('')) {
     return true;
   } else {

@@ -14,11 +14,10 @@ Make this function return true no matter what.
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function meetBonfire(argument) {
-  // Good luck!
   console.log("you can read this function's argument in the developer tools", argument);
 
   return true;

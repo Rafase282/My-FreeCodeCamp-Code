@@ -1,4 +1,4 @@
-/* Bonfire: Factorialize a Number 
+/* Bonfire: Factorialize a Number
 Difficulty: 1/5
 
 Return the factorial of the provided integer.
@@ -18,13 +18,12 @@ Arithmetic Operators
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function factorialize(num) {
   var factorial = 1;
   for (var n = 2; n <= num; n++) {
-  	// Use previous value then multiply by n and return new value to old variable.
     factorial = factorial * n;
   }
   return factorial;

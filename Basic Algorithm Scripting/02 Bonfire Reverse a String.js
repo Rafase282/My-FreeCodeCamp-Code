@@ -1,4 +1,4 @@
-/* Bonfire: Reverse a String 
+/* Bonfire: Reverse a String
 Difficulty: 1/5
 
 Reverse the provided string.
@@ -15,14 +15,11 @@ Global String Object String.split() Array.reverse() Array.join()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function reverseString(str) {
-	// Create new variable, split old string character by character, reverse them, then join them
-	// character by character.
   var strReverse = str.split('').reverse().join('');
-  
   return strReverse;
 }
 

@@ -13,7 +13,7 @@ String.charAt()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 String.prototype.replaceAt = function(index, character) {
@@ -23,10 +23,8 @@ String.prototype.replaceAt = function(index, character) {
 
 
 function titleCase(str) {
-	// SPlit string by whitespace
 	var newTitle = str.split(' ');
 	var updatedTitle = [];
-	// Turn to lowercase, then used the prototype replace function.
 	for (var st in newTitle) {
 		updatedTitle[st] = newTitle[st].toLowerCase().replaceAt(0, newTitle[st].charAt(0).toUpperCase());
 	}

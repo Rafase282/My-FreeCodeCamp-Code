@@ -13,23 +13,19 @@ String.split() String.length
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
-function findLongestWord(str) { 
-	// Convert from string to array of words separated by space.
+function findLongestWord(str) {
 	var words = str.split(' ');
   	var maxLength = 0;
 
-  	// Loop through the array.
   	for(var i = 0; i < words.length; i++) {
-  		// Check for the longest word comparing with the previous
-  		// then sote the new longest word.
   		if (words[i].length > maxLength) {
   			maxLength = words[i].length;
   		}
   	}
-  
+
   return maxLength;
 }
 
