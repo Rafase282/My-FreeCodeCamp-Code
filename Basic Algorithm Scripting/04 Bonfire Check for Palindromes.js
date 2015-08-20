@@ -1,4 +1,4 @@
-/* Bonfire: Check for Palindromes 
+/* Bonfire: Check for Palindromes
 Difficulty: 1/5
 
 Return true if the given string is a palindrome. Otherwise, return false.
@@ -18,13 +18,13 @@ String.replace() String.toLowerCase()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function palindrome(str) {
-  // Use regular expression to replace anythign that is not part of the alphabet.
+  // Use regular expression to replace anything that is not part of the alphabet.
   str = str.replace(/[^a-zA-Z]/g,'').toLowerCase();
-  // Check if the string is the excat same as the string splitted, reversed, and joined back.
+  // Check if the string is the exact same as the string splitted, reversed, and joined back.
   if (str === str.split('').reverse().join('')) {
     return true;
   } else {
