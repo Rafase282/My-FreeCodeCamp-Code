@@ -18,20 +18,15 @@ Comparison Operators
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function largestOfFour(arr) {
   var results = [];
-  // Loop through the arguments
   for (var n in arr) {
-  	// Important: Make sure this is inside the loop to avoid errors
   	var largestNumber = 0;
   	for (var sb in arr[n]) {
-  		// Check a two dimensional array
-  		// From array in arg n, check if indice is greater than current largest number
   		if (arr[n][sb] > largestNumber) {
-  			// Save the value
   			largestNumber = arr[n][sb];
   		}
   	}

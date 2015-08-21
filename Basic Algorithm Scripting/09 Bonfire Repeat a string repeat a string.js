@@ -12,13 +12,11 @@ Global String Object
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function repeat(str, num) {
-	// Variable for repeated string
 	var accumulatedStr = "";
-	// Use while loop to repeat num times the same string.
 	while (num > 0) {
 		accumulatedStr += str;
 		num--;
