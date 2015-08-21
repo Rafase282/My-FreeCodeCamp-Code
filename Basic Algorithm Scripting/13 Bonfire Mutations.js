@@ -21,15 +21,13 @@ Array.indexOf()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function mutation(arr) {
-	// First make the arguments lowercase and arrays.
 	var first = arr[0].toLowerCase().split('');
 	var second = arr[1].toLowerCase().split('');
 	var temp = 0;
-	// Check every character and if the index is found add one
 	for (var s in second){
 		if (first.indexOf(second[s]) > -1) {
 			temp+= 0;

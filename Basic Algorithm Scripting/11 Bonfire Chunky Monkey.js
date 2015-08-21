@@ -12,7 +12,7 @@ Array.push()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function chunk(arr, size) {
@@ -21,7 +21,6 @@ function chunk(arr, size) {
 	var result = [];
 
 	for (var a in arr) {
-		// this is an general form
 		if (a % size !== size - 1)
 			temp.push(arr[a]);
 		else {

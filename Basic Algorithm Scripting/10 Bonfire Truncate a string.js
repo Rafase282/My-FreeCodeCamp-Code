@@ -14,15 +14,12 @@ String.slice()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function truncate(str, num) {
-	// Create a variable to store the truncated string
 	var truncd = '';
-	// If the string needs to be truncated then slice and add the dots.
 	if (str.length > num) {
-		// num-3 because the dots we add coutns for the test.
 		truncd = str.slice(0,num-3) + '...';
 		return truncd;
 	}

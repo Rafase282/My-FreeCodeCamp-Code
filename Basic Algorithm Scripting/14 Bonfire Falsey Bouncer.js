@@ -13,11 +13,10 @@ Boolean Objects Array.filter()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function bouncer(arr) {
-  // Don't show a false ID to this bouncer.
   function isTruthy(arg){
     return Boolean(arg);
   }

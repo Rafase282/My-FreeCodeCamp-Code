@@ -12,12 +12,11 @@ Global Object Object.hasOwnProperty() Object.keys()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function where(collection, source) {
   var arr = [];
-  // What's in a name?
   for (var ob in collection) {
     if (collection[ob][Object.keys(source)] === source[Object.keys(source)]) {
       arr.push(collection[ob]);

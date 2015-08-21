@@ -13,14 +13,12 @@ Arguments object Array.filter()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function destroyer(arr) {
-  // Remove all the values
   var args = Array.prototype.slice.call(arguments);
   args.splice(0,1);
-  console.log(args);
   return arr.filter(function(element) {
     return args.indexOf(element) === -1;
   });

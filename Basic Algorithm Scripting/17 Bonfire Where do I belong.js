@@ -15,14 +15,13 @@ Array.sort()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function where(arr, num) {
 	arr.sort(function(a, b) {
 		return a - b;
 		});
-	console.log(arr);
 	for (var a in arr){
 		if (arr[a] >= num)
 			return parseInt(a);
