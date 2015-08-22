@@ -1,0 +1,80 @@
+body {
+  position: relative;
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: gray;
+  background-color: black;
+}
+h1, h2, p {
+  text-align: center;
+}
+a {
+  color: white;
+}
+.me {
+  width: 250px;
+  height: 250px;
+  margin-top: 50px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: gray;
+}
+.displayed {
+  display: block;
+  margin-right: auto;
+  margin-left: auto
+}
+.img-text {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-right: 30%;
+  padding-left: 30%;
+}
+.social {
+  padding-top: 10px;
+}
+.panel-body {
+  color: black;
+}
+.navbar-header {
+  padding-left: 10%;
+}
+.myNavbar {
+  padding-right: 10%;
+}
+.home {
+  position: relative;
+  height: 100vh;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: #fff;
+  background-color: #1E88E5;
+}
+.experience {
+  height: 100vh;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: #fff;
+  background-color: #009688;
+}
+.portfolio {
+  min-height: 100vh;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: #fff;
+  background-color: #ff9800;
+}
+.contact {
+  height: 90vh;
+  padding-top: 10%;
+  padding-bottom: 50px;
+  color: #fff;
+  background-color: #00bcd4;
+}
+.contact-info {
+  max-width: auto;
+  height: auto;
+  margin: auto;
+}
