@@ -1,25 +1,22 @@
 body {
   position: relative;
 }
-
 footer {
+  min-height: 10vh;
   padding-top: 40px;
   padding-bottom: 10px;
   color: gray;
   background-color: black;
-  min-height: 10vh;
 }
-
-h1,
-h2,
-p {
+h1, h2, p {
   text-align: center;
 }
-
 a {
   color: white;
 }
-
+.gray-text {
+  color: gray;
+}
 .me {
   width: 250px;
   height: 250px;
@@ -28,36 +25,29 @@ a {
   border-style: solid;
   border-color: gray;
 }
-
 .displayed {
   display: block;
   margin-right: auto;
   margin-left: auto
 }
-
 .img-text {
   margin-top: 50px;
   margin-bottom: 50px;
   padding-right: 30%;
   padding-left: 30%;
 }
-
 .social {
   padding-top: 10px;
 }
-
 .panel-body {
   color: black;
 }
-
 .navbar-header {
   padding-left: 10%;
 }
-
-.myNavbar {
+.navbar-right {
   padding-right: 10%;
 }
-
 .home {
   position: relative;
   min-height: 100vh;
@@ -66,7 +56,6 @@ a {
   color: #fff;
   background-color: #1E88E5;
 }
-
 .experience {
   min-height: 100vh;
   padding-top: 10%;
@@ -74,7 +63,6 @@ a {
   color: #fff;
   background-color: #009688;
 }
-
 .portfolio {
   min-height: 100vh;
   padding-top: 10%;
@@ -82,7 +70,6 @@ a {
   color: #fff;
   background-color: #ff9800;
 }
-
 .contact {
   min-height: 90vh;
   padding-top: 10%;
@@ -90,7 +77,6 @@ a {
   color: #fff;
   background-color: #00bcd4;
 }
-
 .contact-info {
   max-width: 80vh;
   min-height: 60vh;
