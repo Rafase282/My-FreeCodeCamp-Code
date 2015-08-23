@@ -3,10 +3,11 @@ body {
 }
 
 footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 10px;
   color: gray;
   background-color: black;
+  min-height: 10vh;
 }
 
 h1,
@@ -59,7 +60,7 @@ a {
 
 .home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 10%;
   padding-bottom: 10%;
   color: #fff;
@@ -67,7 +68,7 @@ a {
 }
 
 .experience {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 10%;
   padding-bottom: 10%;
   color: #fff;
@@ -83,7 +84,7 @@ a {
 }
 
 .contact {
-  height: 90vh;
+  min-height: 90vh;
   padding-top: 10%;
   padding-bottom: 50px;
   color: #fff;
@@ -91,7 +92,7 @@ a {
 }
 
 .contact-info {
-  max-width: auto;
-  height: auto;
+  max-width: 80vh;
+  min-height: 60vh;
   margin: auto;
 }
