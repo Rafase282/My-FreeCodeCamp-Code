@@ -5,12 +5,13 @@ var getQuote = function(data) {
     data.quoteAuthor = 'Unknown';
   }
   $(".author-text").text('Author: ' + data.quoteAuthor);
-
 };
 $(document).ready(function() {
   $.getJSON(url, getQuote, 'jsonp');
-
 });
 $("#quote").click(function() {
   $.getJSON(url, getQuote, 'jsonp');
+});
+$("#tweet").click(function() {
+  alert('Soon Bro!');
 });
