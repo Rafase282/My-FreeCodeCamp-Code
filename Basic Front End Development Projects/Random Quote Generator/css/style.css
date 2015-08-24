@@ -1,8 +1,8 @@
 p, .container-fluid {
-  text-align: center;
-  padding-bottom: 20px;
-  margin-left: 10%;
   margin-right: 10%;
+  margin-left: 10%;
+  padding-bottom: 20px;
+  text-align: center;
   color: #e4f1fe;
   font-family: 'Comic Sans MS';
 }
@@ -11,12 +11,12 @@ body {
   background-color: #0d493b;
 }
 .well {
-  margin-left: 3%;
   margin-right: 3%;
+  margin-left: 3%;
   background-color: #0d493b;
 }
 footer {
-  min-height: 1vh;
+  min-height: 8vh;
   padding-top: 20px;
   padding-bottom: 1px;
   background-color: black;
