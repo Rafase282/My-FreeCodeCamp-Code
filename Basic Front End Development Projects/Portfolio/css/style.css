@@ -21,13 +21,14 @@ a {
   color: gray;
 }
 img {
-    opacity: 1.0;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
 }
-
 .thumbnail img:hover {
-    opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  /* For IE8 and earlier */
 }
 .me {
   width: 250px;
