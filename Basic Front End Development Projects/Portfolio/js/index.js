@@ -1,7 +1,7 @@
 /* Twitter feed code
  *
  */
-!(function (d, s, id) {
+!(function(d, s, id) {
   var js = d.getElementsByTagName(s)[0]
   var fjs = d.getElementsByTagName(s)[0]
   var p = /^http:/.test(d.location) ? 'http' : 'https'
