@@ -1,45 +1,38 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Random Quote Generator</title>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
+<body>
 
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <section class="container-fluid">
+    <h1 class='text-primary'>Random Quotes!</h1>
+    <p> This site will display random quotes using the <a href="http://forismatic.com/" target="_blank">Forismatic</a> API. I hope you enjoy them as I learn to work with API and front end. If you want, you can tweet the quotes, it will take you to a new page
+      where you might need to edit the post if the quote is too long.</p>
+    <div class="well">
+      <p class="quote-text"></p>
+      <p class="author-text"></p>
+    </div>
+    <button type="button" class="btn btn-primary" id="quote">New Quote</button>
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="large" target="_blank">
+      <button type="button" class="btn btn-primary">Tweet it!</button>
+    </a>
+  </section>
 
-        <link rel="stylesheet" href="css/style.css">
+  <footer>
+    <p>Copyright © Rafael J. Rodriguez 2015. All Rights Reserved</p>
+  </footer>
 
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+  <script src="js/index.js"></script>
 
+</body>
 
-
-  </head>
-
-  <body>
-
-    <section class="container-fluid">
-  <h1 class='text-primary'>Random Quotes!</h1>
-  <p> Here I will be displaying random quaotes using the <a href="http://forismatic.com/" target="_blank">Forismatic</a> API. I hope you enjoy them as I learn to work with API and front end.</p>
-  <div class="well">
-    <p class="quote-text">
-
-    </p>
-    <p class="author-text"></p>
-  </div>
-  <button type="button" class="btn btn-primary" id="quote">New Quote</button>
-  <button type="button" class="btn btn-primary" id="tweet">Tweet it</button>
-</section>
-<footer>
-  <p>Copyright © Rafael J. Rodriguez 2015. All Rights Reserved</p>
-</footer>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-
-
-
-  </body>
 </html>
