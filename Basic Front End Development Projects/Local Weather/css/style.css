@@ -1,9 +1,6 @@
-h1,
-h2,
-p {
+h1, h2, p {
   text-align: center;
 }
-
 footer {
   min-height: 10vh;
   padding-top: 30px;
@@ -11,12 +8,10 @@ footer {
   color: gray;
   background-color: black;
 }
-
 section {
   min-height: 90vh;
 }
-
-body{
+body {
   position: relative;
   background-image: url("http://www.kesq.com/image/view/-/27126678/medRes/1/-/maxh/360/maxw/640/-/emidwj/-/2014-07-24-Hot-weather-heat-wave-jpg.jpg");
   background-repeat: no-repeat;
