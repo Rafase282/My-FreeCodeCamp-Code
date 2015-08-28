@@ -1,23 +1,31 @@
 var getLocation = function(data) {
-  var weather = "http://api.openweathermap.org/data/2.5/weather?";
-  var lat = data.lat;
-  var lon = data.lon;
-  var city = data.city;
-  var state = data.regionName;
-  var temp = weather + 'lat=' + lat + '&lon=' + lon + format;
-  console.log(temp);
-
-  var getWeather = function(data) {
-    var temp = data.main.temp;
-    var description = data.weather[0].description;
-    html = '<i class="icon-' + data.weather.code + '"></i><p>' + temp + ' ' + description + '</p><p>' + city + ', ' + state + '</p>';
+  lat = data.lat;
+  lon = data.lon;
+  city = data.city;
+  state = data.regionName;
+  url = 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + data.lat + '&lon=' + data.lon + '&units=';
+  getWeather = function(data) {
+    temp = data.main.temp;
+    description = data.weather[0].description;
+    code = data.weather[0].icon;
+    wspeed = data.wind.speed;
+    html = '<img src="http://openweathermap.org/img/w/' + code + '.png" alt="Weather Icon">' + '<p> ' + Math.round(temp) + ' F, ' + description + '<br> Wind Speed: ' + wspeed + ' mph</p><p>' + city + ', ' + state + '</p>';
     $("#weather").html(html);
   };
-
-  $.getJSON(temp, getWeather, 'jsonp');
-
+  $.getJSON(url + 'imperial', getWeather, 'jsonp');
 };
 
 $(document).ready(function() {
   $.getJSON('http://ip-api.com/json', getLocation, 'jsonp');
+  $('input[type=radio][name=farenheit-celcius]').change(function() {
+    if ($('#f').is(':checked')) {
+      $.getJSON(url + 'imperial', getWeather, 'jsonp');
+      html = '<img src="http://openweathermap.org/img/w/' + code + '.png" alt="Weather Icon">' + '<p> ' + Math.round(temp) + ' F, ' + description + '<br> Wind Speed: ' + wspeed + ' mph</p><p>' + city + ', ' + state + '</p>';
+      $("#weather").html(html);
+    } else {
+      $.getJSON(url + 'metric', getWeather, 'jsonp');
+      html = '<img src="http://openweathermap.org/img/w/' + code + '.png" alt="Weather Icon">' + '<p> ' + Math.round(temp) + ' F, ' + description + '<br> Wind Speed: ' + wspeed + ' km/h</p><p>' + city + ', ' + state + '</p>';
+      $("#weather").html(html);
+    }
+  });
 });

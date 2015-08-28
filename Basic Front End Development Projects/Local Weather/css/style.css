@@ -1,5 +1,9 @@
 h1, h2, p, form {
   text-align: center;
+  font-family: "Georgia";
+}
+p {
+  font-size: 20px;
 }
 footer {
   min-height: 10vh;
@@ -18,4 +22,11 @@ body {
   background-position: center top;
   background-size: 100% 100%;
 }
-form {}
+.well {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
