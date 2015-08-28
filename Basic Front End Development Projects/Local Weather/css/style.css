@@ -1,4 +1,4 @@
-h1, h2, p {
+h1, h2, p, form {
   text-align: center;
 }
 footer {
@@ -18,3 +18,4 @@ body {
   background-position: center top;
   background-size: 100% 100%;
 }
+form {}
