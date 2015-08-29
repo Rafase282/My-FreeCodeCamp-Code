@@ -11,7 +11,7 @@ var getLocation = function (data) {
   getWeather = function (data) {
     var temp = data.main.temp
     var tempUnit = units === 'metric' ? 'C' : 'F'
-    var windUnit = units === 'metric' ? ' knots' : ' km/h'
+    var windUnit = units === 'metric' ? ' meters/s' : ' miles/h'
     var description = data.weather[0].description
     var code = data.weather[0].icon
     var wspeed = data.wind.speed
