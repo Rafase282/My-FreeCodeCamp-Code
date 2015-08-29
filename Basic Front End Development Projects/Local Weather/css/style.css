@@ -1,4 +1,4 @@
-h1, h2, p, form {
+p, form {
   text-align: center;
   font-family: "Georgia";
 }
@@ -17,7 +17,6 @@ section {
 }
 body {
   position: relative;
-  background-image: url("http://www.kesq.com/image/view/-/27126678/medRes/1/-/maxh/360/maxw/640/-/emidwj/-/2014-07-24-Hot-weather-heat-wave-jpg.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% 100%;
@@ -25,6 +24,12 @@ body {
 .well {
   margin-left: 35%;
   margin-right: 35%;
+}
+h1, h2 {
+  margin-left: 35%;
+  margin-right: 35%;
+  text-align: center;
+  font-family: "Georgia";
 }
 img {
   width: 100px;
