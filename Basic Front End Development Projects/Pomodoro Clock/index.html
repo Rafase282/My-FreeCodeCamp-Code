@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <section class='container-fluid'>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class='text-primary'>Pomodoro Clock!</h1>
+      </div>
+    </div>
+
+    <div class="row top-row">
+      <div class="col-xs-6 text-primary">
+        <h4>Break Length</h4>
+      </div>
+      <div class="col-xs-6 text-primary">
+        <h4>Session Length</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <button type="button" class="btn btn-link btn-sm">-</button>
+        <button type="button" class="btn btn-link btn-lg" id="break-time">5</button>
+        <button type="button" class="btn btn-link btn-sm">+</button>
+      </div>
+      <div class="col-xs-6">
+        <button type="button" class="btn btn-link btn-sm">-</button>
+        <button type="button" class="btn btn-link btn-lg" id="work-time">25</button>
+        <button type="button" class="btn btn-link btn-sm">+</button>
+      </div>
+    </div>
+
+
+    <div class="row top-row text-primary">
+      <button type="button" class="circle">
+        <h2>Session</h2>
+        <h2 id="timer">25</h2>
+      </button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>Copyright © Rafael J. Rodriguez 2015. All Rights Reserved</p>
+  </footer>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

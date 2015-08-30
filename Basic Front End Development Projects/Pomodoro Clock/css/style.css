@@ -1,0 +1,28 @@
+h1, p, .row {
+  text-align: center;
+}
+section {
+  min-height: 90vh;
+}
+footer {
+  min-height: 10vh;
+  padding-top: 30px;
+  padding-bottom: 1px;
+  background-color: black;
+  color: #e4f1fe;
+}
+body {
+  position: relative;
+  background-color: #d3d3d3;
+}
+.top-row {
+  margin-top: 50px
+}
+.circle {
+  border-radius: 50%;
+  border: 2px solid #134369;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+}
