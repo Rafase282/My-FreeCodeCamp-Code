@@ -29,21 +29,26 @@
 
     <div class="row">
       <div class="col-xs-6">
-        <button type="button" class="btn btn-link btn-sm">-</button>
+        <button type="button" class="btn btn-link btn-sm" id="minus">-</button>
         <button type="button" class="btn btn-link btn-lg" id="break-time">5</button>
-        <button type="button" class="btn btn-link btn-sm">+</button>
+        <button type="button" class="btn btn-link btn-sm" id="plus">+</button>
       </div>
       <div class="col-xs-6">
-        <button type="button" class="btn btn-link btn-sm">-</button>
+        <button type="button" class="btn btn-link btn-sm" id="minus2">-</button>
         <button type="button" class="btn btn-link btn-lg" id="work-time">25</button>
-        <button type="button" class="btn btn-link btn-sm">+</button>
+        <button type="button" class="btn btn-link btn-sm" id="plus2">+</button>
       </div>
     </div>
 
     <div class="row top-row text-primary">
       <button type="button" class="circle">
         <h2>Session</h2>
-        <h2 id="timer">25</h2>
+        <div id="timer">
+          <span id="hour">0</span>:
+          <span id="min">25</span>:
+          <span id="sec">00</span>
+        </div>
+
       </button>
     </div>
 
