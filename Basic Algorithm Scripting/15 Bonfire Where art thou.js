@@ -15,13 +15,16 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
+// this code no longer works as per the new version.
 function where(collection, source) {
   var arr = [];
   for (var ob in collection) {
     if (collection[ob][Object.keys(source)] === source[Object.keys(source)]) {
       arr.push(collection[ob]);
     }
+
   }
+
   return arr;
 }
 
