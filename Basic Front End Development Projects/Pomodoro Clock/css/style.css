@@ -1,5 +1,6 @@
 h1, p, .row {
   text-align: center;
+  font-size: 130%;
 }
 section {
   min-height: 90vh;
@@ -13,10 +14,13 @@ footer {
 }
 body {
   position: relative;
-  background-color: #d3d3d3;
+  background-color: #ACECF7;
 }
 .top-row {
   margin-top: 50px
+}
+.bottom {
+  margin-bottom: 50px;
 }
 .well {
   border-radius: 50%;
