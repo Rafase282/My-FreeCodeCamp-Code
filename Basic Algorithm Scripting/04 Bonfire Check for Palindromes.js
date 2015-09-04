@@ -22,12 +22,9 @@ http://www.freecodecamp.com/rafase282
 */
 
 function palindrome(str) {
-  str = str.replace(/[^a-zA-Z]/g,'').toLowerCase();
-  if (str === str.split('').reverse().join('')) {
-    return true;
-  } else {
-    return false;
-  }
+  var normalizedStr = str.replace(/[\W_]/g, '').toLowerCase();
+  var reverseStr = normalizedStr.split('').reverse().join('');
+  return normalizedStr === reverseStr;
 }
 
-palindrome("eye");
+palindrome('eye');
