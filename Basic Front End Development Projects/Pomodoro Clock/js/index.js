@@ -12,17 +12,17 @@ var padzeros = function(value) {
 
 var addTime = function(section) {
   section.text(+section.text() + 1);
-  var min = section.text() % 60;
+  var min = +section.text() % 60;
   var hour = +$hours.text();
 
-  if (section.text() < 60) {
-    $minutes.text(padzeros(section.text()));
+  if (+section.text() < 60) {
+    $minutes.text(padzeros(+section.text()));
     if (min === 0 && hour > 1) {
       $hours.text(padzeros(hour - 1));
     }
   }
 
-  if (section.text() >= 60) {
+  if (+section.text() >= 60) {
 
     if (min === 0) {
       hour++;
@@ -34,12 +34,12 @@ var addTime = function(section) {
 };
 
 var subTime = function(section) {
-  if (section.text() > 1) {
-    section.text(section.text() - 1);
-    var min = section.text() % 60;
+  if (+section.text() > 1) {
+    section.text(+section.text() - 1);
+    var min = +section.text() % 60;
     var hour = +$hours.text();
 
-    if (section.text() < 60) {
+    if (+section.text() < 60) {
       $minutes.text(padzeros(min));
       if (min !== 0 && hour >= 1) {
         $hours.text(padzeros(hour - 1));
@@ -47,7 +47,7 @@ var subTime = function(section) {
 
     }
 
-    if (section.text() >= 60) {
+    if (+section.text() >= 60) {
       $minutes.text(padzeros(min));
       if (min === 0 && hour > 1) {
         $hours.text(padzeros(hour - 1));
@@ -58,22 +58,24 @@ var subTime = function(section) {
 
 // Controls for Break Length
 $('#minus').click(function() {
-  if ($breakT.text() > 1) {
-    $breakT.text($breakT.text() - 1);
-  }
+  subTime($breakT);
+  $status.text('Break!');
 });
 
 $('#plus').click(function() {
-  $breakT.text(+$breakT.text() + 1);
+  addTime($breakT);
+  $status.text('Break!');
 });
 
 // Controls for Session Length
 $('#minus2').click(function() {
   subTime($workT);
+  $status.text('Work!');
 });
 
 $('#plus2').click(function() {
   addTime($workT);
+  $status.text('Work!');
 });
 
 working = false;
@@ -85,7 +87,6 @@ $('#start').click(function() {
   var hours = +$hours.text();
   var minutes = +$minutes.text();
   var seconds = +$seconds.text();
-
 
   function clockStart() {
     timerId = setInterval(update, 1000);
@@ -106,18 +107,26 @@ $('#start').click(function() {
 
   function update() {
 
-    if (hours > 0 && minutes === 0) hours--;
+    if (hours > 0 && minutes === 0 && seconds === 0) {
+      hours--;
+    }
+
     document.getElementById('hour').innerHTML = padzeros(hours);
 
-    if (minutes > 0 && seconds === 0) minutes--;
+    if (minutes > 0 && seconds === 0) {
+      minutes--;
+    }
+
     document.getElementById('min').innerHTML = padzeros(minutes);
 
-    if (seconds === 0) {
-      seconds = 61;
+    if (seconds > 0) {
       seconds--;
     }
 
-    if (seconds > 0) seconds--;
+    if (seconds === 0) {
+      seconds = 59;
+    }
+
     document.getElementById('sec').innerHTML = padzeros(seconds);
 
     if (hours === 0 && minutes === 0 && seconds === 0 && $status.text() === 'Work!') {
@@ -146,6 +155,7 @@ $('#start').click(function() {
 
   $('#clear').click(function() {
     clockStop();
+    $status.text('Work!');
     $workT.text($workT.text() - 1);
     addTime($workT);
     $hours.text('00');
