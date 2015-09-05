@@ -7,24 +7,32 @@ $seconds = $('#sec');
 $status = $('#status');
 
 var padzeros = function(value) {
+
   return ('00' + value).slice(-2);
+
 };
 
 var addTime = function(section) {
+
   section.text(+section.text() + 1);
   var min = +section.text() % 60;
   var hour = +$hours.text();
 
   if (+section.text() < 60) {
-    $minutes.text(padzeros(+section.text()));
+
+    $minutes.text(padzeros(section.text()));
+
     if (min === 0 && hour > 1) {
+
       $hours.text(padzeros(hour - 1));
+
     }
   }
 
   if (+section.text() >= 60) {
 
     if (min === 0) {
+
       hour++;
       $hours.text(padzeros(hour));
     }
@@ -34,6 +42,7 @@ var addTime = function(section) {
 };
 
 var subTime = function(section) {
+
   if (+section.text() > 1) {
     section.text(+section.text() - 1);
     var min = +section.text() % 60;
@@ -47,7 +56,7 @@ var subTime = function(section) {
 
     }
 
-    if (+section.text() >= 60) {
+    if (section.text() >= 60) {
       $minutes.text(padzeros(min));
       if (min === 0 && hour > 1) {
         $hours.text(padzeros(hour - 1));
@@ -58,24 +67,24 @@ var subTime = function(section) {
 
 // Controls for Break Length
 $('#minus').click(function() {
-  subTime($breakT);
   $status.text('Break!');
+  subTime($breakT);
 });
 
 $('#plus').click(function() {
-  addTime($breakT);
   $status.text('Break!');
+  addTime($breakT);
 });
 
 // Controls for Session Length
 $('#minus2').click(function() {
-  subTime($workT);
   $status.text('Work!');
+  subTime($workT);
 });
 
 $('#plus2').click(function() {
-  addTime($workT);
   $status.text('Work!');
+  addTime($workT);
 });
 
 working = false;
@@ -83,7 +92,7 @@ working = false;
 // Controls for Timer
 $('#start').click(function() {
 
-  var timerId; // current timer if started
+  var timerId;
   var hours = +$hours.text();
   var minutes = +$minutes.text();
   var seconds = +$seconds.text();
@@ -100,14 +109,16 @@ $('#start').click(function() {
     working = false;
   }
 
+  var audio = new Audio('http://soundbible.com/grab.php?id=1377&type=mp3');
+
   function beep() {
-    var audio = new Audio('http://soundbible.com/grab.php?id=1377&type=mp3');
+
     audio.play();
   }
 
   function update() {
 
-    if (hours > 0 && minutes === 0 && seconds === 0) {
+    if (hours > 0 && minutes === 0) {
       hours--;
     }
 
@@ -119,12 +130,12 @@ $('#start').click(function() {
 
     document.getElementById('min').innerHTML = padzeros(minutes);
 
-    if (seconds > 0) {
-      seconds--;
+    if (seconds === 0) {
+      seconds = 60;
     }
 
-    if (seconds === 0) {
-      seconds = 59;
+    if (seconds > 0) {
+      seconds--;
     }
 
     document.getElementById('sec').innerHTML = padzeros(seconds);
@@ -132,12 +143,14 @@ $('#start').click(function() {
     if (hours === 0 && minutes === 0 && seconds === 0 && $status.text() === 'Work!') {
       beep();
       $status.text('Break!');
-      $breakT.text($breakT.text() - 1);
+      minutes = +$breakT.text();
+      $breakT.text(+$breakT.text() - 1);
       addTime($breakT);
     } else if (hours === 0 && minutes === 0 && seconds === 0 && $status.text() === 'Break!') {
       beep();
       $status.text('Work!');
-      $workT.text($workT.text() - 1);
+      minutes = +$workT.text();
+      $workT.text(+$workT.text() - 1);
       addTime($workT);
     }
 
@@ -155,7 +168,6 @@ $('#start').click(function() {
 
   $('#clear').click(function() {
     clockStop();
-    $status.text('Work!');
     $workT.text($workT.text() - 1);
     addTime($workT);
     $hours.text('00');
