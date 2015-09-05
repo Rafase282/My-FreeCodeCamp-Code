@@ -1,0 +1,35 @@
+h1, p, .row {
+  text-align: center;
+  font-size: 130%;
+}
+section {
+  min-height: 90vh;
+}
+footer {
+  min-height: 10vh;
+  padding-top: 30px;
+  padding-bottom: 1px;
+  background-color: black;
+  color: #e4f1fe;
+}
+body {
+  position: relative;
+  background-color: #ACECAA;
+}
+.top-row {
+  margin-top: 50px
+}
+.bottom {
+  margin-bottom: 50px;
+}
+.well {
+  border-radius: 50%;
+  border: 2px solid #134369;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}

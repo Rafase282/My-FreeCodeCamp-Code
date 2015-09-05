@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Clock v2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <section class='container-fluid'>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class='text-primary'>Pomodoro Clock V2!</h1>
+    </div>
+  </div>
+
+  <div class="row top-row">
+    <div class="col-xs-6 text-primary">
+      <h3>Break Length</h3>
+    </div>
+    <div class="col-xs-6 text-primary">
+      <h3>Session Length</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-link btn-sm" id="minus">-</button>
+      <button type="button" class="btn btn-link btn-lg" id="break-time">5</button>
+      <button type="button" class="btn btn-link btn-sm" id="plus">+</button>
+    </div>
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-link btn-sm" id="minus2">-</button>
+      <button type="button" class="btn btn-link btn-lg" id="work-time">25</button>
+      <button type="button" class="btn btn-link btn-sm" id="plus2">+</button>
+    </div>
+  </div>
+
+  <div class="row top-row text-primary">
+    <div class="well">
+      <h2 id="status">Work!</h2>
+      <br>
+      <div id="timer">
+        <span id="hour">00</span>:
+        <span id="min">25</span>:
+        <span id="sec">00</span>
+      </div>
+    </div>
+  </div>
+  <div class="row top-row text-primary bottom">
+    <button type="button" id="start"> Start
+    </button>
+    <button type="button" id="pause"> Pause
+    </button>
+    <button type="button" id="stop"> Stop
+    </button>
+  </div>
+
+</section>
+
+<footer>
+  <p>Copyright © Rafael J. Rodriguez 2015. All Rights Reserved</p>
+</footer>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
