@@ -59,6 +59,7 @@ function update() {
   if (time <= 0.0) { // Already done
     return;
   }
+
   var tnow = (new Date()).getTime();
   var dt = (tnow - tlast) / 1000.0;
   tlast = tnow;
@@ -75,6 +76,7 @@ function update() {
       time = $workT.text() * 60;
     }
   }
+
   updateDisplay(time);
   if (running) {
     requestAnimationFrame(update);
@@ -86,6 +88,7 @@ function run() {
   if (time <= 0.0) {
     time = $workT.text() * 60;
   }
+
   tlast = (new Date()).getTime();
   running = true;
   requestAnimationFrame(update);

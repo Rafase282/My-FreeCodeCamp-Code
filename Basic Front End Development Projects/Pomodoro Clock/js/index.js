@@ -166,7 +166,7 @@ $('#start').click(function() {
     clockStop();
   });
 
-  $('#clear').click(function() {
+  $('#stop').click(function() {
     clockStop();
     $workT.text($workT.text() - 1);
     addTime($workT);
