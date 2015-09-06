@@ -16,8 +16,9 @@ function drop(arr, func) {
   return arr.filter(func);
 }
 drop([1, 2, 3], function(n) {return n < 3; });
-Code from Max Helmetag (https://github.com/mhelmetag)
 */
+
+// Code from Max Helmetag (https://github.com/mhelmetag)
 
 function drop(arr, func) {
   // Drop them elements.
