@@ -135,11 +135,11 @@ function stop() {
 
 var bStart = document.getElementById('start');
 var bPause = document.getElementById('pause');
-var bStop = document.getElementById('stop');
+var bReset = document.getElementById('reset');
 
 bStart.onclick = run;
 bPause.onclick = pause;
-bStop.onclick = stop;
+bReset.onclick = stop;
 
 $('#progress').waterbubble(
 
