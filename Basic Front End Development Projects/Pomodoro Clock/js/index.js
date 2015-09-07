@@ -166,7 +166,7 @@ $('#start').click(function() {
     clockStop();
   });
 
-  $('#stop').click(function() {
+  $('#clear').click(function() {
     clockStop();
     $workT.text($workT.text() - 1);
     addTime($workT);
@@ -174,5 +174,36 @@ $('#start').click(function() {
     $seconds.text('00');
 
   });
+
+});
+
+$('#progress').waterbubble({
+
+  // bubble size
+  radius: 100,
+
+  // border width
+  lineWidth: undefined,
+
+  // data to present
+  data: 0.5,
+
+  // color of the water bubble
+  waterColor: 'rgba(25, 139, 201, 1)',
+
+  // text color
+  textColor: 'rgba(06, 85, 128, 0.8)',
+
+  // custom font family
+  font: '',
+
+  // show wave
+  wave: true,
+
+  // custom text displayed inside the water bubble
+  txt: undefined,
+
+  // enable water fill animation
+  animation: true,
 
 });
