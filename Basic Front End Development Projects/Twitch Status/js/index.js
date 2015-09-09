@@ -20,8 +20,11 @@ $(document).ready(function() {
     for (var stream in AccInfo) {
       if (AccInfo[stream].status === undefined) {
         data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>Offline</p></div>';
+      } else if (AccInfo[stream].status === 'Account Closed') {
+        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>Account Closed</p></div>';
+
       } else {
-        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>' + AccInfo[stream].status + '</p>' + '<p class= \'stat\'>' + AccInfo[stream].viewers + '</p></div>';
+        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>' + AccInfo[stream].status + '</p>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + AccInfo[stream].viewers + '</p></div>';
 
       }
 
@@ -51,7 +54,14 @@ $(document).ready(function() {
   function getStreamInfo(currentStream) {
     $.getJSON(streams + currentStream.name + '?callback=?', function(feed) {
       secondPassPos++;
-      if (feed.stream !== null && feed.stream !== 'undefined') {
+      if (feed.status === 422) {
+        currentStream.status = 'Account Closed';
+        if (secondPassPos === accounts.length) {
+          render();
+        }
+      }
+
+      if (feed.stream !== null && feed.stream !== undefined) {
         currentStream.status = feed.stream.channel.status;
         currentStream.url = feed.stream.channel.url;
         currentStream.viewers = feed.stream.viewers;
