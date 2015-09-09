@@ -4,39 +4,45 @@ var secondPassPos = 1;
 var logo = 'http://i.imgur.com/vPEp5RQ.png';
 var streams = 'https://api.twitch.tv/kraken/streams/';
 var users = 'https://api.twitch.tv/kraken/users/';
-var sd = {};
+var AccInfo = {};
+var data = '';
 
 $(document).ready(function() {
-  function account(name, logo, status, STREAM_LINK, data) {
+  function Account(name, logo, status, url, viewers) {
     this.name = name;
     this.logo = logo;
     this.status = status;
-    this.STREAM_LINK = STREAM_LINK;
-    this.data = null;
+    this.url = url;
+    this.viewers = viewers;
   }
 
   function render() {
-    console.log(sd);
-    for (var stream in sd) {
-      $('.list').append(
-        '<div>' + '<img class= \'logo\' src = "' + sd[stream].logo + '">' + sd[stream].name + '<p>' + sd[stream].status + '</p></div>'
-      );
+    for (var stream in AccInfo) {
+      if (AccInfo[stream].status === undefined) {
+        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>Offline</p></div>';
+      } else {
+        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>' + AccInfo[stream].status + '</p>' + '<p class= \'stat\'>' + AccInfo[stream].viewers + '</p></div>';
+
+      }
+
+      $('.list').append(data);
+
     }
   }
 
-  function getUserInfo(currentName) {
-    $.getJSON(users + currentName + '?callback=?', function(response) {
+  function getUserInfo(CurrentName) {
+    $.getJSON(users + CurrentName + '?callback=?', function(response) {
       if (response.logo === null) {
-        currentName = new account(response.display_name, logo);
+        CurrentName = new Account(response.display_name, logo);
       } else {
-        currentName = new account(response.display_name, response.logo);
+        CurrentName = new Account(response.display_name, response.logo);
       };
 
       firstPassPos++;
-      sd[currentName.name] = currentName;
+      AccInfo[CurrentName.name] = CurrentName;
       if (firstPassPos === accounts.length) {
-        for (var key in sd) {
-          getStreamInfo(sd[key]);
+        for (var key in AccInfo) {
+          getStreamInfo(AccInfo[key]);
         }
       }
     });
@@ -47,7 +53,8 @@ $(document).ready(function() {
       secondPassPos++;
       if (feed.stream !== null && feed.stream !== 'undefined') {
         currentStream.status = feed.stream.channel.status;
-        currentStream.STREAM_LINK = feed.stream.channel.url;
+        currentStream.url = feed.stream.channel.url;
+        currentStream.viewers = feed.stream.viewers;
         if (secondPassPos === accounts.length) {
           render();
         }
