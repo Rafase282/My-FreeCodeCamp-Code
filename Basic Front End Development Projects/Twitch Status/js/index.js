@@ -20,11 +20,13 @@ $(document).ready(function() {
     for (var stream in AccInfo) {
       if (AccInfo[stream].status === undefined) {
         data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '  <span class="glyphicon glyphicon-info-sign"></span><p class= \'stat\'>Offline</p></div>';
+        $('.list3').append(data);
       } else if (AccInfo[stream].status === 'Account Closed') {
         data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '  <span class="glyphicon glyphicon-warning-sign"></span><p class= \'stat\'>Account Closed</p></div>';
 
       } else {
         data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '  <span class="glyphicon glyphicon-ok-sign"></span> <a href="' + AccInfo[stream].url + '" target="_blank"><p class= \'stat\'>' + AccInfo[stream].status + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + AccInfo[stream].viewers + '</p></div>';
+        $('.list2').append(data);
 
       }
 
