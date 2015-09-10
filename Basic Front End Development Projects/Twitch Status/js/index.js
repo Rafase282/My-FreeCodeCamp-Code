@@ -24,7 +24,7 @@ $(document).ready(function() {
         data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>Account Closed</p></div>';
 
       } else {
-        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<p class= \'stat\'>' + AccInfo[stream].status + '</p>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + AccInfo[stream].viewers + '</p></div>';
+        data = '<div>' + '<img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '<a href="' + AccInfo[stream].url + '" target="_blank"><p class= \'stat\'>' + AccInfo[stream].status + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + AccInfo[stream].viewers + '</p></div>';
 
       }
 
