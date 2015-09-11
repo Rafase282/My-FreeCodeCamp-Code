@@ -61,7 +61,7 @@ $(document).ready(function() {
                 if (secondPassPos === accounts.length) {
                     render();
                 }
-            }
+            };
 
             if (feed.stream !== null && feed.stream !== undefined) {
                 currentStream.status = feed.stream.channel.status;
@@ -70,9 +70,15 @@ $(document).ready(function() {
                 if (secondPassPos === accounts.length) {
                     render();
                 }
-            };
+            }
         });
     }
 
     accounts.forEach(getUserInfo);
+
+    // Search box
+
+    $("input").keyup(function() {
+        $("input").css("background-color", "pink");
+    });
 });
