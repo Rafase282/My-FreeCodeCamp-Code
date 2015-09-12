@@ -1,41 +1,32 @@
 .list {
   list-style: none;
 }
-
 .list div {
   display: list-item;
 }
-
-#home,
-#menu1,
-#menu2 {
+#home, #menu1, #menu2 {
   padding: 25px 25px;
   background-color: #996633;
   border-radius: 25px;
 }
-
 a {
   color: white;
 }
-
 .logo {
   border-radius: 50%;
   height: 42px;
   width: 42px;
   margin-right: 10px;
 }
-
 .stat {
   margin-left: 52px;
 }
-
 section {
   min-height: 95vh;
   padding-top: 1%;
   color: #fff;
   background-color: #00bcd4;
 }
-
 footer {
   background-color: black;
   color: gray;
@@ -46,7 +37,6 @@ footer {
   position: relative;
   text-align: center;
 }
-
 .search-form .form-group {
   float: right !important;
   transition: all 0.35s, border-radius 0s;
@@ -57,7 +47,6 @@ footer {
   border-radius: 25px;
   border: 1px solid #ccc;
 }
-
 .search-form .form-group input.form-control {
   padding-right: 20px;
   border: 0 none;
@@ -65,34 +54,24 @@ footer {
   box-shadow: none;
   display: block;
 }
-
-.search-form .form-group input.form-contr
-ol::-webkit-input-placeholder {
+.search-form .form-group input.form-contr ol::-webkit-input-placeholder {
   display: none;
 }
-
 .search-form .form-group input.form-control:-moz-placeholder {
   /* Firefox 18- */
-  
   display: none;
 }
-
 .search-form .form-group input.form-control::-moz-placeholder {
   /* Firefox 19+ */
-  
   display: none;
 }
-
 .search-form .form-group input.form-control:-ms-input-placeholder {
   display: none;
 }
-
-.search-form .form-group:hover,
-.search-form .form-group.hover {
+.search-form .form-group:hover, .search-form .form-group.hover {
   width: 100%;
   border-radius: 4px 25px 25px 4px;
 }
-
 .search-form .form-group span.form-control-feedback {
   position: absolute;
   top: -1px;
