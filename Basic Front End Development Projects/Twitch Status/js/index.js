@@ -16,21 +16,29 @@ $(document).ready(function() {
     this.data = data;
   }
 
-  function render() {
-    for (var stream in AccInfo) {
-      if (AccInfo[stream].status === undefined) {
-        AccInfo[stream].data = '<div class= "user" id="' + AccInfo[stream].name + '"><img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '  <span class="glyphicon glyphicon-info-sign"></span><p class= \'stat\'>Offline</p></div>';
-        $('.list3').append(AccInfo[stream].data);
-      } else if (AccInfo[stream].status === 'Account Closed') {
-        AccInfo[stream].data = '<div class= "user" id="' + AccInfo[stream].name + '"><img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '  <span class="glyphicon glyphicon-warning-sign"></span><p class= \'stat\'>Account Closed</p></div>';
+  function render(RegEx) {
+    var CAccInfo;
+    CAccInfo = AccInfo;
+    if (typeof RegEx !== 'undefined') {
+      var CAccInfo = AccInfo.filter(function(val) {
+        return (val.match(RegEx));
+      });
+    }
+
+    for (var stream in CAccInfo) {
+      if (CAccInfo[stream].status === undefined) {
+        CAccInfo[stream].data = '<div class= "user" id="' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-info-sign"></span><p class= \'stat\'>Offline</p></div>';
+        $('.list3').append(CAccInfo[stream].data);
+      } else if (CAccInfo[stream].status === 'Account Closed') {
+        CAccInfo[stream].data = '<div class= "user" id="' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-warning-sign"></span><p class= \'stat\'>Account Closed</p></div>';
 
       } else {
-        AccInfo[stream].data = '<div class= "user" id="' + AccInfo[stream].name + '"><img class= \'logo\' src = "' + AccInfo[stream].logo + '">' + AccInfo[stream].name + '  <span class="glyphicon glyphicon-ok-sign"></span> <a href="' + AccInfo[stream].url + '" target="_blank"><p class= \'stat\'>' + AccInfo[stream].status + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + AccInfo[stream].viewers + '</p></div>';
-        $('.list2').append(AccInfo[stream].data);
+        CAccInfo[stream].data = '<div class= "user" id="' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-ok-sign"></span> <a href="' + CAccInfo[stream].url + '" target="_blank"><p class= \'stat\'>' + CAccInfo[stream].status + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + CAccInfo[stream].viewers + '</p></div>';
+        $('.list2').append(CAccInfo[stream].data);
 
       }
 
-      $('.list').append(AccInfo[stream].data);
+      $('.list').append(CAccInfo[stream].data);
 
     }
   }
@@ -77,22 +85,36 @@ $(document).ready(function() {
   accounts.forEach(getUserInfo);
 
   // Search box
+});
 
-  $('input').keyup(function() {
-    if ($('input').val().length > 0) {
-      // Display matching names by hiding anythign that is not what we want from the  class= "user"
-      var reg = new RegExp($('input').val(), 'ig');
-      $('.user').css('display', 'none');
+$('input').keyup(function() {
+  search();
 
-      for (var a in AccInfo) {
-        if (reg.test(AccInfo[a].name)) {
-          $('#' + AccInfo[a].name).css('display', 'block');
-        }
+});
+
+function search() {
+  if ($('input').val().length > 0) {
+    // Display matching names by hiding anythign that is not what we want from the  class= "user"
+    var reg = new RegExp($('input').val(), 'ig');
+    $('.user').css('display', 'none');
+
+    for (var a in AccInfo) {
+      if (reg.test(AccInfo[a].name)) {
+        $('#' + AccInfo[a].name).css('display', 'block');
       }
-
-    } else if ($('input').val().length < 1) {
-      // display everything again
-      $('.user').css('display', 'block');
     }
+
+  } else if ($('input').val().length < 1) {
+    // display everything again
+    $('.user').css('display', 'block');
+  }
+
+  $('input').unbind('keyup');
+  $('input').keyup(function() {
+    search();
   });
+}
+
+$('input').keyup(function() {
+  search();
 });
