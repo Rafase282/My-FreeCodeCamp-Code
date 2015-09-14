@@ -87,15 +87,10 @@ $(document).ready(function() {
   // Search box
 });
 
-$('input').keyup(function() {
-  search();
-
-});
-
 function search() {
-  if ($('input').val().length > 0) {
+  if ($('#search').val().length > 0) {
     // Display matching names by hiding anythign that is not what we want from the  class= "user"
-    var reg = new RegExp($('input').val(), 'ig');
+    var reg = new RegExp($('#search').val(), 'ig');
     $('.user').css('display', 'none');
 
     for (var a in AccInfo) {
@@ -104,17 +99,17 @@ function search() {
       }
     }
 
-  } else if ($('input').val().length < 1) {
+  } else if ($('#search').val().length < 1) {
     // display everything again
     $('.user').css('display', 'block');
   }
 
-  $('input').unbind('keyup');
-  $('input').keyup(function() {
+  $('#search').unbind('keyup');
+  $('#search').keyup(function() {
     search();
   });
 }
 
-$('input').keyup(function() {
+$('#search').keyup(function() {
   search();
 });

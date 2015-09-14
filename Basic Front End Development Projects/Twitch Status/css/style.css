@@ -4,7 +4,7 @@
 .list div {
   display: list-item;
 }
-#home, #menu1, #menu2 {
+#all, #online, #offline {
   padding: 25px 25px;
   background-color: #996633;
   border-radius: 25px;
@@ -54,7 +54,7 @@ footer {
   box-shadow: none;
   display: block;
 }
-.search-form .form-group input.form-contr ol::-webkit-input-placeholder {
+.search-form .form-group input.form-control::-webkit-input-placeholder {
   display: none;
 }
 .search-form .form-group input.form-control:-moz-placeholder {
