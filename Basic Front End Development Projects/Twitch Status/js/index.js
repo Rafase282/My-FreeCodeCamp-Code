@@ -27,13 +27,13 @@ $(document).ready(function() {
 
     for (var stream in CAccInfo) {
       if (CAccInfo[stream].status === undefined) {
-        CAccInfo[stream].data = '<div class= "user" id="' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-info-sign"></span><p class= \'stat\'>Offline</p></div>';
+        CAccInfo[stream].data = '<div class= "user ' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-info-sign"></span><p class= \'stat\'>Offline</p></div>';
         $('.list3').append(CAccInfo[stream].data);
       } else if (CAccInfo[stream].status === 'Account Closed') {
-        CAccInfo[stream].data = '<div class= "user" id="' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-warning-sign"></span><p class= \'stat\'>Account Closed</p></div>';
+        CAccInfo[stream].data = '<div class= "user ' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-warning-sign"></span><p class= \'stat\'>Account Closed</p></div>';
 
       } else {
-        CAccInfo[stream].data = '<div class= "user" id="' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-ok-sign"></span> <a href="' + CAccInfo[stream].url + '" target="_blank"><p class= \'stat\'>' + CAccInfo[stream].status + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + CAccInfo[stream].viewers + '</p></div>';
+        CAccInfo[stream].data = '<div class= "user ' + CAccInfo[stream].name + '"><img class= \'logo\' src = "' + CAccInfo[stream].logo + '">' + CAccInfo[stream].name + '  <span class="glyphicon glyphicon-ok-sign"></span> <a href="' + CAccInfo[stream].url + '" target="_blank"><p class= \'stat\'>' + CAccInfo[stream].status + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon-eye-open"></span> ' + CAccInfo[stream].viewers + '</p></div>';
         $('.list2').append(CAccInfo[stream].data);
 
       }
@@ -95,7 +95,7 @@ function search() {
 
     for (var a in AccInfo) {
       if (reg.test(AccInfo[a].name)) {
-        $('#' + AccInfo[a].name).css('display', 'block');
+        $('.' + AccInfo[a].name).css('display', 'block');
       }
     }
 
