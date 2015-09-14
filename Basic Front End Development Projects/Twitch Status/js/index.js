@@ -84,12 +84,11 @@ $(document).ready(function() {
 
   accounts.forEach(getUserInfo);
 
-  // Search box
 });
 
 function search() {
   if ($('#search').val().length > 0) {
-    // Display matching names by hiding anythign that is not what we want from the  class= "user"
+    // Display matching names by hiding anything that is not what we want from the  class= "user"
     var reg = new RegExp($('#search').val(), 'ig');
     $('.user').css('display', 'none');
 
