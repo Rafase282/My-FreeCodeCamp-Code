@@ -15,17 +15,19 @@ String.concat()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function diff(arr1, arr2) {
   // Same, same; but different.
   var newArr = arr1.concat(arr2);
-  function check(item){
+
+  function check(item) {
     if (arr1.indexOf(item) === -1 || arr2.indexOf(item) === -1) {
       return item;
     }
   }
+
   return newArr.filter(check);
 }
 
