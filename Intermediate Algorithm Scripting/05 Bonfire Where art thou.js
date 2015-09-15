@@ -15,15 +15,17 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
-// this code no longer works as per the new version.
 function where(collection, source) {
   var arr = [];
-  for (var ob in collection) {
-    if (collection[ob][Object.keys(source)] === source[Object.keys(source)]) {
-      arr.push(collection[ob]);
-    }
-
-  }
+  var keys = Object.keys(source);
+  // Filter array and remove the ones that do not have the keys from source.
+  arr = collection.filter(function(obj) {
+    //Use the Array method every() instead of a for loop to check for every key from source.
+    return keys.every(function(key) {
+      // Check if the object has the property and the same value.
+      return obj.hasOwnProperty(key) && obj[key] === source[key];
+    });
+  });
 
   return arr;
 }
