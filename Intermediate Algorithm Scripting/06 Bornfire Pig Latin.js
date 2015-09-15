@@ -20,26 +20,25 @@ String.split()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function translate(str) {
-    // Create variables to be used
-    var pigLatin = '';
-    var regex = /[aeiou]/gi;
-    // Check if the first character is a vowel
-    if (str[0].match(regex)){
-        pigLatin = str + 'way';
-    } else {
-        // Find how many consonants before the firs vowel.
-        var vowelIndice = str.indexOf(str.match(regex)[0]);
-        // Take the string from the first vowel to the last char
-        // then add the consonants that were previously omitted and add the ending.
-        pigLatin = str.substr(vowelIndice) + str.substr(0,vowelIndice) + 'ay';
-    }
-    return pigLatin;
-}
+  // Create variables to be used
+  var pigLatin = '';
+  var regex = /[aeiou]/gi;
 
-console.log(translate("consonant"));
-console.log(translate("Ugricultura"));
-console.log(translate("glove"));
+  // Check if the first character is a vowel
+  if (str[0].match(regex)) {
+    pigLatin = str + 'way';
+  } else {
+    // Find how many consonants before the firs vowel.
+    var vowelIndice = str.indexOf(str.match(regex)[0]);
+
+    // Take the string from the first vowel to the last char
+    // then add the consonants that were previously omitted and add the ending.
+    pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + 'ay';
+  }
+
+  return pigLatin;
+}
