@@ -26,6 +26,7 @@ function factorialize(num) {
   for (var n = 2; n <= num; n++) {
     factorial = factorial * n;
   }
+
   return factorial;
 }
 

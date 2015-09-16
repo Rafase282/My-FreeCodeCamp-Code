@@ -25,19 +25,20 @@ http://www.freecodecamp.com/rafase282
 */
 
 function mutation(arr) {
-	var first = arr[0].toLowerCase().split('');
-	var second = arr[1].toLowerCase().split('');
-	var temp = 0;
-	for (var s in second){
-		if (first.indexOf(second[s]) > -1) {
-			temp+= 0;
-		} else
-		    temp+=1;
-		}
-	if (temp === 0)
-		return true;
-	else
-		return false;
+  var first = arr[0].toLowerCase().split('');
+  var second = arr[1].toLowerCase().split('');
+  var temp = 0;
+  for (var s = 0; s < second.length; s++) {
+    if (first.indexOf(second[s]) > -1) {
+      temp += 0;
+    } else
+      temp += 1;
+  }
+
+  if (temp === 0)
+    return true;
+  else
+    return false;
 }
 
 mutation(['hello', 'hey']);

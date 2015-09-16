@@ -18,12 +18,13 @@ http://www.freecodecamp.com/rafase282
 */
 
 function truncate(str, num) {
-	var truncd = '';
-	if (str.length > num) {
-		truncd = str.slice(0,num-3) + '...';
-		return truncd;
-	}
-	return str;
+  var truncd = '';
+  if (str.length > num) {
+    truncd = str.slice(0, num - 3) + '...';
+    return truncd;
+  }
+
+  return str;
 }
 
 truncate('A-tisket a-tasket A green and yellow basket', 11);

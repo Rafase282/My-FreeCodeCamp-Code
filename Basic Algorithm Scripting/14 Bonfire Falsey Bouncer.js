@@ -17,9 +17,10 @@ http://www.freecodecamp.com/rafase282
 */
 
 function bouncer(arr) {
-  function isTruthy(arg){
+  function isTruthy(arg) {
     return Boolean(arg);
   }
+
   var filteredArray = arr.filter(isTruthy);
   return filteredArray;
 }
