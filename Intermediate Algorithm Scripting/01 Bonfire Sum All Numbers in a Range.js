@@ -16,17 +16,18 @@ Array.reduce()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function sumAll(arr) {
-    var max = Math.max(arr[0], arr[1]);
-    var min = Math.min(arr[0], arr[1]);
-    var temp = 0;
-    for (var i=min; i <= max; i++){
-        temp += i;
-    }
-  return(temp);
+  var max = Math.max(arr[0], arr[1]);
+  var min = Math.min(arr[0], arr[1]);
+  var temp = 0;
+  for (var i = min; i <= max; i++) {
+    temp += i;
+  }
+
+  return (temp);
 }
 
 sumAll([1, 4]);

@@ -34,4 +34,6 @@ function drop(arr, func) {
   return arr;
 }
 
-drop([1, 2, 3], function(n) {return n < 3; });
+drop([1, 2, 3], function(n) {
+  return n < 3;
+});

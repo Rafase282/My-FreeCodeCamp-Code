@@ -11,27 +11,27 @@ Array.isArray()
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function steamroller(arr) {
-	var flattenedArray = [];
-	// Create function that adds an element if it is not an array.
-	// If it is an array, then loops through it and uses recursion on that array.
-	var flatten = function (arg) {
-		if (!Array.isArray(arg)){
-			flattenedArray.push(arg);
-		} else {
-			for (var a in arg) {
-				flatten(arg[a]);
-			}
-		}
-	};
-	// Call the function for each element in the array
-	arr.forEach(flatten);
-	return flattenedArray;
+  var flattenedArray = [];
+
+  // Create function that adds an element if it is not an array.
+  // If it is an array, then loops through it and uses recursion on that array.
+  var flatten = function(arg) {
+    if (!Array.isArray(arg)) {
+      flattenedArray.push(arg);
+    } else {
+      for (var a in arg) {
+        flatten(arg[a]);
+      }
+    }
+  };
+
+  // Call the function for each element in the array
+  arr.forEach(flatten);
+  return flattenedArray;
 }
 
-steamroller([1, [], [3, [[4]]]]);
-
-
+steamroller([1, [2], [3, [[4]]]]);
