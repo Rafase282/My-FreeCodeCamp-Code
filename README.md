@@ -15,14 +15,19 @@ I will try to keep everything updated. If you are also part of the camp or would
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-Since the map changed, the order of the programs has also changed. Just check the wiki for the programs that have been completed and documented already.
+All coded has been done up to the **Advanced Algorithm Scripting**
 
 ## Wiki Status:
-I'm currently working on the **Basic Front End Development Projects** Tree.
+I'm currently working on the **Bonfire: Validate US Telephone Numbers** Tree.
 
 Completed:
 1. HTML5 and CSS
 2. Responsive Design with Bootstrap
 3. jQuery
 4. Basic JavaScript
-5. Basic Algorithm Scripting
+5. Object Oriented and Functional Programming
+6. Basic Algorithm Scripting
+7. Basic Front End Development Projects
+8. Intermediate Algorithm Scripting
+9. Upper Intermediate Algorithm Scripting
+10. Automated Testing and Debugging
