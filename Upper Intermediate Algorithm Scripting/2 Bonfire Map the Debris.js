@@ -19,26 +19,28 @@ Math.pow()
 
 Code by Rafael Rodriguez & https://github.com/ozydesign
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 function orbitalPeriod(arr) {
-	var GM = 398600.4418;
-	var earthRadius = 6367.4447;
-	var a = 2 * Math.PI;
-	var newArr = [];
-	var getOrbPeriod = function (obj) {
-	    var c = Math.pow(earthRadius + obj.avgAlt ,3);
-	    var b = Math.sqrt(c/GM);
-	    var orbPeriod = Math.round(a * b);
-	    delete obj.avgAlt;
-	    obj.orbitalPeriod = orbPeriod;
-	    return obj;
-	};
-	
-	for (var elem in arr){
-	    newArr.push(getOrbPeriod(arr[elem]));
-	}
-	return newArr;
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  var a = 2 * Math.PI;
+  var newArr = [];
+  var getOrbPeriod = function(obj) {
+    var c = Math.pow(earthRadius + obj.avgAlt, 3);
+    var b = Math.sqrt(c / GM);
+    var orbPeriod = Math.round(a * b);
+    delete obj.avgAlt;
+    obj.orbitalPeriod = orbPeriod;
+    return obj;
+  };
+
+  for (var elem in arr) {
+    newArr.push(getOrbPeriod(arr[elem]));
+  }
+
+  return newArr;
 }
-orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]);
+
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);

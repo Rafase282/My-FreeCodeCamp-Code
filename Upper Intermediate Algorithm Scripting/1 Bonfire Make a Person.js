@@ -19,32 +19,37 @@ Details of the Object Model
 
 Code by Rafael Rodriguez
 rafase282@gmail.com
-http://www.freecodecamp.com/rafase282 
+http://www.freecodecamp.com/rafase282
 */
 
 var Person = function(firstAndLast) {
-    
-    var fullName = firstAndLast;
-    var arr = fullName.split(' ');
-    
-    this.getFirstName = function() {
-        return arr[0];
-    };
-    this.getLastName = function() {
-        return arr[1];
-    };
-    this.getFullName = function() {
-        return fullName;
-    };
-    this.setFirstName = function(first) {
-        arr[0] = first;
-    };
-    this.setLastName = function(last) {
-        arr[1] = last;
-    };
-    this.setFullName = function(firstAndLast) {
-        fullName = firstAndLast;
-    };
+
+  var fullName = firstAndLast;
+  var arr = fullName.split(' ');
+
+  this.getFirstName = function() {
+    return arr[0];
+  };
+
+  this.getLastName = function() {
+    return arr[1];
+  };
+
+  this.getFullName = function() {
+    return fullName;
+  };
+
+  this.setFirstName = function(first) {
+    arr[0] = first;
+  };
+
+  this.setLastName = function(last) {
+    arr[1] = last;
+  };
+
+  this.setFullName = function(firstAndLast) {
+    fullName = firstAndLast;
+  };
 };
 
 var bob = new Person('Bob Ross');
