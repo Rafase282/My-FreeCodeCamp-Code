@@ -11,7 +11,7 @@ Here are some helpful links:
 
 Array.reduce()
 
-ode by Rafael Rodriguez
+Code by Rafael Rodriguez & @guyjoseph
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
