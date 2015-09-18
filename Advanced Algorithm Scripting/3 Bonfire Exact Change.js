@@ -16,23 +16,51 @@ Global Object
 */
 
 function drawer(price, cash, cid) {
-  var change;
-  // Here is your change, ma'am.
-  return change;
-}
 
-// Example cash-in-drawer array:
-// [['PENNY', 1.01],
-// ['NICKEL', 2.05],
-// ['DIME', 3.10],
-// ['QUARTER', 4.25],
-// ['ONE', 90.00],
-// ['FIVE', 55.00],
-// ['TEN', 20.00],
-// ['TWENTY', 60.00],
-// ['ONE HUNDRED', 100.00]]
+  // Total Amoount to return to client
+  var totalChange = cash - price;
 
-drawer(19.50, 20.00, [
+  //Standard currency Value
+  var stdCurr = [0.01, 0.05, 0.10, 0.25, 1, 5, 10, 20, 100];
+
+  //Name of current currency
+  var currType;
+
+  // How many of the current standard currency
+  var stdCurrAmount;
+  var currCurrency;
+
+  // Change to be returned in proper format.
+  var changeArr = [];
+
+  var totalCash = +cid.map(function(a) {
+    return a[1];
+  }).reduce(function(a, b) {
+    return a + b;
+  }).toFixed(2);
+
+  if (totalChange > totalCash) {
+    return 'Insificient Funds';
+  } else if (totalChange === totalCash) {
+    return 'Closed';
+  }
+
+  for (var i = +cid.length - 1; i >= 0; i--) {
+    currCurrency = +cid[i][1];
+    currType = cid[i][0];
+    if (stdCurr[i] <= totalChange) {
+      stdCurrAmount = Math.floor(totalChange / stdCurr[i]);
+      currCurrency = currCurrency - (stdCurr[i] * stdCurrAmount);
+      cid[i][1] = currCurrency;
+      changeArr.push([currType, totalChange]);
+      break;
+    }
+  }
+
+  return changeArr;
+};
+
+console.log(drawer(19.50, 20.00, [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
   ['DIME', 3.10],
@@ -42,4 +70,4 @@ drawer(19.50, 20.00, [
   ['TEN', 20.00],
   ['TWENTY', 60.00],
   ['ONE HUNDRED', 100.00]
-]);
+]));
