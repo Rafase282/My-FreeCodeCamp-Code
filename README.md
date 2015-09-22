@@ -15,10 +15,10 @@ I will try to keep everything updated. If you are also part of the camp or would
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **Advanced Algorithm Scripting**
+All coded has been done up to the **AngularJS**
 
 ## Wiki Status:
-I'm currently working on the **Bonfire: Inventory Update** for wiki and code.
+I'm currently working on the **Waypoint: Get Started with Angular.js**.
 
 Completed:
 1. HTML5 and CSS
@@ -31,3 +31,4 @@ Completed:
 8. Intermediate Algorithm Scripting
 9. Upper Intermediate Algorithm Scripting
 10. Automated Testing and Debugging
+11. Advanced Algorithm Scripting
