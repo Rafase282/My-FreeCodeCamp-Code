@@ -3,6 +3,8 @@ This repository is not for an app but more as a journal where I keep a record of
 
 I will try to keep everything updated. If you are also part of the camp or would like to contribute in any way then feel free to contact me. The purpose of this is for reference and learning material overall, for everyone as it is public.
 
+If you find this useful then follow and start it, feel free to share it also.
+
 ## Contact me
 **Rafael Rodriguez**
 
