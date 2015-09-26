@@ -19,10 +19,12 @@ http://www.freecodecamp.com/rafase282
 */
 
 function where(arr, num) {
+  // Sort alphabetically
   arr.sort(function(a, b) {
     return a - b;
   });
 
+  // Check for each element if it is greater than num and returnt he index if it is.
   for (var a = 0; a < arr.length; a++) {
     if (arr[a] >= num)
       return parseInt(a);
