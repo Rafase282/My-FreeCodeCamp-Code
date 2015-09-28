@@ -36,11 +36,14 @@ function orbitalPeriod(arr) {
     return obj;
   };
 
-  for (var elem in arr) {
-    newArr.push(getOrbPeriod(arr[elem]));
+  for (var i = 0; i < arr.length; i++) {
+    newArr.push(getOrbPeriod(arr[i]));
   }
 
   return newArr;
 }
 
-orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+orbitalPeriod([{
+  name: 'sputnik',
+  avgAlt: 35873.5553
+}]);
