@@ -20,7 +20,7 @@ If you find this useful then follow and start it, feel free to share it also.
 All coded has been done up to the **AngularJS**
 
 ## Wiki Status:
-I'm currently working on the **Waypoint: Power Forms with Angular.js**.
+I'm currently working on the **Waypoint: Customize Angular.js Directives**.
 
 Completed:
 1. HTML5 and CSS
