@@ -34,3 +34,11 @@ Completed:
 9. Upper Intermediate Algorithm Scripting
 10. Automated Testing and Debugging
 11. Advanced Algorithm Scripting
+
+To-DO:
+1. Get Started with Free Code Camp
+2. Intermediate Front End Development Projects
+3. Git
+4. Node.js and Express.js
+5. MongoDB
+6. Full Stack JavaScript Projects
