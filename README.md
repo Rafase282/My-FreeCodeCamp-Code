@@ -17,10 +17,10 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **AngularJS**
+All coded has been done up to the **Intermediate Front End Development Projects**
 
 ## Wiki Status:
-I'm currently working on the **Waypoint: Customize Angular.js Directives**.
+I'm currently working on the **Zipline: Stylize Stories on Camper News**.
 
 Completed:
 1. HTML5 and CSS
@@ -34,11 +34,11 @@ Completed:
 9. Upper Intermediate Algorithm Scripting
 10. Automated Testing and Debugging
 11. Advanced Algorithm Scripting
+12. Angular.js
 
 To-DO:
 1. Get Started with Free Code Camp
-2. Intermediate Front End Development Projects
-3. Git
-4. Node.js and Express.js
-5. MongoDB
-6. Full Stack JavaScript Projects
+2. Git
+3. Node.js and Express.js
+4. MongoDB
+5. Full Stack JavaScript Projects
