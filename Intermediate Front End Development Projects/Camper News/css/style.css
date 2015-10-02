@@ -1,0 +1,28 @@
+h1,
+h2 {
+  text-align: center;
+  font-family: cursive, sans-serif;
+  color: brown;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+section {
+  min-height: 92vh;
+  padding-top: 1%;
+  color: #fff;
+  background-color: #00bcd4;
+}
+
+footer {
+  background-color: black;
+  color: gray;
+  width: 100%;
+  heigth: 25px;
+  line-height: 25px;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+}
