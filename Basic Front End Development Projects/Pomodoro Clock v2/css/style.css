@@ -1,16 +1,22 @@
 h1, p, .row {
   text-align: center;
   font-size: 130%;
+  font-family: cursive, sans-serif;
 }
 section {
   min-height: 90vh;
+  padding-top: 1px;
+  color: #fff;
+  bottom: 10px;
 }
 footer {
-  min-height: 10vh;
-  padding-top: 30px;
-  padding-bottom: 1px;
   background-color: black;
-  color: #e4f1fe;
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  position: relative;
+  text-align: center;
 }
 body {
   position: relative;
@@ -20,5 +26,5 @@ body {
   margin-top: 50px
 }
 .bottom {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }

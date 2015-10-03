@@ -9,7 +9,7 @@
   background-color: #996633;
   border-radius: 25px;
 }
-a {
+section a {
   color: white;
 }
 .logo {
@@ -22,18 +22,19 @@ a {
   margin-left: 52px;
 }
 section {
-  min-height: 95vh;
-  padding-top: 1%;
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #fff;
   background-color: #00bcd4;
+  bottom: 10px;
 }
 footer {
   background-color: black;
   color: gray;
-  width: 100%;
-  heigth: 50px;
-  line-height: 50px;
-  bottom: 0;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
   position: relative;
   text-align: center;
 }

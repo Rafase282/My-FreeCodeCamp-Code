@@ -1,10 +1,10 @@
-p, .container-fluid {
+section p, .container-fluid {
   text-align: center;
   padding-bottom: 20px;
   margin-left: 10%;
   margin-right: 10%;
   color: #e4f1fe;
-  font-family: 'Comic Sans MS';
+  font-family: cursive, sans-serif;
 }
 body {
   position: relative;
@@ -16,13 +16,18 @@ body {
   background-color: #0d493b;
 }
 footer {
-  min-height: 8vh;
-  padding-top: 20px;
-  padding-bottom: 1px;
   background-color: black;
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  position: relative;
+  text-align: center;
+  font-family: cursive, sans-serif;
 }
 section {
-  min-height: 91.8vh;
-  font-size: 18px;
-  font-weight: 300;
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 10px;
 }

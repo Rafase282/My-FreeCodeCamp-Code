@@ -1,19 +1,25 @@
 p, form {
   text-align: center;
-  font-family: "Georgia";
+  font-family: cursive, sans-serif;
 }
 p {
   font-size: 20px;
 }
 footer {
-  min-height: 10vh;
-  padding-top: 30px;
-  padding-bottom: 1px;
-  color: gray;
   background-color: black;
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  position: relative;
+  text-align: center;
+  font-family: cursive, sans-serif;
 }
 section {
   min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  bottom: 10px;
 }
 body {
   position: relative;
@@ -29,7 +35,7 @@ h1, h2 {
   margin-left: 35%;
   margin-right: 35%;
   text-align: center;
-  font-family: "Georgia";
+  font-family: cursive, sans-serif;
 }
 img {
   width: 100px;

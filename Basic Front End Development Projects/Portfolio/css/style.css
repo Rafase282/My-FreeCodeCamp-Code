@@ -2,16 +2,20 @@ body {
   position: relative;
 }
 footer {
-  min-height: 10vh;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  color: gray;
   background-color: black;
-}
-h1, h2, p {
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  position: relative;
   text-align: center;
+  font-family: cursive, sans-serif;
 }
-a {
+section h1, h2, p {
+  text-align: center;
+  font-family: cursive, sans-serif;
+}
+section a {
   color: white;
 }
 .gray-text {
@@ -85,13 +89,13 @@ img {
 }
 .contact {
   min-height: 90vh;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-bottom: 50px;
   color: #fff;
   background-color: #00bcd4;
 }
 .contact-info {
-  max-width: 80vh;
+  max-width: 100vh;
   min-height: 60vh;
   margin: auto;
 }
