@@ -1,1 +1,4 @@
-$(document).ready(function() { $('.text-primary').text('Hi CodePen!') });
+$(document).ready(function() {
+  var url = 'http://www.freecodecamp.com/news/hot';
+
+});
