@@ -2,6 +2,7 @@ h2 {
   text-align: center;
   font-family: cursive, sans-serif;
   color: gray;
+  margin-bottom: 50px;
 }
 h1 {
   font-size: 52px;
@@ -35,6 +36,7 @@ footer {
 }
 .well {
   width: 250px;
+  height: 400px;
   color: black;
-  margin-left: 50px;
+  margin-left: 25px;
 }

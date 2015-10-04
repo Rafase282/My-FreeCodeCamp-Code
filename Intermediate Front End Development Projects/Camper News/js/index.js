@@ -5,7 +5,7 @@ $(document).ready(function() {
   var headline = 'Undefined';
   var link = '';
   var upvotes = 0;
-  var fcc = 'http://freecodecamp/';
+  var fcc = 'http://freecodecamp.com/';
   var time = 0;
   var html;
 
@@ -17,9 +17,9 @@ $(document).ready(function() {
       link = data[news].link;
       upvotes = data[news].upVotes.length;
       time = new Date(data[news].timePosted);
-      html = '<article class= "well well-sm"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</a> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + '</p> <a href="' + link + '" target="_blank"><p>' + headline + '</p></a>' + '<p> Posted on: ' + time + '</p></article>';
+      html = '<article class= " col-sm-1 col-md-2 well well-sm"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</a> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + '</p> <a href="' + link + '" target="_blank"><p>' + headline + '</p></a>' + '<p> Posted on: ' + time + '</p></article>';
 
-      $('section').append(html);
+      $('.row').append(news + 1 % 6 === 0 ? '</div><div class="row">' : '' + html);
     }
   });
 });
