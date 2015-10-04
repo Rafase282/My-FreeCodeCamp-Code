@@ -30,6 +30,11 @@ footer {
 .logo {
   border-radius: 5%;
   height: 200px;
-  width: 180px;
+  width: 230px;
   margin-right: 10px;
+}
+.well {
+  width: 250px;
+  color: black;
+  margin-left: 50px;
 }

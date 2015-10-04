@@ -17,9 +17,9 @@ $(document).ready(function() {
       link = data[news].link;
       upvotes = data[news].upVotes.length;
       time = new Date(data[news].timePosted);
-      html = '<div class= "user"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p class= \'stat\'>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</p></a>' + ' <a href="' + link + '" target="_blank"><p class= \'stat\'>' + headline + '</p></a>' + '<p class= \'stat\'> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + ' Posted on: ' + time + '</p></div>';
+      html = '<article class= "well well-sm"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</a> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + '</p> <a href="' + link + '" target="_blank"><p>' + headline + '</p></a>' + '<p> Posted on: ' + time + '</p></article>';
 
-      $('.list').append(html);
+      $('section').append(html);
     }
   });
 });
