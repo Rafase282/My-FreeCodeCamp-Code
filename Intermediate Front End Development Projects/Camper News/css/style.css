@@ -1,27 +1,35 @@
 h2 {
   text-align: center;
   font-family: cursive, sans-serif;
-  color: brown;
+  color: gray;
 }
 h1 {
   font-size: 52px;
   text-align: center;
   font-family: cursive, sans-serif;
-  color: brown;
+  color: #663300;
 }
 section {
-  min-height: 92vh;
-  padding-top: 1%;
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #fff;
-  background-color: #00bcd4;
+  background-color: #B29980;
+  bottom: 10px;
 }
 footer {
   background-color: black;
   color: gray;
-  width: 100%;
-  height: 25px;
-  line-height: 25px;
-  bottom: 0;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
   position: relative;
   text-align: center;
+  font-family: cursive, sans-serif;
+}
+.logo {
+  border-radius: 5%;
+  height: 200px;
+  width: 180px;
+  margin-right: 10px;
 }
