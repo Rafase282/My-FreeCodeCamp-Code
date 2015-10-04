@@ -1,4 +1,11 @@
+// Function to truncate strings to custom lenght.
+String.prototype.trunc = String.prototype.trunc ||
+  function(n) {
+    return this.length > n ? this.substr(0, n - 1) + '&hellip;' : this;
+  };
+
 $(document).ready(function() {
+  // Set default values for key variables
   var url = 'http://www.freecodecamp.com/news/hot';
   var username = 'Unknown';
   var picture = 'http://i.imgur.com/vPEp5RQ.png';
@@ -9,7 +16,9 @@ $(document).ready(function() {
   var time = 0;
   var html;
 
+  // Call API
   $.getJSON(url, function(data) {
+    // For each object in the json file, asign the right data to the variables.
     for (var news in data) {
       username = data[news].author.username;
       picture = data[news].author.picture;
@@ -17,8 +26,12 @@ $(document).ready(function() {
       link = data[news].link;
       upvotes = data[news].upVotes.length;
       time = new Date(data[news].timePosted);
-      html = '<article class= " col-sm-1 col-md-2 well well-sm"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</a> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + '</p> <a href="' + link + '" target="_blank"><p>' + headline + '</p></a>' + '<p> Posted on: ' + time + '</p></article>';
 
+      // Generate HTML5 elements to be displayed
+
+      html = '<article class= " col-sm-1 col-md-2 well well-sm"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</a> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + '</p> <a href="' + link + '" target="_blank"><p>' + headline.trunc(50) + '</p></a>' + '<p> Posted on: ' + time.toString('ddd d, MMM yyyy') + '</p></article>';
+
+      // Displays the elements to the page
       $('.row').append(news + 1 % 6 === 0 ? '</div><div class="row">' : '' + html);
     }
   });
