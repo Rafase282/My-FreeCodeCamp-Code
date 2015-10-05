@@ -29,10 +29,10 @@ $(document).ready(function() {
 
       // Generate HTML5 elements to be displayed
 
-      html = '<article class= " col-sm-1 col-md-2 well well-sm"><img class= \'logo\' src = "' + picture + '">' + ' <a href="' + fcc + username + '" target="_blank"><p>' + 'by ' + username + ' (<i class="fa fa-fire fa-fw"></i>)</a> <span class="glyphicon glyphicon glyphicon-arrow-up"></span> ' + upvotes + '</p> <a href="' + link + '" target="_blank"><p>' + headline.trunc(50) + '</p></a>' + '<p> Posted on: ' + time.toString('ddd d, MMM yyyy') + '</p></article>';
+      html = '<article class="col-xs-2 well well-sm"><img class="logo" src="' + picture + '"><a href="' + fcc + username + '" target="_blank"><p>by' + username + '(<i class="fa fa-fire fa-fw"></i>)<span class="glyphicon glyphicon glyphicon-arrow-up"></span>' + upvotes + '</p></a><a href="' + link + '"target="_blank"><p>' + headline.trunc(50) + '</p></a><p> Posted on: ' + time.toString('ddd d, MMM yyyy') + '</p></article>';
 
       // Displays the elements to the page
-      $('.row').append(news + 1 % 6 === 0 ? '</div><div class="row">' : '' + html);
+      $('.row').append(html);
     }
   });
 });

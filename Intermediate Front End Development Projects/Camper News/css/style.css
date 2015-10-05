@@ -1,12 +1,10 @@
 h2 {
-  text-align: center;
   font-family: cursive, sans-serif;
   color: gray;
   margin-bottom: 50px;
 }
 h1 {
   font-size: 52px;
-  text-align: center;
   font-family: cursive, sans-serif;
   color: #663300;
 }
@@ -17,6 +15,7 @@ section {
   color: #fff;
   background-color: #B29980;
   bottom: 10px;
+  text-align: center;
 }
 footer {
   background-color: black;
@@ -31,12 +30,17 @@ footer {
 .logo {
   border-radius: 5%;
   height: 250px;
-  width: 230px;
+  width: 200px;
   margin-right: 10px;
 }
 .well {
-  width: 250px;
+  width: 230px;
   height: 370px;
   color: black;
-  margin-left: 25px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.row {
+  margin: auto;
+  width: 95%;
 }
