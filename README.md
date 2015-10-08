@@ -22,7 +22,7 @@ All coded has been done up to the **Intermediate Front End Development Projects*
 ## Wiki Status:
 I'm currently working on the **Zipline: Stylize Stories on Camper News**.
 
-Completed:
+# Completed:
 1. HTML5 and CSS
 2. Responsive Design with Bootstrap
 3. jQuery
@@ -36,7 +36,7 @@ Completed:
 11. Advanced Algorithm Scripting
 12. Angular.js
 
-To-DO:
+# To-DO:
 1. Get Started with Free Code Camp
 2. Git
 3. Node.js and Express.js
