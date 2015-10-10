@@ -1,4 +1,5 @@
 var arrResults = [];
+var html = '';
 
 function Result(title, snippet, url) {
   this.title = title;
@@ -15,25 +16,27 @@ function search() {
       'Api-User-Agent': 'Example/1.0'
     },
     success: function(data) {
+      $('.results').empty();
       // do something with data
       arrResults.length = 0;
       var resArr = data.query.search;
       //console.log(resArr);
       for (var result in resArr) {
         arrResults.push(new Result(resArr[result].title, resArr[result].snippet));
+        html = '<div id="articles" class="well"><a href="' + resArr[result].link + '"target="_blank"><h3>' + resArr[result].title + '</h3><p>' + resArr[result].snippet + '</p></a></div>';
+
+        // Displays the elements to the page
+        $('.results').append(html);
       }
-      console.log(arrResults);
     }
   });
 
   if ($('#search').val().length > 0) {
-    // Display matching names by hiding anything that is not what we want from the  class= "user"
-    var reg = new RegExp($('#search').val(), 'ig');
-    $('.user').css('display', 'none');
+    $('.articles').css('display', 'none');
 
   } else if ($('#search').val().length < 1) {
     // display everything again
-    $('.user').css('display', 'block');
+    $('.articles').css('display', 'block');
   }
 
   $('#search').unbind('keyup');

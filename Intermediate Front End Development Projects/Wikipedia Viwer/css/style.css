@@ -17,6 +17,12 @@ section {
   background-color: #34addb;
   bottom: 10px;
 }
+.well {
+  border-radius: 30%;
+}
+.results {
+  margin-top: 10%;
+}
 footer {
   background-color: black;
   color: gray;
@@ -30,7 +36,7 @@ footer {
 .search-position {
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 15%;
   transform: translate(-50%, -50%);
 }
 
