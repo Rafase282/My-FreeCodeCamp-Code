@@ -20,7 +20,7 @@ If you find this useful then follow and start it, feel free to share it also.
 All coded has been done up to the **Intermediate Front End Development Projects** One of them was moved to the basic front end, I have to finish that one.
 
 ## Wiki Status:
-I'm currently working on the **Zipline: Stylize Stories on Camper News**.
+I'm currently working on the **Zipline: Build a JavaScript Calculator**.
 
 # Completed:
 1. HTML5 and CSS
