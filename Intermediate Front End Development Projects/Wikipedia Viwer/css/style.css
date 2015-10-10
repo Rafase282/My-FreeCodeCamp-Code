@@ -1,13 +1,8 @@
-h2 {
-  text-align: center;
-  font-family: cursive, sans-serif;
-  color: #663300;
-}
 h1 {
   font-size: 52px;
+  font-family: Courier;
   text-align: center;
-  font-family: cursive, sans-serif;
-  color: #663300;
+  font-family: Courier New, Courier, monospace;
 }
 section {
   min-height: 90vh;
@@ -19,6 +14,8 @@ section {
 }
 .well {
   border-radius: 30%;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 .results {
   margin-top: 10%;

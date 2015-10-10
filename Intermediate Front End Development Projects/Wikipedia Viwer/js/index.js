@@ -1,9 +1,8 @@
 var arrResults = [];
 var html = '';
 
-function Result(title, snippet, url) {
+function Result(title, snippet) {
   this.title = title;
-  this.url = url;
   this.snippet = snippet;
 }
 
@@ -20,10 +19,9 @@ function search() {
       // do something with data
       arrResults.length = 0;
       var resArr = data.query.search;
-      //console.log(resArr);
       for (var result in resArr) {
         arrResults.push(new Result(resArr[result].title, resArr[result].snippet));
-        html = '<div id="articles" class="well"><a href="' + resArr[result].link + '"target="_blank"><h3>' + resArr[result].title + '</h3><p>' + resArr[result].snippet + '</p></a></div>';
+        html = '<div id="articles" class="well"><a href="https://en.wikipedia.org/wiki/' + resArr[result].title + '"target="_blank"><h3>' + resArr[result].title + '</h3><p>' + resArr[result].snippet + '</p></a></div>';
 
         // Displays the elements to the page
         $('.results').append(html);
