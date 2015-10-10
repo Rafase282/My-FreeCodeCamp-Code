@@ -1,22 +1,14 @@
-var url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=rafael';
-var query = $('#search').val();
+var arrResults = [];
+
+function Result(title, snippet, url) {
+  this.title = title;
+  this.url = url;
+  this.snippet = snippet;
+}
 
 function search() {
-
-  // Option 1
-  $.getJSON(url + query, function(response) {
-    console.log(data);
-    var title = data.query.pages[0].title;
-    console.log(title);
-  });
-
-  // Option 2
   $.ajax({
-    url: url,
-    action: 'query',
-    list: 'search',
-    format: 'json',
-    srsearch: query,
+    url: 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=' + $('#search').val(),
     dataType: 'jsonp',
     type: 'POST',
     headers: {
@@ -24,9 +16,13 @@ function search() {
     },
     success: function(data) {
       // do something with data
-      console.log(data);
-      var title = data.query.pages[0].title;
-      console.log(title);
+      arrResults.length = 0;
+      var resArr = data.query.search;
+      //console.log(resArr);
+      for (var result in resArr) {
+        arrResults.push(new Result(resArr[result].title, resArr[result].snippet));
+      }
+      console.log(arrResults);
     }
   });
 
