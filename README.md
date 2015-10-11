@@ -37,8 +37,7 @@ I'm currently working on the **Zipline: Build a JavaScript Calculator**.
 12. Angular.js
 
 # To-DO:
-1. Get Started with Free Code Camp
-2. Git
-3. Node.js and Express.js
-4. MongoDB
-5. Full Stack JavaScript Projects
+1. Git
+2. Node.js and Express.js
+3. MongoDB
+4. Full Stack JavaScript Projects
