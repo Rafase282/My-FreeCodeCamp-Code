@@ -19,7 +19,6 @@ Arithmetic Operators
 Code by Rafael Rodriguez
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
-*/
 
 function factorialize(num) {
   var factorial = 1;
@@ -28,6 +27,17 @@ function factorialize(num) {
   }
 
   return factorial;
+}
+
+factorialize(5);
+*/
+
+//With recursion
+function factorialize(num) {
+  if (num <= 1) {
+    return 1
+  };
+  return num * factorialize(num - 1)
 }
 
 factorialize(5);

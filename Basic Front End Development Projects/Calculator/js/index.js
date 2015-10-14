@@ -1,1 +1,3 @@
-$(document).ready(function() { $('.text-primary').text('Hi CodePen!') });
+$(document).ready(function() {
+  $('.text-primary').text('Hi CodePen!')
+});
