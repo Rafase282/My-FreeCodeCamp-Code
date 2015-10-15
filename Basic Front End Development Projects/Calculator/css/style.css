@@ -3,14 +3,12 @@ h2 {
   font-family: cursive, sans-serif;
   color: #663300;
 }
-
 h1 {
   font-size: 52px;
   text-align: center;
   font-family: cursive, sans-serif;
   color: #663300;
 }
-
 section {
   min-height: 90vh;
   padding-top: 10px;
@@ -19,7 +17,6 @@ section {
   background-color: #00bcd4;
   bottom: 10px;
 }
-
 footer {
   background-color: black;
   color: gray;
@@ -29,4 +26,108 @@ footer {
   position: relative;
   text-align: center;
   font-family: cursive, sans-serif;
+}
+
+/*Calculator*/
+
+.red {
+  background-color: red;
+  border-color: red;
+}
+.plus {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  margin-top: -20px;
+}
+button {
+  background-color: black;
+  border-color: black;
+  width: 100%;
+  padding: 20px 30px;
+}
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: #999;
+  margin: 0 auto;
+}
+.tg td {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #999;
+  color: #444;
+  background-color: #F7FDFA;
+}
+.tg th {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 20px 20px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #999;
+  color: #fff;
+  background-color: #26ADE4;
+}
+.tg .tg-ljlu {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace !important;
+  background-color: #330001;
+  color: #ffffff;
+  text-align: center;
+}
+.tg .tg-a8gl {
+  font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace !important;
+  background-color: #cac1c0;
+  color: #333333;
+  text-align: right;
+  vertical-align: top;
+}
+.tg .tg-ftb4 {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace !important;
+  background-color: #fe0000;
+  color: #ffffff;
+  text-align: center;
+}
+.tg .tg-lewp {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace !important;
+  background-color: #fe0000;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-6dgb {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Lucida Console", Monaco, monospace !important;
+  ;
+  background-color: #330001;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: top;
+}
+@media screen and (max-width: 767px) {
+  .tg {
+    width: auto !important;
+  }
+  .tg col {
+    width: auto !important;
+  }
+  .tg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: auto 0;
+  }
 }
