@@ -1,17 +1,37 @@
-var part1;
-var part2;
-var operand;
 $('#clear-all').click(function() {
-  $('#result').text('');
+  $('#result').text(0);
 });
 
 $('#clear').click(function() {
-  $('#result').text('');
+  $('#result').text(0);
 });
 
 $('#plus').click(function() {
-  part1 = $('#result').text();
-  operand = '+';
+  $('#result').text($('#result').text() + '+');
+});
+
+$('#minus').click(function() {
+  $('#result').text($('#result').text() + '-');
+});
+
+$('#mult').click(function() {
+  $('#result').text($('#result').text() + '*');
+});
+
+$('#division').click(function() {
+  $('#result').text($('#result').text() + '/');
+});
+
+$('#mod').click(function() {
+  $('#result').text($('#result').text() + '%');
+});
+
+$('#dec').click(function() {
+  $('#result').text($('#result').text() + '.');
+});
+
+$('#eq').click(function() {
+  $('#result').text(eval($('#result').text()));
 });
 
 $('#nine').click(function() {
