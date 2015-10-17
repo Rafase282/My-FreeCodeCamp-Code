@@ -1,9 +1,9 @@
 $('#clear-all').click(function() {
-  $('#result').text(0);
+  $('#result').text('');
 });
 
 $('#clear').click(function() {
-  $('#result').text(0);
+  $('#result').text('');
 });
 
 $('#plus').click(function() {
