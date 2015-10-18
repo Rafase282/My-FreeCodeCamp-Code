@@ -1,3 +1,13 @@
+var operands = ['+', '-', '*', '/', '%'];
+
+function Check() {
+  var lastChar = $('#result').text()[0];
+  operands.map(function(op) {
+    if (op == lastChar) {
+      $('#result').text('Err' + lastChar);
+    }
+  });
+}
 $('#clear-all').click(function() {
   $('#result').text('');
 });
@@ -7,6 +17,7 @@ $('#clear').click(function() {
 });
 
 $('#plus').click(function() {
+  Check();
   $('#result').text($('#result').text() + '+');
 });
 
