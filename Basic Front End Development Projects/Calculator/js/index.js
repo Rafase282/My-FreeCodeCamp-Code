@@ -1,12 +1,12 @@
-var operands = ['+', '-', '*', '/', '%'];
+var operands = ['+', '-', '*', '/', '%', '.'];
 
 function Check() {
-  var lastChar = $('#result').text()[0];
-  operands.map(function(op) {
-    if (op == lastChar) {
-      $('#result').text('Err' + lastChar);
+  var lastChar = $('#result').text().slice(-1);
+  for (var i = 0; i < operands.length; i++) {
+    if (operands[i] == lastChar) {
+      $('#result').text('Err');
     }
-  });
+  }
 }
 $('#clear-all').click(function() {
   $('#result').text('');
@@ -22,22 +22,27 @@ $('#plus').click(function() {
 });
 
 $('#minus').click(function() {
+  Check();
   $('#result').text($('#result').text() + '-');
 });
 
 $('#mult').click(function() {
+  Check();
   $('#result').text($('#result').text() + '*');
 });
 
 $('#division').click(function() {
+  Check();
   $('#result').text($('#result').text() + '/');
 });
 
 $('#mod').click(function() {
+  Check();
   $('#result').text($('#result').text() + '%');
 });
 
 $('#dec').click(function() {
+  Check();
   $('#result').text($('#result').text() + '.');
 });
 
