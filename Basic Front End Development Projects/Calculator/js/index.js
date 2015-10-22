@@ -21,6 +21,16 @@ $('#plus').click(function() {
   $('#result').text($('#result').text() + '+');
 });
 
+$('#op').click(function() {
+  Check();
+  $('#result').text($('#result').text() + '(');
+});
+
+$('#clo').click(function() {
+  Check();
+  $('#result').text($('#result').text() + ')');
+});
+
 $('#minus').click(function() {
   Check();
   $('#result').text($('#result').text() + '-');
