@@ -17,9 +17,9 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **Intermediate Front End Development Projects** I just have to finish the calculator.
+All coded has been done up to the **Intermediate Front End Development Projects** I just have to finish the section.
 ## Wiki Status:
-I'm currently working on the **Zipline: Build a JavaScript Calculator**.
+I'm currently working on the **Zipline: Build a Tic Tac Toe Game**.
 
 # Completed:
 1. HTML5 and CSS
