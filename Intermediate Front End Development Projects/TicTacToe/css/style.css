@@ -3,14 +3,12 @@ h2 {
   font-family: cursive, sans-serif;
   color: #663300;
 }
-
 h1 {
   font-size: 52px;
   text-align: center;
   font-family: cursive, sans-serif;
   color: #663300;
 }
-
 section {
   min-height: 90vh;
   padding-top: 10px;
@@ -18,11 +16,9 @@ section {
   color: #fff;
   bottom: 10px;
 }
-
 body {
   background-image: url('http://www.aapopuskala.fi/_img/paper.jpg');
 }
-
 footer {
   background-color: black;
   color: gray;
@@ -33,7 +29,6 @@ footer {
   text-align: center;
   font-family: cursive, sans-serif;
 }
-
 .field {
   border-color: black;
   width: 100px;
@@ -41,7 +36,6 @@ footer {
   border-style: solid;
   border-width: 5px;
 }
-
 .board {
   margin: 0 auto;
   display: block;
