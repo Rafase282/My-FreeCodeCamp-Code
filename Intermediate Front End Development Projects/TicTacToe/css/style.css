@@ -1,12 +1,12 @@
-h2 {
+h2, h3 {
   text-align: center;
-  font-family: cursive, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   color: #663300;
 }
 h1 {
   font-size: 52px;
   text-align: center;
-  font-family: cursive, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   color: #663300;
 }
 section {
