@@ -17,6 +17,23 @@ var grid = [
 ];
 var pos = [];
 var score = [0, 0];
+var winPos = [
+  [
+    [1, 1],
+    [1, 2],
+    [1, 3]
+  ],
+  [
+    [2, 1],
+    [2, 2],
+    [2, 3]
+  ],
+  [
+    [3, 1],
+    [3, 2],
+    [3, 3]
+  ]
+];
 
 // Set the icon for the players
 $('.icon').on('click', function() {
@@ -27,14 +44,12 @@ $('.icon').on('click', function() {
     player = 'O';
     machine = 'X';
   }
-
   curPlayer = player;
 });
 
 // Player Toggler
 function PToggler(cplayer) {
-  cplayer === player ? curPlayer = machine : curPlayer = player;
-
+  cplayer === player ? curPlayer = machine : curPlayer = player
 };
 
 //Mark position clicked
