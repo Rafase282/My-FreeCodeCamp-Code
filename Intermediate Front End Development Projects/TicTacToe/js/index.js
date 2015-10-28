@@ -1,6 +1,7 @@
 // Declare Players
 var player = 'X';
 var machine = 'O';
+var curPlayer = player;
 
 // Declare position and grid
 var grid = [
@@ -26,10 +27,20 @@ $('.icon').on('click', function() {
     player = 'O';
     machine = 'X';
   }
+
+  curPlayer = player;
 });
 
+// Player Toggler
+function PToggler(cplayer) {
+  cplayer === player ? curPlayer = machine : curPlayer = player;
+
+};
+
+//Mark position clicked
 $('.field').on('click', function() {
-  switch ($(this).attr('id')) {
+  var id = $(this).attr('id');
+  switch (id) {
     case 'r1c1':
       pos = [1, 1];
       break;
@@ -58,5 +69,8 @@ $('.field').on('click', function() {
       pos = [3, 3];
       break;
   }
+
+  $(this).html('<p class="ico">' + curPlayer + '</p>');
+  PToggler(curPlayer);
 
 });

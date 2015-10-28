@@ -35,3 +35,9 @@ footer {
   display: block;
   width: 295px;
 }
+.ico {
+  margin: -10px auto;
+  display: block;
+  color: black;
+  font-size: 80px;
+}
