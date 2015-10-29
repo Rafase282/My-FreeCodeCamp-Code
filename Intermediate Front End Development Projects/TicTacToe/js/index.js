@@ -16,23 +16,25 @@ var grid = [
   [3, 3],
 ];
 var pos = [];
+var pBoard = [];
+var mBoard = [];
 var score = [0, 0];
 var winPos = [
   [
     [1, 1],
     [1, 2],
-    [1, 3]
+    [1, 3],
   ],
   [
     [2, 1],
     [2, 2],
-    [2, 3]
+    [2, 3],
   ],
   [
     [3, 1],
     [3, 2],
-    [3, 3]
-  ]
+    [3, 3],
+  ],
 ];
 
 // Set the icon for the players
@@ -44,13 +46,40 @@ $('.icon').on('click', function() {
     player = 'O';
     machine = 'X';
   }
+
   curPlayer = player;
+  $('.player').removeClass('X');
+  $('.player').addClass(player);
+  $('.machine').removeClass('O');
+  $('.machine').addClass(machine);
 });
 
 // Player Toggler
 function PToggler(cplayer) {
-  cplayer === player ? curPlayer = machine : curPlayer = player
+  cplayer === player ? curPlayer = machine : curPlayer = player;
 };
+
+// Check for a win
+function WinCheck(curBoard) {
+  var chk = curBoard.filter(function(arr) {
+    return winPos.filter(function(win) {
+      return win == arr;
+    });
+  });
+
+  console.log(chk, '.' + curPlayer);
+
+  // If we got a win then update score and clear up the board
+  $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
+
+  //Clear();
+
+};
+
+//Clear the board
+function Clear() {
+  $('.field').empty();
+}
 
 //Mark position clicked
 $('.field').on('click', function() {
@@ -86,6 +115,14 @@ $('.field').on('click', function() {
   }
 
   $(this).html('<p class="ico">' + curPlayer + '</p>');
+  if (curPlayer === machine) {
+    mBoard.push(pos);
+    WinCheck(mBoard);
+  } else {
+    pBoard.push(pos);
+    WinCheck(pBoard);
+  }
+
   PToggler(curPlayer);
 
 });
