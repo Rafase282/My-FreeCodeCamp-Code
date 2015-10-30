@@ -16,8 +16,8 @@ var grid = [
   [3, 3],
 ];
 var pos = [];
-var pBoard = [];
-var mBoard = [];
+var pMoves = [];
+var mMoves = [];
 var score = [0, 0];
 var winPos = [
   [
@@ -61,18 +61,19 @@ function PToggler(cplayer) {
 
 // Check for a win
 function WinCheck(curBoard) {
-  var chk = curBoard.filter(function(arr) {
-    return winPos.filter(function(win) {
-      return win == arr;
-    });
-  });
+  for (var i = 0; i < winPos.length; i++) {
+    for (var j = 0; j < curBoard.length; j++) {
+      curBoard[j] == winPos[i]
+    }
+  }
+});
 
-  console.log(chk, '.' + curPlayer);
+console.log(chk, '.' + curPlayer);
 
-  // If we got a win then update score and clear up the board
-  $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
+// If we got a win then update score and clear up the board
+$('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
 
-  //Clear();
+//Clear();
 
 };
 
@@ -116,11 +117,11 @@ $('.field').on('click', function() {
 
   $(this).html('<p class="ico">' + curPlayer + '</p>');
   if (curPlayer === machine) {
-    mBoard.push(pos);
-    WinCheck(mBoard);
+    mMoves.push(pos);
+    WinCheck(mMoves);
   } else {
-    pBoard.push(pos);
-    WinCheck(pBoard);
+    pMoves.push(pos);
+    WinCheck(pMoves);
   }
 
   PToggler(curPlayer);
