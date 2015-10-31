@@ -18,6 +18,7 @@ If you find this useful then follow and start it, feel free to share it also.
 
 ## Code Status:
 All coded has been done up to the **Intermediate Front End Development Projects** I just have to finish the section.
+
 ## Wiki Status:
 I'm currently working on the **Zipline: Build a Tic Tac Toe Game**.
 
@@ -40,3 +41,4 @@ I'm currently working on the **Zipline: Build a Tic Tac Toe Game**.
 2. Node.js and Express.js
 3. MongoDB
 4. Full Stack JavaScript Projects
+5. There are a few more waypoints I should add.
