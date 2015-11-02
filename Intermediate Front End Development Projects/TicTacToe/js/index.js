@@ -61,19 +61,15 @@ function PToggler(cplayer) {
 
 // Check for a win
 function WinCheck(curBoard) {
-  for (var i = 0; i < winPos.length; i++) {
-    for (var j = 0; j < curBoard.length; j++) {
-      curBoard[j] == winPos[i]
-    }
-  }
-});
+  curBoard.map(function(arr) {
+    console.log(arr, winPos[0][0]);
+    return (winPos.indexOf(arr));
+  });
 
-console.log(chk, '.' + curPlayer);
+  // If we got a win then update score and clear up the board
+  $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
 
-// If we got a win then update score and clear up the board
-$('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
-
-//Clear();
+  //Clear();
 
 };
 
