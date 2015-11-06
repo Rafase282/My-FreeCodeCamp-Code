@@ -1,41 +1,16 @@
+/*
+To-DO: Add a draw handler, create basic machine AI,
+implement smart AI, beautify the front end.
+*/
+
 // Declare Players
 var player = 'X';
 var machine = 'O';
 var curPlayer = player;
 
-// Declare position and grid
-var grid = [
-  [1, 1],
-  [1, 2],
-  [1, 3],
-  [2, 1],
-  [2, 2],
-  [2, 3],
-  [3, 1],
-  [3, 2],
-  [3, 3],
-];
+// Declare score & position
 var pos = [];
-var pMoves = [];
-var mMoves = [];
 var score = [0, 0];
-var winPos = [
-  [
-    [1, 1],
-    [1, 2],
-    [1, 3],
-  ],
-  [
-    [2, 1],
-    [2, 2],
-    [2, 3],
-  ],
-  [
-    [3, 1],
-    [3, 2],
-    [3, 3],
-  ],
-];
 
 // Set the icon for the players
 $('.icon').on('click', function() {
@@ -60,66 +35,90 @@ function PToggler(cplayer) {
 };
 
 // Check for a win
-function WinCheck(curBoard) {
-  curBoard.map(function(arr) {
-    console.log(arr, winPos[0][0]);
-    return (winPos.indexOf(arr));
-  });
+function WinCheck() {
+  switch (true) {
+    case $('#r1c1').text() === curPlayer && $('#r1c2').text() === curPlayer &&
+    $('#r1c3').text() === curPlayer:
+      DrawLine('#r1c1', '#r1c2', '#r1c3');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r2c1').text() === curPlayer && $('#r2c2').text() === curPlayer &&
+    $('#r2c3').text() === curPlayer:
+      DrawLine('#r2c1', '#r2c2', '#r2c3');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r3c1').text() === curPlayer && $('#r3c2').text() === curPlayer &&
+    $('#r3c3').text() === curPlayer:
+      DrawLine('#r3c1', '#r3c2', '#r3c3');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r1c1').text() === curPlayer && $('#r2c1').text() === curPlayer &&
+    $('#r3c1').text() === curPlayer:
+      DrawLine('#r1c1', '#r2c1', '#r3c1');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r1c2').text() === curPlayer && $('#r2c2').text() === curPlayer &&
+    $('#r3c2').text() === curPlayer:
+      DrawLine('#r1c2', '#r2c2', '#r3c2');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r1c3').text() === curPlayer && $('#r2c3').text() === curPlayer &&
+    $('#r3c3').text() === curPlayer:
+      DrawLine('#r1c3', '#r2c3', '#r3c3');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r1c1').text() === curPlayer && $('#r2c2').text() === curPlayer &&
+    $('#r3c3').text() === curPlayer:
+      DrawLine('#r1c1', '#r2c2', '#r3c3');
+      setTimeout(UpdateScore, 1000);
+      break;
+    case $('#r1c3').text() === curPlayer && $('#r2c2').text() === curPlayer &&
+    $('#r3c1').text() === curPlayer:
+      DrawLine('#r1c3', '#r2c2', '#r3c1');
+      setTimeout(UpdateScore, 1000);
+      break;
+  }
 
-  // If we got a win then update score and clear up the board
-  $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
-
-  //Clear();
+  // ADD DRAW HANDLER
 
 };
+
+// Clarify the winning hand
+function DrawLine(pos1, pos2, pos3) {
+  var $pos1 = $(pos1);
+  var $pos2 = $(pos2);
+  var $pos3 = $(pos3);
+  $pos1.addClass('winningRow');
+  $pos2.addClass('winningRow');
+  $pos3.addClass('winningRow');
+}
+
+// Updates the score and clears the board by calling the Clear function.
+function UpdateScore() {
+  $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
+  Clear();
+}
 
 //Clear the board
 function Clear() {
   $('.field').empty();
+  $('.field').removeClass('clicked');
+  $('div').removeClass('winningRow');
 }
 
 //Mark position clicked
 $('.field').on('click', function() {
   var id = $(this).attr('id');
-  switch (id) {
-    case 'r1c1':
-      pos = [1, 1];
-      break;
-    case 'r1c2':
-      pos = [1, 2];
-      break;
-    case 'r1c3':
-      pos = [1, 3];
-      break;
-    case 'r2c1':
-      pos = [2, 1];
-      break;
-    case 'r2c2':
-      pos = [2, 2];
-      break;
-    case 'r2c3':
-      pos = [2, 3];
-      break;
-    case 'r3c1':
-      pos = [3, 1];
-      break;
-    case 'r3c2':
-      pos = [3, 2];
-      break;
-    case 'r3c3':
-      pos = [3, 3];
-      break;
-  }
 
-  $(this).html('<p class="ico">' + curPlayer + '</p>');
-  if (curPlayer === machine) {
-    mMoves.push(pos);
-    WinCheck(mMoves);
-  } else {
-    pMoves.push(pos);
-    WinCheck(pMoves);
-  }
+  // Prevent changing already selected grid
+  if (!$('#' + id).hasClass('clicked')) {
+    $('#' + id).addClass('clicked');
 
-  PToggler(curPlayer);
+    // Add Icon to the board
+    $(this).html('<p class="ico">' + curPlayer + '</p>');
+
+    WinCheck();
+    PToggler(curPlayer);
+  }
 
 });
