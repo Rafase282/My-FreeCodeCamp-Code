@@ -1,36 +1,39 @@
-/*
-To-DO: Create basic machine AI,
-implement smart AI, beautify the front end.
-*/
-
 // Declare Players
 var player = 'X';
 var machine = 'O';
 var curPlayer = player;
 
-// Declare score & position, etc
-var pos = [];
-var score = [0, 0];
+// Other needed Variables
+var gameOver = false;
+var lockIcon = false;
 var moves = 1;
 
+$('.field').on('click', MarkPosition);
+
+$('.icon').on('click', SetIcon);
+
 // Set the icon for the players
-$('.icon').on('click', function() {
-  if ($(this).attr('id') === 'x') {
+function SetIcon() {
+  if ($(this).attr('id') === 'X' && !lockIcon) {
     player = 'X';
     machine = 'O';
-  } else {
+    lockIcon = true;
+  } else if ($(this).attr('id') === 'O' && !lockIcon) {
     player = 'O';
     machine = 'X';
+    lockIcon = true;
   }
 
   curPlayer = player;
 
   // Adjust the right setting
   $('.player').removeClass('X');
-  $('.player').addClass(player);
+  $('.player').removeClass('O');
   $('.machine').removeClass('O');
+  $('.machine').removeClass('X');
+  $('.player').addClass(player);
   $('.machine').addClass(machine);
-});
+};
 
 // Player Toggler
 function PToggler(cplayer) {
@@ -50,41 +53,49 @@ function WinCheck() {
     case $('#r1c1').text() === curPlayer && $('#r1c2').text() === curPlayer &&
     $('#r1c3').text() === curPlayer:
       DrawLine('#r1c1', '#r1c2', '#r1c3');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r2c1').text() === curPlayer && $('#r2c2').text() === curPlayer &&
     $('#r2c3').text() === curPlayer:
       DrawLine('#r2c1', '#r2c2', '#r2c3');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r3c1').text() === curPlayer && $('#r3c2').text() === curPlayer &&
     $('#r3c3').text() === curPlayer:
       DrawLine('#r3c1', '#r3c2', '#r3c3');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r1c1').text() === curPlayer && $('#r2c1').text() === curPlayer &&
     $('#r3c1').text() === curPlayer:
       DrawLine('#r1c1', '#r2c1', '#r3c1');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r1c2').text() === curPlayer && $('#r2c2').text() === curPlayer &&
     $('#r3c2').text() === curPlayer:
       DrawLine('#r1c2', '#r2c2', '#r3c2');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r1c3').text() === curPlayer && $('#r2c3').text() === curPlayer &&
     $('#r3c3').text() === curPlayer:
       DrawLine('#r1c3', '#r2c3', '#r3c3');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r1c1').text() === curPlayer && $('#r2c2').text() === curPlayer &&
     $('#r3c3').text() === curPlayer:
       DrawLine('#r1c1', '#r2c2', '#r3c3');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     case $('#r1c3').text() === curPlayer && $('#r2c2').text() === curPlayer &&
     $('#r3c1').text() === curPlayer:
       DrawLine('#r1c3', '#r2c2', '#r3c1');
+      gameOver = true;
       setTimeout(UpdateScore, 1000);
       break;
     default:
@@ -105,6 +116,7 @@ function DrawLine(pos1, pos2, pos3) {
 
 // Updates the score and clears the board by calling the Clear function.
 function UpdateScore() {
+  console.log(curPlayer);
   $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
   Clear();
 }
@@ -122,10 +134,23 @@ function Clear() {
 
   // Reset Moves
   moves = 1;
+
+  // Reset gameover
+  gameOver = false;
+
+  // Reset Player to chosen one.
+  SetIcon();
+
+};
+
+// FUnctiont o draw icon on the board.
+function DrawIcon(id) {
+  $('#' + id).html('<p class="ico">' + curPlayer + '</p>');
 }
 
 //Mark position clicked
-$('.field').on('click', function() {
+function MarkPosition() {
+  lockIcon = true;
   var id = $(this).attr('id');
 
   // Prevent changing already selected grid
@@ -133,13 +158,54 @@ $('.field').on('click', function() {
     $('#' + id).addClass('clicked');
 
     // Add Icon to the board
-    $(this).html('<p class="ico">' + curPlayer + '</p>');
+    DrawIcon(id);
 
     WinCheck();
-    PToggler(curPlayer);
 
     // Mark number of moves
     moves += 1;
-  }
 
-});
+    PToggler(curPlayer);
+
+    // Add Icon to the board for machine
+    if (gameOver === false && moves % 2 === 0) {
+      MachineMove();
+      WinCheck();
+      moves += 1;
+      PToggler(curPlayer);
+    }
+  }
+};
+
+// just place moves on the board, bare minimum implementation
+function MachineMove() {
+  switch (true) {
+    case $('#r1c1').text() !== player && $('#r1c1').text() !== machine:
+      DrawIcon('r1c1');
+      break;
+    case $('#r1c2').text() !== player && $('#r1c2').text() !== machine:
+      DrawIcon('r1c2');
+      break;
+    case $('#r1c3').text() !== player && $('#r1c3').text() !== machine:
+      DrawIcon('r1c3');
+      break;
+    case $('#r2c1').text() !== player && $('#r2c1').text() !== machine:
+      DrawIcon('r2c1');
+      break;
+    case $('#r2c2').text() !== player && $('#r2c2').text() !== machine:
+      DrawIcon('r2c2');
+      break;
+    case $('#r2c3').text() !== player && $('#r2c3').text() !== machine:
+      DrawIcon('r2c3');
+      break;
+    case $('#r3c1').text() !== player && $('#r3c1').text() !== machine:
+      DrawIcon('r3c1');
+      break;
+    case $('#r3c2').text() !== player && $('#r3c2').text() !== machine:
+      DrawIcon('r3c2');
+      break;
+    case $('r3c3').text() !== player && $('#r2c3').text() !== machine:
+      DrawIcon('r3c3');
+      break;
+  }
+};
