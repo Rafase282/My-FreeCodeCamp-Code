@@ -112,6 +112,7 @@ function DrawLine(pos1, pos2, pos3) {
   $pos1.addClass('winningRow');
   $pos2.addClass('winningRow');
   $pos3.addClass('winningRow');
+  PToggler(curPlayer);
 }
 
 // Updates the score and clears the board by calling the Clear function.
@@ -169,7 +170,7 @@ function MarkPosition() {
 
     // Add Icon to the board for machine
     if (gameOver === false && moves % 2 === 0) {
-      MachineMove();
+      MachineAI();
       WinCheck();
       moves += 1;
       PToggler(curPlayer);
@@ -178,7 +179,7 @@ function MarkPosition() {
 };
 
 // just place moves on the board, bare minimum implementation
-function MachineMove() {
+function MachineAI() {
   switch (true) {
     case $('#r1c1').text() !== player && $('#r1c1').text() !== machine:
       DrawIcon('r1c1');
