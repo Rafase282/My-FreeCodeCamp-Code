@@ -112,12 +112,13 @@ function DrawLine(pos1, pos2, pos3) {
   $pos1.addClass('winningRow');
   $pos2.addClass('winningRow');
   $pos3.addClass('winningRow');
+
+  // Fix for the race problem of JS vs jQuery toggling the current player befre the score is changed.
   PToggler(curPlayer);
 }
 
 // Updates the score and clears the board by calling the Clear function.
 function UpdateScore() {
-  console.log(curPlayer);
   $('.' + curPlayer).text(+$('.' + curPlayer).text() + 1);
   Clear();
 }
