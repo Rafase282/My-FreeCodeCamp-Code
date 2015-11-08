@@ -1,4 +1,5 @@
-h1, h3 {
+h1,
+h3 {
   text-align: center;
   font-family: "Lucida Console", Monaco, monospace;
   color: #663300;
@@ -21,12 +22,11 @@ footer {
   line-height: 20px;
   padding-top: 10px;
   padding-bottom: 6px;
-  position: relative;
+  position: fixed;
   text-align: center;
   font-family: cursive, sans-serif;
   width: 100%;
   bottom: 0;
-  position: fixed;
 }
 
 .field {
