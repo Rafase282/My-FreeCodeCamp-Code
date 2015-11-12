@@ -5,6 +5,7 @@ var seqCopy;
 var strict = false;
 var power = false;
 var round;
+var win;
 var lock = false;
 var speed = 600;
 var audio1 = new Audio(
@@ -97,36 +98,19 @@ function beep(audio) {
   }
 }
 
-function playerMove() {
-  // Time for the user to play
-  if (power == true) {
-    var position = $(this).data('tile');
-    player.push(position);
+function strictON() {
+  // Handles the case of strict being on.
+  if (strict) {
+    // Reset
+    win = false;
+    gameOver();
+    resetGame();
+  } else {
+    // Another chance, removed bad move from player and replays sequence.
+    player.pop();
+    animate(sequence, speed);
 
-    if (player.length !== sequence.length) {
-      // If the two sequences are not the same size
-      if (position === seqCopy.shift()) {
-        // Check  to make sure the position is in the right sequence
-        console.log('Passed', 'player:', player, 'sequence:', sequence,
-          'current position:', position, 'checking:', seqCopy);
-      } else {
-        // Lost round, reset if strict, another chance if not.
-        //strict ? resetGame() : player.pop() animate(sequence, speed);
-        if (strict) {
-          // Reset
-          resetGame();
-        } else {
-          // Another chance, removed bad move from player and replays sequence.
-          player.pop();
-          animate(sequence, speed);
-
-          // Player Moves now
-        }
-      }
-    } else {
-      // If the difference is one, then make it 0 by pushing the last position to sequence.
-      NewRound(sequence, speed);
-    }
+    // Player Moves now
   }
 }
 
@@ -146,7 +130,7 @@ function resetGame() {
 }
 
 function onOf() {
-  // On/Off toggleClass
+  // On-Off toggleClass
   $('.power-button').toggleClass('float-left float-right');
   if ($('.power-button').hasClass('float-right')) {
     power = true;
@@ -182,6 +166,41 @@ function startOpt() {
     } else {
       $('#start').text('START');
       resetGame();
+    }
+  }
+}
+
+function gameOver(win) {
+  // Handle the game over case
+  if (win == true) {
+    //Display, player Wins!
+    console.log('You win!');
+  } else {
+    //Display player lost
+    console.log('You Lose!');
+  }
+}
+
+function playerMove() {
+  // Time for the user to play
+  if (power == true) {
+    var position = $(this).data('tile');
+    player.push(position);
+
+    if (player.length !== sequence.length) {
+      // If the two sequences are not the same size
+      if (position === seqCopy.shift()) {
+        // Check  to make sure the position is in the right sequence
+        console.log('Passed', 'player:', player, 'sequence:', sequence,
+          'current position:', position, 'checking:', seqCopy);
+      } else {
+        // Lost round, reset if strict, another chance if not.
+        //strict ? resetGame() : player.pop() animate(sequence, speed);
+        strictON();
+      }
+    } else {
+      // If the difference is one, then make it 0 by pushing the last position to sequence.
+      NewRound(sequence, speed);
     }
   }
 }
