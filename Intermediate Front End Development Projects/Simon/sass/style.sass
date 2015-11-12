@@ -1,5 +1,23 @@
+//FONTS
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One)
+$font-stack: 'Alfa Slab One', cursive 
+
+
 //VARIABLES
 $simon-height: 70vmin
+
+/* colors & borders */
+$red: rgba(255, 54, 48, 1)
+$burgundy: rgba(35, 11, 10, 0.85)
+$blue: rgba(54, 97, 196, 1)
+$light-blue: rgba(89, 196, 206, 1)
+$green: rgba(41, 217, 53, 1)
+$yellow: rgba(255, 241, 48, 1)
+$gray: rgba(50, 50, 50, 1)
+$shadow: rgba(10, 10, 10, 1)
+$bg-shadow: linear-gradient(to top, rgba($gray, 0.2), rgba($shadow, 0.3))
+$tile-border: 1.5vmin solid $gray
+$outer-border: 3.2vmin solid $gray
 
 //HELPER CLASSES
 .button-bright
@@ -16,8 +34,9 @@ $simon-height: 70vmin
 .boxes
   height: 50%
   width: 50%
-  border: 20px solid black
-  background-image: linear-gradient(to top, rgba(black, 0.3), rgba(black, 0.4))
+  border: $outer-border
+  box-shadow: 0.5vmin 0.5vmin 3vmin $shadow
+  background-image: $bg-shadow
   background-blend-mode: darken
  
 .brighten
@@ -30,6 +49,14 @@ section
   position: relative
   height: 90vh
   width: 100%
+  background:
+    image: url(https://cloud.githubusercontent.com/assets/13574207/11122154/81d5b022-891f-11e5-9d3a-881197b29d2a.jpg)
+    size: cover
+    position: center
+    blend-mode: screen
+    color: gray
+    
+    
   
   .app-container
     @extend .flex-centered
@@ -39,34 +66,38 @@ section
     width: $simon-height
     //border: solid 20px black
     //border-radius: 50%
+    
+    //TILES
     .green
       @extend .boxes
-      background-color: rgba(green, 0.8)
+      background-color: $green
       border-top-left-radius: 100%
-      border-right: 10px solid black
-      border-bottom: 10px solid black
+      border-right: $tile-border
+      border-bottom: $tile-border
       
       
     .red
       @extend .boxes
-      background-color: rgba(red, 0.85)
+      background-color: $red
       border-top-right-radius: 100%
-      border-left: 10px solid black
-      border-bottom: 10px solid black
+      border-left: $tile-border
+      border-bottom: $tile-border
       
     .yellow
       @extend .boxes
-      background-color: rgba(yellow, 0.8)
+      background-color: $yellow
       border-bottom-left-radius: 100%
-      border-right: 10px solid black
-      border-top: 10px solid black
+      border-right: $tile-border
+      border-top: $tile-border
       
     .blue
       @extend .boxes
-      background-color: rgba(blue, 0.85)
+      background-color: $blue
       border-bottom-right-radius: 100%
-      border-top: 10px solid black
-      border-left: 10px solid black
+      border-top: $tile-border
+      border-left: $tile-border
+      
+    //CENTER SECTION
     .board
       @extend .flex-centered
       position: absolute
@@ -84,8 +115,9 @@ section
         width: 100%
         background-image: none
         background-color: white
-        border: 10px solid black !important
+        border: $tile-border /*!important*/
         border-radius: 50%
+        box-shadow: 0.2vmin 0.2vmin 0.5vmin $shadow
         
         
           
@@ -99,19 +131,24 @@ section
           
           span
             //border: solid 1px black
-            font-size: 7.5vmin
-            font-weight: bold
+            font-size: 6vmin
+            font-family: $font-stack
             color: black
             padding: 0
-            margin: 0
+            margin-top: 3vmin
+            //background-color: pink
+          .reg
+            font-family: Helvetica, sans-serif
+            font-size: 2vmin
+            margin-bottom: 2vmin
           
         /* MAIN GAME CONTROLS */
         .middle-row
           display: flex
           justify-content: space-around
           //background-color: pink
-          width: 95%
-          height: 35%
+          width: 90%
+          height: 33%
           margin: 0
           .display, .start, .strict
             position: relative
@@ -123,64 +160,97 @@ section
             //border: 1px solid red
             position: absolute
             width: 100%
-            bottom: -3vmin
+            bottom: -2.2vmin
             left: 0
+            padding: 0
+            margin: 0
             font-size: 1.5vmin
             color: black
             text-align: center
+          
+          /*ROUND DISPLAY  */
           .display
-            display: inline-block
-            background-color: rgba(black, 0.7)
-            border: 3px solid rgba(black, 0.8)
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            background-color: $burgundy
+            border: 3px solid $shadow
             border-radius: 10%
+            .round-number
+              color: $burgundy + rgba(175, 44, 44, 0.85)
+              font-size: 4.5vmin
+            
+          /* START BUTTON */
           .start
             display: inline-flex
             justify-content: center
             align-items: center
+            .label
+              bottom: -1.88vmin
             .start-button
-              background-color: rgba(darkred, 0.85)
+              background-color: $red
               height: 5vmin
               width: 5vmin
-              border: 5px solid rgba(black, 0.8)
-              border-radius: 50%              
+              border: 0.6vmin solid $gray
+              border-radius: 50% 
+              box-shadow: 0.2vmin 0.2vmin 0.4vmin $shadow
+          
+          /* STRICT BUTTON */
           .strict
             display: inline-flex
             justify-content: center
             align-items: center
+            .label
+              bottom: -1.88vmin
             .strict-button
-              
-              background-color: rgba(yellow, 0.85)
-              background-image: linear-gradient(to top, rgba(black, 0.3), rgba(black, 0.4))
-              background-blend-mode: darken
+              background-color: $yellow - rgb(44,44,44)
               height: 5vmin
               width: 5vmin
-              border: 5px solid rgba(black, 0.8)
+              border: 0.6vmin solid $gray
               border-radius: 50%
+              box-shadow: 0.2vmin 0.2vmin 0.4vmin $shadow
             
         /* POWER BUTTON */
         .bottom-row
           @extend .flex-centered
-          height: 25%
+          height: 23%
           width: 100%
             
           .power-bg
             display: block
             height: 3vmin
-            width: 25%
+            width: 20%
             padding: 1px
-            background-color: rgba(black, 0.8)
+            background-color: $shadow
+            border-radius: 0.5vmin
           .power-button
             height: 100%
-            width: 45%
-            background-color: pink
-            
+            width: 50%
+            background-color: $light-blue
+            border-radius: 0.5vmin
+            border: 0.3vmin solid $gray
+          /* POWER BUTTON LABELS */
           .on
-            margin-left: .5vmin
-            font-size: 2vmin
+            margin-left: .3vmin
+            font-size: 1.5vmin
             font-weight: 600
+            
           .off
             margin-right: .5vmin
-            font-size: 2vmin
+            font-size: 1.5vmin
             font-weight: 600
+            
+// FOOTER
+footer
+  background-color: black
+  color: gray
+  line-height: 20px
+  padding-top: 10px
+  padding-bottom: 6px
+  position: fixed
+  text-align: center
+  font-family: cursive, sans-serif
+  width: 100%
+  bottom: 0
             
             

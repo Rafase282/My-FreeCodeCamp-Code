@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+/* colors & borders */
 .button-bright {
   background-image: none !important;
 }
@@ -19,8 +21,9 @@
 .boxes, section .app-container .green, section .app-container .red, section .app-container .yellow, section .app-container .blue {
   height: 50%;
   width: 50%;
-  border: 20px solid black;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+  border: 3.2vmin solid #323232;
+  box-shadow: 0.5vmin 0.5vmin 3vmin #0a0a0a;
+  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.2), rgba(10, 10, 10, 0.3));
   background-blend-mode: darken;
 }
 
@@ -33,43 +36,42 @@ section {
   position: relative;
   height: 90vh;
   width: 100%;
+  background-image: url(https://cloud.githubusercontent.com/assets/13574207/11122154/81d5b022-891f-11e5-9d3a-881197b29d2a.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+  background-color: gray;
 }
-
 section .app-container {
   flex-wrap: wrap;
   position: relative;
   height: 70vmin;
   width: 70vmin;
 }
-
 section .app-container .green {
-  background-color: rgba(0, 128, 0, 0.8);
+  background-color: #29d935;
   border-top-left-radius: 100%;
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-right: 1.5vmin solid #323232;
+  border-bottom: 1.5vmin solid #323232;
 }
-
 section .app-container .red {
-  background-color: rgba(255, 0, 0, 0.85);
+  background-color: #ff3630;
   border-top-right-radius: 100%;
-  border-left: 10px solid black;
-  border-bottom: 10px solid black;
+  border-left: 1.5vmin solid #323232;
+  border-bottom: 1.5vmin solid #323232;
 }
-
 section .app-container .yellow {
-  background-color: rgba(255, 255, 0, 0.8);
+  background-color: #fff130;
   border-bottom-left-radius: 100%;
-  border-right: 10px solid black;
-  border-top: 10px solid black;
+  border-right: 1.5vmin solid #323232;
+  border-top: 1.5vmin solid #323232;
 }
-
 section .app-container .blue {
-  background-color: rgba(0, 0, 255, 0.85);
+  background-color: #3661c4;
   border-bottom-right-radius: 100%;
-  border-top: 10px solid black;
-  border-left: 10px solid black;
+  border-top: 1.5vmin solid #323232;
+  border-left: 1.5vmin solid #323232;
 }
-
 section .app-container .board {
   position: absolute;
   top: 25%;
@@ -78,122 +80,146 @@ section .app-container .board {
   width: 50%;
   border-radius: 50%;
 }
-
 section .app-container .board .circle {
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
   background-image: none;
   background-color: white;
-  border: 10px solid black !important;
+  border: 1.5vmin solid #323232;
   border-radius: 50%;
+  box-shadow: 0.2vmin 0.2vmin 0.5vmin #0a0a0a;
   /* BRAND NAME */
   /* MAIN GAME CONTROLS */
   /* POWER BUTTON */
 }
-
 section .app-container .board .circle .brand {
   width: 100%;
   height: 40%;
 }
-
 section .app-container .board .circle .brand span {
-  font-size: 7.5vmin;
-  font-weight: bold;
+  font-size: 6vmin;
+  font-family: "Alfa Slab One", cursive;
   color: black;
   padding: 0;
-  margin: 0;
+  margin-top: 3vmin;
 }
-
+section .app-container .board .circle .brand .reg {
+  font-family: Helvetica, sans-serif;
+  font-size: 2vmin;
+  margin-bottom: 2vmin;
+}
 section .app-container .board .circle .middle-row {
   display: flex;
   justify-content: space-around;
-  width: 95%;
-  height: 35%;
+  width: 90%;
+  height: 33%;
   margin: 0;
+  /*ROUND DISPLAY  */
+  /* START BUTTON */
+  /* STRICT BUTTON */
 }
-
 section .app-container .board .circle .middle-row .display, section .app-container .board .circle .middle-row .start, section .app-container .board .circle .middle-row .strict {
   position: relative;
   height: 61.8%;
   width: 30%;
   box-sizing: border-box;
 }
-
 section .app-container .board .circle .middle-row span.label {
   position: absolute;
   width: 100%;
-  bottom: -3vmin;
+  bottom: -2.2vmin;
   left: 0;
+  padding: 0;
+  margin: 0;
   font-size: 1.5vmin;
   color: black;
   text-align: center;
 }
-
 section .app-container .board .circle .middle-row .display {
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 3px solid rgba(0, 0, 0, 0.8);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(35, 11, 10, 0.85);
+  border: 3px solid #0a0a0a;
   border-radius: 10%;
 }
-
+section .app-container .board .circle .middle-row .display .round-number {
+  color: rgba(210, 55, 54, 0.85);
+  font-size: 4.5vmin;
+}
 section .app-container .board .circle .middle-row .start {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-
+section .app-container .board .circle .middle-row .start .label {
+  bottom: -1.88vmin;
+}
 section .app-container .board .circle .middle-row .start .start-button {
-  background-color: rgba(139, 0, 0, 0.85);
+  background-color: #ff3630;
   height: 5vmin;
   width: 5vmin;
-  border: 5px solid rgba(0, 0, 0, 0.8);
+  border: 0.6vmin solid #323232;
   border-radius: 50%;
+  box-shadow: 0.2vmin 0.2vmin 0.4vmin #0a0a0a;
 }
-
 section .app-container .board .circle .middle-row .strict {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-
+section .app-container .board .circle .middle-row .strict .label {
+  bottom: -1.88vmin;
+}
 section .app-container .board .circle .middle-row .strict .strict-button {
-  background-color: rgba(255, 255, 0, 0.85);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
-  background-blend-mode: darken;
+  background-color: #d3c504;
   height: 5vmin;
   width: 5vmin;
-  border: 5px solid rgba(0, 0, 0, 0.8);
+  border: 0.6vmin solid #323232;
   border-radius: 50%;
+  box-shadow: 0.2vmin 0.2vmin 0.4vmin #0a0a0a;
 }
-
 section .app-container .board .circle .bottom-row {
-  height: 25%;
+  height: 23%;
   width: 100%;
+  /* POWER BUTTON LABELS */
 }
-
 section .app-container .board .circle .bottom-row .power-bg {
   display: block;
   height: 3vmin;
-  width: 25%;
+  width: 20%;
   padding: 1px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #0a0a0a;
+  border-radius: 0.5vmin;
 }
-
 section .app-container .board .circle .bottom-row .power-button {
   height: 100%;
-  width: 45%;
-  background-color: pink;
+  width: 50%;
+  background-color: #59c4ce;
+  border-radius: 0.5vmin;
+  border: 0.3vmin solid #323232;
 }
-
 section .app-container .board .circle .bottom-row .on {
-  margin-left: 0.5vmin;
-  font-size: 2vmin;
+  margin-left: 0.3vmin;
+  font-size: 1.5vmin;
   font-weight: 600;
 }
-
 section .app-container .board .circle .bottom-row .off {
   margin-right: 0.5vmin;
-  font-size: 2vmin;
+  font-size: 1.5vmin;
   font-weight: 600;
+}
+
+footer {
+  background-color: black;
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  position: fixed;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  width: 100%;
+  bottom: 0;
 }
