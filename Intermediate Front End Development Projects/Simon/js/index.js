@@ -69,7 +69,7 @@ function getColor(num) {
 }
 
 function beep(audio) {
-  // body...
+  // Plays the correct audio file.
   switch (audio) {
     case 'audio1':
       audio1.play();
@@ -84,4 +84,9 @@ function beep(audio) {
       audio4.play();
       break;
   }
+}
+
+function playerMove(sequence) {
+  // Time for the user to play
+
 }
