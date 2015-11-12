@@ -1,8 +1,8 @@
-// Set variables
-var sequence = [1, 2, 3, 4];
+// Set variables and sounds
+var sequence = [];
 var player = [];
 var strict = false;
-var count = 0;
+var round = 0;
 var speed = 600;
 var audio1 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
@@ -13,19 +13,23 @@ var audio3 = new Audio(
 var audio4 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
 
+// Handles ON and OFF
 $('.power-button').on('click', function() {
   $(this).toggleClass('float-left float-right');
   NewRound(sequence, speed);
 });
 
+// Set Strict mode ON and OFF
 $('.strict-button').on('click', function() {
   $(this).toggleClass('brighten');
 });
 
+// Set start/restart button ON and OFF
 $('.start-button').on('click', function() {
   $(this).toggleClass('brighten');
 });
 
+// Handles user input
 $('.tiles').on('click', playerMove).on('mousedown', function() {
   var audio = 'audio' + $(this).data('tile');
   beep(audio);
@@ -41,6 +45,7 @@ function NewRound(sequence, speed) {
 
   //Must increase speed on 5th, 9th and 13th round
   animate(sequence, speed);
+  updateRound();
 }
 
 function animate(sequence, speed) {
@@ -90,7 +95,22 @@ function beep(audio) {
   }
 }
 
-function playerMove(sequence) {
+function playerMove() {
   // Time for the user to play
+  var position = $(this).data('tile');
+  player.push(position);
 
+  if (position === sequence.shift()) {
+    console.log('good', player, sequence);
+    sequence.push(position);
+    NewRound(sequence, speed);
+  } else {
+    console.log('Bad');
+  }
+}
+
+function updateRound() {
+  // Update Round and display it
+  round += 1;
+  $('.round-number').text(round);
 }
