@@ -26,7 +26,11 @@ $('.start-button').on('click', function() {
   $(this).toggleClass('brighten');
 });
 
-$('.tiles').on('click', function() {
+$('.tiles').on('click', playerMove).on('mousedown', function() {
+  var audio = 'audio' + $(this).data('tile');
+  beep(audio);
+  $(this).toggleClass('brighten');
+}).on('mouseup', function() {
   $(this).toggleClass('brighten');
 });
 
