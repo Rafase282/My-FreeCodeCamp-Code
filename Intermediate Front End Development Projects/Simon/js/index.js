@@ -1,8 +1,10 @@
 // Set variables and sounds
 var sequence = [];
 var player = [];
+var seqCopy;
 var strict = false;
-var round = 0;
+var power = false;
+var round;
 var speed = 600;
 var audio1 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
@@ -14,37 +16,36 @@ var audio4 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
 
 // Handles ON and OFF
-$('.power-button').on('click', function() {
-  $(this).toggleClass('float-left float-right');
-  NewRound(sequence, speed);
-});
+$('.power-button').on('click', onOf);
 
 // Set Strict mode ON and OFF
-$('.strict-button').on('click', function() {
-  $(this).toggleClass('brighten');
-});
+$('.strict-button').on('click', strictOpt);
 
 // Set start/restart button ON and OFF
-$('.start-button').on('click', function() {
-  $(this).toggleClass('brighten');
-});
+$('.start-button').on('click', startOpt);
 
 // Handles user input
 $('.tiles').on('click', playerMove).on('mousedown', function() {
-  var audio = 'audio' + $(this).data('tile');
-  beep(audio);
-  $(this).toggleClass('brighten');
+  if (power == true) {
+    var audio = 'audio' + $(this).data('tile');
+    beep(audio);
+    $(this).toggleClass('brighten');
+  }
 }).on('mouseup', function() {
-  $(this).toggleClass('brighten');
+  if (power == true) {
+    $(this).toggleClass('brighten');
+  }
 });
 
 function NewRound(sequence, speed) {
   // Adds new random color and sends the sequence to be animated
   var color = getColor(4);
   sequence.push(color);
+  seqCopy = sequence;
 
   //Must increase speed on 5th, 9th and 13th round
   animate(sequence, speed);
+  round += 1;
   updateRound();
 }
 
@@ -97,20 +98,77 @@ function beep(audio) {
 
 function playerMove() {
   // Time for the user to play
-  var position = $(this).data('tile');
-  player.push(position);
+  if (power == true) {
+    var position = $(this).data('tile');
+    player.push(position);
 
-  if (position === sequence.shift()) {
-    console.log('good', player, sequence);
-    sequence.push(position);
-    NewRound(sequence, speed);
-  } else {
-    console.log('Bad');
+    if (player.length !== sequence.length) {
+      // If the two sequences are not the same size
+      if (position === seqCopy.shift()) {
+        // Check  to make sure the position is in the right sequence
+        console.log('Passed', 'player:', player, 'sequence:', sequence,
+          'current position:', position, 'checking:', seqCopy);
+      } else {
+        // Lost round, reset if strict, another chance if not.
+        //strict ? resetGame() : player.pop() animate(sequence, speed);
+        if (strict) {
+          // Reset
+          resetGame();
+        } else {
+          // Another chance, removed bad move from player and replays sequence.
+          player.pop();
+          animate(sequence, speed);
+
+          // Player Moves now
+        }
+      }
+    } else {
+      // If the difference is one, then make it 0 by pushing the last position to sequence.
+      NewRound(sequence, speed);
+    }
   }
 }
 
 function updateRound() {
-  // Update Round and display it
-  round += 1;
+  // Display round
   $('.round-number').text(round);
+}
+
+function resetGame() {
+  // Resets the board with the previous values
+  sequence = [];
+  player = [];
+  round = 0;
+}
+
+function onOf() {
+  // On/Off toggleClass
+  $('.power-button').toggleClass('float-left float-right');
+  if ($('.power-button').hasClass('float-right')) {
+    power = true;
+    round = 0;
+    updateRound();
+  } else {
+    round = '';
+    updateRound();
+    $('.strict-button').removeClass('brighten');
+    strict = false;
+    power = false;
+  }
+}
+
+function strictOpt() {
+  // Switch helper
+  if (power == true) {
+    $('.strict-button').toggleClass('brighten');
+    $('.strict-button').hasClass('brighten') ? strict = true : strict = false;
+  }
+}
+
+function startOpt() {
+  // Starts the game
+  if (power == true) {
+    $('.start-button').toggleClass('brighten');
+    NewRound(sequence, speed)
+  }
 }
