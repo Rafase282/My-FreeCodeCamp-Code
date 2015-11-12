@@ -39,19 +39,32 @@ $('.tiles').on('click', playerMove).on('mousedown', function() {
   }
 });
 
-function NewRound(sequence, speed) {
+function NewRound() {
   // Adds new random color and sends the sequence to be animated
   var color = getColor(4);
   sequence.push(color);
-  seqCopy = sequence;
+  seqCopy = copyArr(sequence);
 
   //Must increase speed on 5th, 9th and 13th round
-  animate(sequence, speed);
+  animate();
   round += 1;
   updateRound();
 }
 
-function animate(sequence, speed) {
+function copyArr(argument) {
+  // makes a duplicate of sequence
+  var a = argument;
+  var length = a.length;
+  var b = new Array(length);
+
+  while (length--) {
+    b[length] = a[length];
+  }
+
+  return b;
+}
+
+function animate() {
   var i = 0;
   var interval = setInterval(function() {
     LightUp(sequence[i]);
@@ -100,7 +113,7 @@ function beep(audio) {
 
 function strictON() {
   // Handles the case of strict being on.
-  if (strict) {
+  if (strict == true) {
     // Reset
     win = false;
     gameOver();
@@ -108,7 +121,7 @@ function strictON() {
   } else {
     // Another chance, removed bad move from player and replays sequence.
     player.pop();
-    animate(sequence, speed);
+    animate();
 
     // Player Moves now
   }
@@ -139,6 +152,7 @@ function onOf() {
   } else {
     $('.strict-button').removeClass('brighten');
     $('.start-button').removeClass('brighten');
+    $('#start').text('START');
     strict = false;
     power = false;
     resetGame();
@@ -162,7 +176,7 @@ function startOpt() {
     if ($('.start-button').hasClass('brighten')) {
       $('#start').text('RESET');
       lock = true;
-      NewRound(sequence, speed);
+      NewRound();
     } else {
       $('#start').text('START');
       resetGame();
@@ -170,7 +184,7 @@ function startOpt() {
   }
 }
 
-function gameOver(win) {
+function gameOver() {
   // Handle the game over case
   if (win == true) {
     //Display, player Wins!
@@ -186,9 +200,11 @@ function playerMove() {
   if (power == true) {
     var position = $(this).data('tile');
     player.push(position);
-
-    if (player.length !== sequence.length) {
-      // If the two sequences are not the same size
+    // exp = while sequence is greater than player or it is one.
+    var exp = sequence.length > player.length || sequence.length === 1;
+    console.log(sequence.length > player.length, 'or', sequence.length === 1,
+      '=', exp);
+    if (exp) {
       if (position === seqCopy.shift()) {
         // Check  to make sure the position is in the right sequence
         console.log('Passed', 'player:', player, 'sequence:', sequence,
@@ -198,9 +214,9 @@ function playerMove() {
         //strict ? resetGame() : player.pop() animate(sequence, speed);
         strictON();
       }
-    } else {
-      // If the difference is one, then make it 0 by pushing the last position to sequence.
-      NewRound(sequence, speed);
+    } else if (sequence.length === player.length) {
+      NewRound();
     }
+
   }
 }
