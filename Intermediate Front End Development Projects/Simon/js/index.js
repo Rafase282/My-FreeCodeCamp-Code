@@ -5,6 +5,7 @@ var seqCopy;
 var strict = false;
 var power = false;
 var round;
+var lock = false;
 var speed = 600;
 var audio1 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
@@ -139,6 +140,9 @@ function resetGame() {
   sequence = [];
   player = [];
   round = 0;
+  updateRound();
+  lock = false;
+  speed = 600;
 }
 
 function onOf() {
@@ -149,17 +153,19 @@ function onOf() {
     round = 0;
     updateRound();
   } else {
-    round = '';
-    updateRound();
     $('.strict-button').removeClass('brighten');
+    $('.start-button').removeClass('brighten');
     strict = false;
     power = false;
+    resetGame();
+    round = '';
+    updateRound();
   }
 }
 
 function strictOpt() {
   // Switch helper
-  if (power == true) {
+  if (power == true && lock == false) {
     $('.strict-button').toggleClass('brighten');
     $('.strict-button').hasClass('brighten') ? strict = true : strict = false;
   }
@@ -169,6 +175,13 @@ function startOpt() {
   // Starts the game
   if (power == true) {
     $('.start-button').toggleClass('brighten');
-    NewRound(sequence, speed)
+    if ($('.start-button').hasClass('brighten')) {
+      $('#start').text('RESET');
+      lock = true;
+      NewRound(sequence, speed);
+    } else {
+      $('#start').text('START');
+      resetGame();
+    }
   }
 }
