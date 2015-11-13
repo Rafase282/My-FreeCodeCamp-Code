@@ -35,7 +35,7 @@ $outer-border: 3.2vmin solid $gray
   height: 50%
   width: 50%
   border: $outer-border
-  box-shadow: 0.5vmin 0.5vmin 3vmin $shadow
+  box-shadow: 1vmin 1vmin 3vmin $shadow
   background-image: $bg-shadow
   background-blend-mode: darken
  
@@ -50,13 +50,57 @@ section
   height: 90vh
   width: 100%
   background:
-    image: url(https://cloud.githubusercontent.com/assets/13574207/11122154/81d5b022-891f-11e5-9d3a-881197b29d2a.jpg)
+    image: url(https://cloud.githubusercontent.com/assets/13574207/11134180/7f5e3224-8960-11e5-924d-463c78063cb9.jpg)
     size: cover
     position: center
-    blend-mode: screen
-    color: gray
-    
-    
+    /*blend-mode: overlay
+    //color: rgba($shadow 0.5)*/
+  .win, .lose
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: rgba($blue, 0.8) + rgba(0,0,0,0.8)
+    font-size: 11vmin
+    font-weight: bold
+    color: white
+    letter-spacing: -0.5vmin
+    text-shadow: 1vmin 1vmin 6vmin $shadow
+    z-index: 1
+    .modal-buttons
+      display: flex
+      align-items: center
+      justify-content: space-around
+      position: absolute
+      top: 60%
+      left: 25%
+      width: 50%
+      height: 10%
+      //background-color: pink
+      
+      .play-again, .quit
+        @extend .flex-centered
+        background-image: $bg-shadow
+        background-color: $green
+        height: 61.8%
+        width: 40%
+        max-width: 175px
+        border-radius: 1vmin
+        box-shadow: 0.4vmin 0.4vmin 1vmin $shadow
+        color: black
+        text-shadow: none
+        font-size: 3vmin
+        font-weight: 500
+        letter-spacing: 0
+        
+        &:active
+          box-shadow: none
+        
+        
   
   .app-container
     @extend .flex-centered

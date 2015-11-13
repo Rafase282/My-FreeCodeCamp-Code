@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One);
+
 /* colors & borders */
+
 .button-bright {
   background-image: none !important;
 }
@@ -12,7 +14,7 @@
   float: left;
 }
 
-.flex-centered, section, section .app-container, section .app-container .board, section .app-container .board .circle, section .app-container .board .circle .brand, section .app-container .board .circle .bottom-row {
+.flex-centered, section, section .win .modal-buttons .play-again, section .win .modal-buttons .quit, section .lose .modal-buttons .play-again, section .lose .modal-buttons .quit, section .app-container, section .app-container .board, section .app-container .board .circle, section .app-container .board .circle .brand, section .app-container .board .circle .bottom-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +24,7 @@
   height: 50%;
   width: 50%;
   border: 3.2vmin solid #323232;
-  box-shadow: 0.5vmin 0.5vmin 3vmin #0a0a0a;
+  box-shadow: 1vmin 1vmin 3vmin #0a0a0a;
   background-image: linear-gradient(to top, rgba(50, 50, 50, 0.2), rgba(10, 10, 10, 0.3));
   background-blend-mode: darken;
 }
@@ -36,42 +38,95 @@ section {
   position: relative;
   height: 90vh;
   width: 100%;
-  background-image: url(https://cloud.githubusercontent.com/assets/13574207/11122154/81d5b022-891f-11e5-9d3a-881197b29d2a.jpg);
+  background-image: url(https://cloud.githubusercontent.com/assets/13574207/11134180/7f5e3224-8960-11e5-924d-463c78063cb9.jpg);
   background-size: cover;
   background-position: center;
-  background-blend-mode: screen;
-  background-color: gray;
+  /*blend-mode: overlay */
 }
+
+section .win, section .lose {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(54, 97, 196, 0.8);
+  font-size: 11vmin;
+  font-weight: bold;
+  color: white;
+  letter-spacing: -0.5vmin;
+  text-shadow: 1vmin 1vmin 6vmin #0a0a0a;
+  z-index: 1;
+}
+
+section .win .modal-buttons, section .lose .modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  width: 50%;
+  height: 10%;
+}
+
+section .win .modal-buttons .play-again, section .win .modal-buttons .quit, section .lose .modal-buttons .play-again, section .lose .modal-buttons .quit {
+  background-image: linear-gradient(to top, rgba(50, 50, 50, 0.2), rgba(10, 10, 10, 0.3));
+  background-color: #29d935;
+  height: 61.8%;
+  width: 40%;
+  max-width: 175px;
+  border-radius: 1vmin;
+  box-shadow: 0.4vmin 0.4vmin 1vmin #0a0a0a;
+  color: black;
+  text-shadow: none;
+  font-size: 3vmin;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+section .win .modal-buttons .play-again:active, section .win .modal-buttons .quit:active, section .lose .modal-buttons .play-again:active, section .lose .modal-buttons .quit:active {
+  box-shadow: none;
+}
+
 section .app-container {
   flex-wrap: wrap;
   position: relative;
   height: 70vmin;
   width: 70vmin;
 }
+
 section .app-container .green {
   background-color: #29d935;
   border-top-left-radius: 100%;
   border-right: 1.5vmin solid #323232;
   border-bottom: 1.5vmin solid #323232;
 }
+
 section .app-container .red {
   background-color: #ff3630;
   border-top-right-radius: 100%;
   border-left: 1.5vmin solid #323232;
   border-bottom: 1.5vmin solid #323232;
 }
+
 section .app-container .yellow {
   background-color: #fff130;
   border-bottom-left-radius: 100%;
   border-right: 1.5vmin solid #323232;
   border-top: 1.5vmin solid #323232;
 }
+
 section .app-container .blue {
   background-color: #3661c4;
   border-bottom-right-radius: 100%;
   border-top: 1.5vmin solid #323232;
   border-left: 1.5vmin solid #323232;
 }
+
 section .app-container .board {
   position: absolute;
   top: 25%;
@@ -80,6 +135,7 @@ section .app-container .board {
   width: 50%;
   border-radius: 50%;
 }
+
 section .app-container .board .circle {
   flex-wrap: wrap;
   height: 100%;
@@ -93,10 +149,12 @@ section .app-container .board .circle {
   /* MAIN GAME CONTROLS */
   /* POWER BUTTON */
 }
+
 section .app-container .board .circle .brand {
   width: 100%;
   height: 40%;
 }
+
 section .app-container .board .circle .brand span {
   font-size: 6vmin;
   font-family: "Alfa Slab One", cursive;
@@ -104,11 +162,13 @@ section .app-container .board .circle .brand span {
   padding: 0;
   margin-top: 3vmin;
 }
+
 section .app-container .board .circle .brand .reg {
   font-family: Helvetica, sans-serif;
   font-size: 2vmin;
   margin-bottom: 2vmin;
 }
+
 section .app-container .board .circle .middle-row {
   display: flex;
   justify-content: space-around;
@@ -119,12 +179,14 @@ section .app-container .board .circle .middle-row {
   /* START BUTTON */
   /* STRICT BUTTON */
 }
+
 section .app-container .board .circle .middle-row .display, section .app-container .board .circle .middle-row .start, section .app-container .board .circle .middle-row .strict {
   position: relative;
   height: 61.8%;
   width: 30%;
   box-sizing: border-box;
 }
+
 section .app-container .board .circle .middle-row span.label {
   position: absolute;
   width: 100%;
@@ -136,6 +198,7 @@ section .app-container .board .circle .middle-row span.label {
   color: black;
   text-align: center;
 }
+
 section .app-container .board .circle .middle-row .display {
   display: inline-flex;
   justify-content: center;
@@ -144,18 +207,22 @@ section .app-container .board .circle .middle-row .display {
   border: 3px solid #0a0a0a;
   border-radius: 10%;
 }
+
 section .app-container .board .circle .middle-row .display .round-number {
   color: rgba(210, 55, 54, 0.85);
   font-size: 4.5vmin;
 }
+
 section .app-container .board .circle .middle-row .start {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
+
 section .app-container .board .circle .middle-row .start .label {
   bottom: -1.88vmin;
 }
+
 section .app-container .board .circle .middle-row .start .start-button {
   background-color: #ff3630;
   height: 5vmin;
@@ -164,14 +231,17 @@ section .app-container .board .circle .middle-row .start .start-button {
   border-radius: 50%;
   box-shadow: 0.2vmin 0.2vmin 0.4vmin #0a0a0a;
 }
+
 section .app-container .board .circle .middle-row .strict {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
+
 section .app-container .board .circle .middle-row .strict .label {
   bottom: -1.88vmin;
 }
+
 section .app-container .board .circle .middle-row .strict .strict-button {
   background-color: #d3c504;
   height: 5vmin;
@@ -180,11 +250,13 @@ section .app-container .board .circle .middle-row .strict .strict-button {
   border-radius: 50%;
   box-shadow: 0.2vmin 0.2vmin 0.4vmin #0a0a0a;
 }
+
 section .app-container .board .circle .bottom-row {
   height: 23%;
   width: 100%;
   /* POWER BUTTON LABELS */
 }
+
 section .app-container .board .circle .bottom-row .power-bg {
   display: block;
   height: 3vmin;
@@ -193,6 +265,7 @@ section .app-container .board .circle .bottom-row .power-bg {
   background-color: #0a0a0a;
   border-radius: 0.5vmin;
 }
+
 section .app-container .board .circle .bottom-row .power-button {
   height: 100%;
   width: 50%;
@@ -200,11 +273,13 @@ section .app-container .board .circle .bottom-row .power-button {
   border-radius: 0.5vmin;
   border: 0.3vmin solid #323232;
 }
+
 section .app-container .board .circle .bottom-row .on {
   margin-left: 0.3vmin;
   font-size: 1.5vmin;
   font-weight: 600;
 }
+
 section .app-container .board .circle .bottom-row .off {
   margin-right: 0.5vmin;
   font-size: 1.5vmin;

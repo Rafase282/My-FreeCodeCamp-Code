@@ -16,8 +16,7 @@ var audio3 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
 var audio4 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
-
-// var audioBuzzer = new Audio(sound from somewhere) --> Notifies user that they didn't get the sequence right
+var audioBuzzer = new Audio('https://s3-us-west-2.amazonaws.com/guylemon/Buzzer.mp3');
 
 // Handles ON and OFF
 $('.power-button').on('click', onOf);
@@ -28,11 +27,30 @@ $('.strict-button').on('click', strictOpt);
 // Set start/restart button ON and OFF
 $('.start-button').on('click', startOpt);
 
+//Click listener for .win and .lose
+$('.win').click(function() {
+  $('.win').addClass('hidden');
+});
+
+$('.lose').click(function() {
+  $('.lose').addClass('hidden');
+});
+
+$('.play-again').click(function() {
+  $('lose').addClass('hidden');
+  $('.win').addClass('hidden');
+  resetGame();
+});
+
+$('.quit').click(function() {
+  $('lose').addClass('hidden');
+  $('.win').addClass('hidden');
+  onOf();
+});
+
 // Handles user input
 $('.tiles').on('click', playerMove).on('mousedown', function() {
   if (power == true && lock == true) {
-    var audio = 'audio' + $(this).data('tile');
-    beep(audio);
     $(this).toggleClass('brighten');
   }
 }).on('mouseup', function() {
@@ -49,10 +67,10 @@ function NewRound() {
   player = [];
 
   //Must increase speed on 5th, 9th and 13th round
+  if (round >= 4) speed = 400;
+  if (round >= 8) speed = 200;
+  if (round >= 12) speed = 100;
   animate();
-  if (round >= 5) speed = 400;
-  if (round >= 9) speed = 200;
-  if (round >= 13) speed = 100;
   round += 1;
   updateRound();
 }
@@ -114,6 +132,9 @@ function beep(audio) {
       break;
     case 'audio4':
       audio4.play();
+      break;
+    case 'audioBuzzer':
+      audioBuzzer.play();
       break;
   }
 }
@@ -191,27 +212,6 @@ function startOpt() {
   }
 }
 
-//Click listener for .win and .lose
-$('.win').click(function() {
-  $('.win').addClass('hidden');
-});
-
-$('.lose').click(function() {
-  $('.lose').addClass('hidden');
-});
-
-$('.play-again').click(function() {
-  $('lose').addClass('hidden');
-  $('.win').addClass('hidden');
-  resetGame();
-});
-
-$('.quit').click(function() {
-  $('lose').addClass('hidden');
-  $('.win').addClass('hidden');
-  onOf();
-});
-
 //Game over function
 function gameOver() {
   // Handle the game over case
@@ -230,42 +230,25 @@ function playerMove() {
     var position = $(this).data('tile');
     player.push(position);
 
-    // exp = while sequence is greater than player or it is one.
-    var exp = sequence.length === player.length;
-    console.log(sequence.length > player.length, 'or', sequence.length === 1,
-      '=', exp);
-    var shifted = seqCopy.shift();
-    if (exp) {
-      if (compareArray(sequence, player)) {
+    //If the player entry is incorrect at any point, play the buzzersound and start the sequence again. [1,2,3,4]
+    if (player[player.length - 1] !== sequence[player.length - 1]) {
+      beep('audioBuzzer');
+      strictON();
+    } else {
+      var audio = 'audio' + $(this).data('tile');
+      beep(audio);
+
+      // exp = while sequence is greater than player or it is one.
+      var exp = sequence.length === player.length;
+      if (exp) {
         // If it is round 20, set win to true and call gameover.
         if (round === 20) {
           win = true;
           gameOver();
-        } else NewRound();
-
-        // Check  to make sure the position is in the right sequence
-        console.log('Passed', 'player:', player, 'sequence:', sequence,
-          'current position:', position, 'checking:', shifted, seqCopy);
-      } else {
-        // Lost round, reset if strict, another chance if not.
-        //strict ? resetGame() : player.pop() animate(sequence, speed);
-
-        //audioBuzzer.play()--> Notify user they had the wrong sequence
-        strictON();
+        } else {
+          NewRound();
+        }
       }
     }
-
-    /*if (sequence[sequence.length -1] === player[player.length -1]) {
-      NewRound();
-    }*/
-
   }
-}
-
-function compareArray(sequence, player) {
-  return sequence.map(function(cur, idx) {
-    return cur === player[idx];
-  }).reduce(function(a, b) {
-    return a && b;
-  });
 }

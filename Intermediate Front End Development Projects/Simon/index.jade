@@ -1,4 +1,13 @@
 section
+  .win.hidden YOU WIN!
+    .modal-buttons
+      span.play-again PLAY AGAIN
+      span.quit QUIT
+  .lose.hidden OH NO!
+    .modal-buttons
+      span.play-again PLAY AGAIN
+      span.quit QUIT
+  // the game 
   .app-container
     .tiles.green(data-tile='4') 
     .tiles.red(data-tile='1') 
@@ -26,7 +35,7 @@ section
           span.on ON
           // TO-DO: COME UP WITH A PROPER FOOTER FOR THE TEAM
  footer
- p Copyright © Rafael J. Rodriguez & Guy 2015. All Rights Reserved
+ p Copyright © Rafael J. Rodriguez & #[a(href='mailto: guy@guylemon.com') Guy Lemon] 2015. All Rights Reserved
  p 
    a(href='mailto:rafase282@gmail.com')
      i.fa.fa-envelope.fa-fw
