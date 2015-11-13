@@ -7,7 +7,7 @@ var power = false;
 var round;
 var win;
 var lock = false;
-var speed = 600;
+var speed = 800;
 var audio1 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound1.mp3');
 var audio2 = new Audio(
@@ -16,6 +16,8 @@ var audio3 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound3.mp3');
 var audio4 = new Audio(
   'http://s3.amazonaws.com/freecodecamp/simonSound4.mp3');
+
+// var audioBuzzer = new Audio(sound from somewhere) --> Notifies user that they didn't get the sequence right
 
 // Handles ON and OFF
 $('.power-button').on('click', onOf);
@@ -28,13 +30,13 @@ $('.start-button').on('click', startOpt);
 
 // Handles user input
 $('.tiles').on('click', playerMove).on('mousedown', function() {
-  if (power == true) {
+  if (power == true && lock == true) {
     var audio = 'audio' + $(this).data('tile');
     beep(audio);
     $(this).toggleClass('brighten');
   }
 }).on('mouseup', function() {
-  if (power == true) {
+  if (power == true && lock == true) {
     $(this).toggleClass('brighten');
   }
 });
@@ -44,9 +46,13 @@ function NewRound() {
   var color = getColor(4);
   sequence.push(color);
   seqCopy = copyArr(sequence);
+  player = [];
 
   //Must increase speed on 5th, 9th and 13th round
   animate();
+  if (round >= 5) speed = 400;
+  if (round >= 9) speed = 200;
+  if (round >= 13) speed = 100;
   round += 1;
   updateRound();
 }
@@ -83,7 +89,7 @@ function LightUp(tile) {
   var $tile = $('[data-tile=' + tile + ']').addClass('brighten');
   window.setTimeout(function() {
     $tile.removeClass('brighten');
-  }, 300);
+  }, speed / 2);
 }
 
 function getColor(num) {
@@ -95,6 +101,7 @@ function getColor(num) {
 
 function beep(audio) {
   // Plays the correct audio file.
+  //
   switch (audio) {
     case 'audio1':
       audio1.play();
@@ -120,7 +127,7 @@ function strictON() {
     resetGame();
   } else {
     // Another chance, removed bad move from player and replays sequence.
-    player.pop();
+    player = [];
     animate();
 
     // Player Moves now
@@ -219,7 +226,7 @@ function gameOver() {
 
 function playerMove() {
   // Time for the user to play
-  if (power == true) {
+  if (power == true && lock == true) {
     var position = $(this).data('tile');
     player.push(position);
 
@@ -229,23 +236,36 @@ function playerMove() {
       '=', exp);
     var shifted = seqCopy.shift();
     if (exp) {
-      if (sequence[sequence.length - 1] === player[player.length - 1]) {
-        NewRound();
+      if (compareArray(sequence, player)) {
+        // If it is round 20, set win to true and call gameover.
+        if (round === 20) {
+          win = true;
+          gameOver();
+        } else NewRound();
 
-        // &&
         // Check  to make sure the position is in the right sequence
         console.log('Passed', 'player:', player, 'sequence:', sequence,
           'current position:', position, 'checking:', shifted, seqCopy);
       } else {
         // Lost round, reset if strict, another chance if not.
         //strict ? resetGame() : player.pop() animate(sequence, speed);
+
+        //audioBuzzer.play()--> Notify user they had the wrong sequence
         strictON();
       }
     }
-    /*
-    if (sequence[sequence.length -1] === player[player.length -1]) {
+
+    /*if (sequence[sequence.length -1] === player[player.length -1]) {
       NewRound();
     }*/
 
   }
+}
+
+function compareArray(sequence, player) {
+  return sequence.map(function(cur, idx) {
+    return cur === player[idx];
+  }).reduce(function(a, b) {
+    return a && b;
+  });
 }
