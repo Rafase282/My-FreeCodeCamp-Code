@@ -134,6 +134,8 @@ function updateRound() {
 
 function resetGame() {
   // Resets the board with the previous values
+  $('.start-button').removeClass('brighten');
+  $('#start').text('START');
   sequence = [];
   player = [];
   round = 0;
@@ -151,8 +153,6 @@ function onOf() {
     updateRound();
   } else {
     $('.strict-button').removeClass('brighten');
-    $('.start-button').removeClass('brighten');
-    $('#start').text('START');
     strict = false;
     power = false;
     resetGame();
@@ -184,14 +184,36 @@ function startOpt() {
   }
 }
 
+//Click listener for .win and .lose
+$('.win').click(function() {
+  $('.win').addClass('hidden');
+});
+
+$('.lose').click(function() {
+  $('.lose').addClass('hidden');
+});
+
+$('.play-again').click(function() {
+  $('lose').addClass('hidden');
+  $('.win').addClass('hidden');
+  resetGame();
+});
+
+$('.quit').click(function() {
+  $('lose').addClass('hidden');
+  $('.win').addClass('hidden');
+  onOf();
+});
+
+//Game over function
 function gameOver() {
   // Handle the game over case
   if (win == true) {
     //Display, player Wins!
-    console.log('You win!');
+    $('.win').removeClass('hidden');
   } else {
     //Display player lost
-    console.log('You Lose!');
+    $('.lose').removeClass('hidden');
   }
 }
 
@@ -200,23 +222,30 @@ function playerMove() {
   if (power == true) {
     var position = $(this).data('tile');
     player.push(position);
+
     // exp = while sequence is greater than player or it is one.
-    var exp = sequence.length > player.length || sequence.length === 1;
+    var exp = sequence.length === player.length;
     console.log(sequence.length > player.length, 'or', sequence.length === 1,
       '=', exp);
+    var shifted = seqCopy.shift();
     if (exp) {
-      if (position === seqCopy.shift()) {
+      if (sequence[sequence.length - 1] === player[player.length - 1]) {
+        NewRound();
+
+        // &&
         // Check  to make sure the position is in the right sequence
         console.log('Passed', 'player:', player, 'sequence:', sequence,
-          'current position:', position, 'checking:', seqCopy);
+          'current position:', position, 'checking:', shifted, seqCopy);
       } else {
         // Lost round, reset if strict, another chance if not.
         //strict ? resetGame() : player.pop() animate(sequence, speed);
         strictON();
       }
-    } else if (sequence.length === player.length) {
-      NewRound();
     }
+    /*
+    if (sequence[sequence.length -1] === player[player.length -1]) {
+      NewRound();
+    }*/
 
   }
 }
