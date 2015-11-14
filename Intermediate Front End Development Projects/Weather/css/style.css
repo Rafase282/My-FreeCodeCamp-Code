@@ -32,10 +32,18 @@ footer {
   bottom: 0;
 }
 
-.well{
+.well {
   text-align: center;
   color: black;
   margin-top: 50px;
   margin-left: 30%;
   margin-right: 30%;
+}
+
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: 100% 100%;
 }
