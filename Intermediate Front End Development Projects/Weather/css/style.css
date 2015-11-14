@@ -31,3 +31,11 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+.well{
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
