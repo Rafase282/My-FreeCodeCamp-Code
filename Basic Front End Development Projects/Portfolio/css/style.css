@@ -7,6 +7,8 @@ footer {
   line-height: 20px;
   padding-top: 10px;
   padding-bottom: 5px;
+  width: 100%;
+  bottom: 0;
   position: relative;
   text-align: center;
   font-family: cursive, sans-serif;
@@ -15,6 +17,11 @@ section h1, h2, p {
   text-align: center;
   font-family: cursive, sans-serif;
 }
+
+.panel-body, p {
+    font-size: 150%;
+}
+
 section a {
   color: white;
 }
