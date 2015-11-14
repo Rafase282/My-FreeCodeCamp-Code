@@ -1,28 +1,33 @@
 // Setup and get geolocation from the browser.
 var units = 'imperial';
-var lat;
-var lon;
-var url;
 var imgs = [
   'url("http://i.imgur.com/eI5KLUW.jpg")',
   'url("http://i.imgur.com/rG0P1ro.jpg")',
   'url("http://i.imgur.com/voCuONs.jpg")',
   'url("http://i.imgur.com/5tFHSKa.jpg")',
 ];
+var Coordinates = function(lat, lon) {
+  this.latitude = lat;
+  this.longitude = lon;
+};
+
+var coord = new Coordinates(0, 0);
 
 function getLocation() {
   // Request location consent from user
+  var display = document.getElementById('weather');
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    x.innerHTML = 'Geolocation is not supported by this browser.';
+    display.innerHTML = 'Geolocation is not supported by this browser.';
   }
 };
 
 function showPosition(position) {
   // Stores requested into on global variables.
-  lat = position.coords.latitude;
-  lon = position.coords.longitude;
+  coord.latitude = position.coords.latitude;
+  coord.longitude = position.coords.longitude;
+  callWeatherAPI();
 };
 
 function getURL(lat, lon, units) {
@@ -36,6 +41,7 @@ function getURL(lat, lon, units) {
 function Unit() {
   // Selects the right unit for the weather and calls the API
   $('#f').is(':checked') ? units = 'imperial' : units = 'metric';
+  callWeatherAPI();
 };
 
 function getWeather(data) {
@@ -46,6 +52,8 @@ function getWeather(data) {
   var description = data.weather[0].description;
   var code = data.weather[0].icon;
   var wspeed = data.wind.speed;
+  var city = data.name;
+  var state = data.id;
 
   // Create custom HTML to display all the information gathered.
   var html = '<img src="http://openweathermap.org/img/w/' + code +
@@ -55,40 +63,50 @@ function getWeather(data) {
 
   // Displays the custom HTML
   $('#weather').html(html);
-  prepBackground();
-  setBackground();
+  var tempArr = prepBackground(tempUnit);
+  setBackground(temp, tempArr);
 
 };
 
-function setBackground() {
+function setBackground(temp, tempArr) {
   // Select custom backgroudn image according to temperature range.
-  if (temp >= temps[0]) {
+  if (temp >= tempArr[0]) {
     $('body').css('background-image', imgs[0]);
-  } else if (temp < temps[0] && temp >= temps[1]) {
+  } else if (temp < tempArr[0] && temp >= tempArr[1]) {
     $('body').css('background-image', imgs[1]);
-  } else if (temp < temps[1] && temp >= temps[2]) {
+  } else if (temp < tempArr[1] && temp >= tempArr[2]) {
     $('body').css('background-image', imgs[2]);
-  } else if (temp < temps[2]) {
+  } else if (temp < tempArr[2]) {
     $('body').css('background-image', imgs[3]);
   }
 };
 
-function prepBackground() {
+function prepBackground(tempUnit) {
   // Checks what kind style of temperature was used for dynamic background image.
+  var tempArr;
   switch (tempUnit) {
     case 'F':
-      var temps = [90, 70, 32];
+      tempArr = [90, 70, 32];
       break;
     case 'C':
-      temps = [32, 21, 0];
+      tempArr = [32, 21, 0];
       break;
   }
+  return tempArr;
 };
 
 function callWeatherAPI() {
   // Calls the API to get the wheather information.
-  $.getJSON(getURL(lat, lon, units), getWeather, 'jsonp');
+  var url = getURL(coord.latitude, coord.latitude, units);
+  $.getJSON(url, getWeather, 'jsonp');
+};
+
+function start() {
+  // Function to call all functions and make the app tic
+  getLocation();
+  callWeatherAPI();
 };
 
 // Handles Unit selection
 $('input[type=radio][name=farenheit-celcius]').change(Unit);
+$(document).ready(getLocation);
