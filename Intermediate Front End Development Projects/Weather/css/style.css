@@ -47,3 +47,7 @@ body {
   background-size: cover;
   background-size: 100% 100%;
 }
+
+p{
+  font-size: 150%;
+}
