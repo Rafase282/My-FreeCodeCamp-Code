@@ -1,0 +1,33 @@
+h2 {
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #663300;
+}
+
+h1 {
+  font-size: 52px;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #663300;
+}
+
+section {
+  min-height: 90vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  bottom: 10px;
+}
+
+footer {
+  background-color: black;
+  color: gray;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  position: fixed;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  width: 100%;
+  bottom: 0;
+}
