@@ -57,7 +57,7 @@ function getWeather(data) {
 
   // Create custom HTML to display all the information gathered.
   var html = '<img src="http://openweathermap.org/img/w/' + code +
-    '.png" alt="Weather Icon">' + '<p> ' + Math.round(temp) + ' ' + tempUnit +
+    '.png" alt="Weather Icon" class="icon">' + '<p> ' + Math.round(temp) + ' ' + tempUnit +
     ', ' + description + '<br> Wind Speed: ' + wspeed + windUnit + '</p><p>' +
     city + ', ' + state + '</p>';
 
