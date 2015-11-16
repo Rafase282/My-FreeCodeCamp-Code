@@ -17,10 +17,10 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **Intermediate Front End Development Projects** I just have to finish the section.
+All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the node, express and mongodb before I do the basejumps.
 
 ## Wiki Status:
-I'm currently working on the **Zipline: Build a Tic Tac Toe Game & Zipline: Build a Simon Game & JSON APIs and Ajax**.
+I'm currently working on the **Node.js and Express.js**.
 
 ### Completed:
 1. HTML5 and CSS
@@ -38,11 +38,11 @@ I'm currently working on the **Zipline: Build a Tic Tac Toe Game & Zipline: Buil
 13. Git
 14. Gear up for Success
 15. Get Started with Free Code Camp
+16. Intermediate Front End Development Projects
 
 ### To-DO:
-1. Node.js and Express.js
-2. MongoDB
-3. Full Stack JavaScript Projects
+1. MongoDB
+2. Full Stack JavaScript Projects
 
 ## Contribute to my wiki.
 If you would like to contribute then feel free to clone, fork, create a branch, add or edit content and submit a pull request to this repo [https://github.com/Rafase282/MyFCCWiki](https://github.com/Rafase282/MyFCCWiki) then I will check it out and merge it. Then push it to the live wiki. This also could serve as a  repo for only the wiki if you want to keep your own but do not want to also clone my code.
