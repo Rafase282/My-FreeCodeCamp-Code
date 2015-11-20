@@ -30,6 +30,7 @@ body {
 .well {
   margin-left: 35%;
   margin-right: 35%;
+  background-color: rgba(255,255,255,0.75);
 }
 h1, h2 {
   margin-left: 35%;
