@@ -48,18 +48,17 @@ function getWeather(data) {
   // Gets the weather after the API call.
   var temp = data.main.temp;
   var tempUnit = units === 'metric' ? 'C' : 'F';
-  var windUnit = units === 'metric' ? ' meters/s' : ' miles/h';
+  var windUnit = units === 'metric' ? ' meter/sec' : ' miles/hour';
   var description = data.weather[0].description;
   var code = data.weather[0].icon;
   var wspeed = data.wind.speed;
   var city = data.name;
-  var state = data.id;
 
   // Create custom HTML to display all the information gathered.
   var html = '<img src="http://openweathermap.org/img/w/' + code +
     '.png" alt="Weather Icon" class="icon">' + '<p> ' + Math.round(temp) + ' ' + tempUnit +
     ', ' + description + '<br> Wind Speed: ' + wspeed + windUnit + '</p><p>' +
-    city + ', ' + state + '</p>';
+    city + '</p>';
 
   // Displays the custom HTML
   $('#weather').html(html);
@@ -97,8 +96,8 @@ function prepBackground(tempUnit) {
 
 function callWeatherAPI() {
   // Calls the API to get the wheather information.
-  var url = getURL(coord.latitude, coord.latitude, units);
-  $.getJSON(url, getWeather, 'jsonp');
+  var url = getURL(coord.latitude, coord.longitude, units);
+  $.getJSON(url, getWeather);
 };
 
 function start() {
