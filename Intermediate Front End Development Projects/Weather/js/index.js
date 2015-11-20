@@ -48,7 +48,7 @@ function getWeather(data) {
   // Gets the weather after the API call.
   var temp = data.main.temp;
   var tempUnit = units === 'metric' ? 'C' : 'F';
-  var windUnit = units === 'metric' ? ' meter/sec' : ' miles/hour';
+  var windUnit = units === 'metric' ? ' meters/sec' : ' miles/hour';
   var description = data.weather[0].description;
   var code = data.weather[0].icon;
   var wspeed = data.wind.speed;
