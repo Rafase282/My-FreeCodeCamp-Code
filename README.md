@@ -20,7 +20,7 @@ If you find this useful then follow and start it, feel free to share it also.
 All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the node, express and mongodb before I do the basejumps.
 
 ## Wiki Status:
-I'm currently working on the **Node.js and Express.js**.
+I'm currently working on the **Waypoint: Finish working with Node.js Servers**.
 
 ### Completed:
 1. HTML5 and CSS
