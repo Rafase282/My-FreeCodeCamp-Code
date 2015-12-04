@@ -17,10 +17,10 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the node, express and mongodb before I do the basejumps.
+All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the mongodb before I do the basejumps.
 
 ## Wiki Status:
-I'm currently working on the **Waypoint: Finish working with Node.js Servers**.
+I'm currently working on the **Waypoint: Store Data in MongoDB**.
 
 ### Completed:
 1. HTML5 and CSS
@@ -39,6 +39,7 @@ I'm currently working on the **Waypoint: Finish working with Node.js Servers**.
 14. Gear up for Success
 15. Get Started with Free Code Camp
 16. Intermediate Front End Development Projects
+17. Node.js and Express.js
 
 ### To-DO:
 1. MongoDB
