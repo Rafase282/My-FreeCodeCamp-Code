@@ -42,8 +42,7 @@ I'm currently working on the **Waypoint: Store Data in MongoDB**.
 17. Node.js and Express.js
 
 ### To-DO:
-1. MongoDB
-2. Full Stack JavaScript Projects
+1. Full Stack JavaScript Projects
 
 ## Contribute to my wiki.
 If you would like to contribute then feel free to clone, fork, create a branch, add or edit content and submit a pull request to this repo [https://github.com/Rafase282/MyFCCWiki](https://github.com/Rafase282/MyFCCWiki) then I will check it out and merge it. Then push it to the live wiki. This also could serve as a  repo for only the wiki if you want to keep your own but do not want to also clone my code.
