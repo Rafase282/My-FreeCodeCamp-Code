@@ -17,10 +17,10 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the mongodb before I do the basejumps.
+All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the basejumps.
 
 ## Wiki Status:
-I'm currently working on the **Waypoint: Store Data in MongoDB**.
+I'm currently working on the **Basejump: Build a Voting App**.
 
 ### Completed:
 1. HTML5 and CSS
@@ -40,6 +40,7 @@ I'm currently working on the **Waypoint: Store Data in MongoDB**.
 15. Get Started with Free Code Camp
 16. Intermediate Front End Development Projects
 17. Node.js and Express.js
+18. MongoDB
 
 ### To-DO:
 1. Full Stack JavaScript Projects
