@@ -17,7 +17,7 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-All coded has been done up to the **Advanced Algorithm Scripting** I just have to complete the basejumps.
+The curriculum changed so I'm still working on the **Voting App**.
 
 ## Wiki Status:
 I'm currently working on the **Basejump: Build a Voting App**.
