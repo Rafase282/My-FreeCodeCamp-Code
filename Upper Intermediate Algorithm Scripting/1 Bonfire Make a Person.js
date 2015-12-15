@@ -3,8 +3,7 @@ Difficulty: 3/5
 
 Fill in the object constructor with the methods specified in the tests.
 
-Those methods are getFirstName(), getLastName(), getFullName(), setFirstName(first),
-setLastName(last), and setFullName(firstAndLast).
+Those methods are getFirstName(), getLastName(), getFullName(), setFirstName(first), setLastName(last), and setFullName(firstAndLast).
 
 All functions that take an argument have an arity of 1, and the argument will be a string.
 
@@ -24,8 +23,7 @@ http://www.freecodecamp.com/rafase282
 
 var Person = function(firstAndLast) {
 
-  var fullName = firstAndLast;
-  var arr = fullName.split(' ');
+  var arr = firstAndLast.split(' ');
 
   this.getFirstName = function() {
     return arr[0];
@@ -36,7 +34,7 @@ var Person = function(firstAndLast) {
   };
 
   this.getFullName = function() {
-    return fullName;
+    return arr.join(' ');
   };
 
   this.setFirstName = function(first) {
@@ -48,7 +46,7 @@ var Person = function(firstAndLast) {
   };
 
   this.setFullName = function(firstAndLast) {
-    fullName = firstAndLast;
+    arr = firstAndLast.split(' ');
   };
 };
 
