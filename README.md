@@ -43,7 +43,11 @@ I'm currently working on the **Basejump: Build a Voting App**.
 18. MongoDB
 
 ### To-DO:
-1. Full Stack JavaScript Projects
+1. Dynamic Web Applications
+2. Data Visualization Certification
+3. API Projects
+4. Full Stack Development Certification
+5. Coding Interview Preparation
 
 ## Contribute to my wiki.
 If you would like to contribute then feel free to clone, fork, create a branch, add or edit content and submit a pull request to this repo [https://github.com/Rafase282/MyFCCWiki](https://github.com/Rafase282/MyFCCWiki) then I will check it out and merge it. Then push it to the live wiki. This also could serve as a  repo for only the wiki if you want to keep your own but do not want to also clone my code.
