@@ -17,7 +17,7 @@ If you find this useful then follow and start it, feel free to share it also.
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-The curriculum changed so I'm still working on the **Voting App**.
+The curriculum changed so I'm still working on the **Voting App**, if you know react then feel free to help me..
 
 ## Wiki Status:
 I'm currently working on the **Basejump: Build a Voting App**.
