@@ -1,7 +1,9 @@
 # My Work From FreeCodeCamp
-This repository is not for an app but more as a journal where I keep a record of everything I have done and learned from FreeCodeCamp. I decided to use a wiki as I can put more information easily on it. You will find my code there and also on the right directories if you just want to see the code.
+This repository is not for an app but more as a journal where I keep a record of everything I have done and learned from FreeCodeCamp. I decided to use a wiki as I can put more information easily on it. You will find the code easily on the directories, and more information on the wiki section
 
-I will try to keep everything updated. If you are also part of the camp or would like to contribute in any way then feel free to contact me. The purpose of this is for reference and learning material overall, for everyone as it is public.
+I will try to keep everything updated. Please keep in mind that this started as a journal and so I have kept the code as it was when I solved the original challenges. This means that I did not re-write them with more advance techniques or improved on them but instead leave them as is until the problems are updated and they need thus the solution needs to be updated too.
+
+If you are also part of the camp or would like to contribute in any way then feel free to contact me. The purpose of this is for reference and learning material overall, for everyone as it is public. If you encounter a solution that no longer works then please open an issue so that I can work on it. While I do not accept solutions from other people for this repo, feel free to send pull request with fixes to typos or better explanations and examples. Shortly after I started this wiki, I became part of FreeCodeCamp and manage the wiki there, so if you want updated solutions with more advance solutions you will find them there instead.
 
 If you find this useful then follow and start it, feel free to share it also.
 
