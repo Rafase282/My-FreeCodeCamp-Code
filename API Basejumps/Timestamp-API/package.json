@@ -1,0 +1,30 @@
+{
+  "name": "timestamp-api",
+  "version": "0.0.1",
+  "description": "FreeCodeCamp API Basejump: Timestamp microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafase282/Timestamp-API.git"
+  },
+  "keywords": [
+    "API",
+    "Rafase282",
+    "TimeStamp",
+    "NODE"
+  ],
+  "author": "Rafael (Rafase282)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Rafase282/Timestamp-API/issues"
+  },
+  "homepage": "https://github.com/Rafase282/Timestamp-API#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "moment": "^2.10.6"
+  }
+}

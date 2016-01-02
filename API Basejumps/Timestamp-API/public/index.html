@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Timestamp microservice</title>
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Timestamp microservice">
+  <meta name="author" content="Rafase282">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <img src="https://avatars0.githubusercontent.com/Rafase282?&s=128" alt="My Face" />
+    <p>
+      <a href="mailto:rafase282@gmail.com">
+        <i class="fa fa-envelope fa-fw"></i>
+      </a>
+      <a href="https://github.com/Rafase282" target="_blank">
+        <i class="fa fa-github fa-fw"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/rafase282" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="http://codepen.io/Rafase282" target="_blank">
+        <i class="fa fa-codepen"></i>
+      </a>
+      <a href="https://rafase282.wordpress.com/" target="_blank">
+        <i class="fa fa-wordpress"></i>
+      </a>
+      <a href="http://www.freecodecamp.com/rafase282" target="_blank">
+    (<i class="fa fa-fire fa-fw"></i>)
+  </a></p>Created by Rafael (Rafase282) Rodriguez.
+    <h1 class="header">
+      FreeCodeCamp API Basejump: Timestamp Microservice
+    </h1>
+    <blockquote>
+      User stories:
+      <ul>1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
+      <ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
+      <ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
+    </blockquote>
+    <h3>Example usage:</h3>
+    <code>https://r282-timestamp-api.herokuapp.com/December%2015,%202015</code>
+    <br>
+    <code>https://r282-timestamp-api.herokuapp.com/1450137600</code>
+    <h3>Example output:</h3>
+    <code>
+      { "unix": 1450137600, "natural": "December 15, 2015" }
+    </code>
+  </div>
+</body>
+
+</html>
