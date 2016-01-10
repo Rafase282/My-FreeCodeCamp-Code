@@ -20,9 +20,23 @@ http://www.freecodecamp.com/rafase282
 */
 
 function rot13(str) { // LBH QVQ VG!
+  return str.toUpperCase().split(' ').map(function(subStr) {
+    return subStr.split('').map(function(subChar) {
+      return decode(subChar.charCodeAt(0));
+    }).join('');
+  }).join(' ');
 
-  return str;
+  function decode(arg) {
+    // Takes care of characters that are not in [A-Z] such as ! and ? and decodes [A-Z]
+    var decoded = 0;
+    if (arg < 65 || arg > 90) {
+      return String.fromCharCode(arg);
+    } else {
+      decoded = (arg + 13) % 91;
+    }
+    return String.fromCharCode(decoded < 65 ? decoded += 65 : decoded);
+  }
+
 }
-
 // Change the inputs below to test
-rot13("SERR PBQR PNZC");
+rot13("SERR CVMMN!");
