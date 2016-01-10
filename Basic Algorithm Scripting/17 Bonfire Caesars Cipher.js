@@ -20,11 +20,9 @@ http://www.freecodecamp.com/rafase282
 */
 
 function rot13(str) { // LBH QVQ VG!
-  return str.toUpperCase().split(' ').map(function(subStr) {
-    return subStr.split('').map(function(subChar) {
-      return decode(subChar.charCodeAt(0));
-    }).join('');
-  }).join(' ');
+  return str.toUpperCase().split('').map(function(subStr) {
+    return decode(subStr.charCodeAt(0));
+  }).join('');
 
   function decode(arg) {
     // Takes care of characters that are not in [A-Z] such as ! and ? and decodes [A-Z]
