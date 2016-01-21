@@ -37,3 +37,18 @@ find([1, 2, 3, 4], function(num) {
 });
 
 //Implementation using Arry.some() needed.
+
+I found This New Solution 
+
+function find(arr, test) {
+    var result;
+ arr.some(function (currentValue){
+   if(test(currentValue)){
+     result=currentValue;
+     return result;
+   }
+ });
+    return result;
+}
+find([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+
