@@ -37,8 +37,6 @@ find([1, 2, 3, 4], function(num) {
   return num % 2 === 0;
 });
 
-//Implementation using Arry.some() needed.
-
 // Using Arr.filter()
 
 function find(arr, func) {
