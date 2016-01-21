@@ -8,13 +8,14 @@ Remember to use RSAP if you get stuck. Try to pair program. Write your own code.
 
 Here are some helpful links:
 
-Array.some()
+Array.filter()
 
 Code by Rafael Rodriguez & Ronald (https://github.com/ronstarcool)
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
+// Using for loop
 function find(arr, func) {
   // Make num undefined by default
   var num;
@@ -37,3 +38,12 @@ find([1, 2, 3, 4], function(num) {
 });
 
 //Implementation using Arry.some() needed.
+
+// Using Arr.filter()
+
+function find(arr, func) {
+  // filter the provide array by the function provided and return only the first element.
+  return arr.filter(func)[0];
+}
+
+find([1, 2, 3, 4], function(num){ return num % 2 === 0; });

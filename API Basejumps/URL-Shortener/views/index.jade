@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+  
+    if (err)
+        div
+            h2(style = "color: red;")= err
+  
+    img(src="https://avatars0.githubusercontent.com/Rafase282?&s=128" alt="My Face")
+    p
+      a(href="mailto:rafase282@gmail.com") 
+        i(class="fa fa-envelope fa-fw")
+      a(href="https://github.com/Rafase282" target="_blank") 
+        i(class="fa fa-github fa-fw")
+      a(href="https://www.linkedin.com/in/rafase282" target="_blank") 
+        i(class="fa fa-linkedin")
+      a(href="http://codepen.io/Rafase282" target="_blank") 
+        i(class="fa fa-codepen")
+      a(href="https://rafase282.wordpress.com/" target="_blank") 
+        i(class="fa fa-wordpress")
+      a(href="http://www.freecodecamp.com/rafase282" target="_blank")
+        i(class="fa fa-fire fa-fw")
+    p Created by Rafael (Rafase282) Rodriguez.
+    h1(class="header")
+      | FreeCodeCamp API Basejump: URL Shortener Microservice
+    blockquote
+      p User stories:
+      ul
+        li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</ul>
+        li When I visit that shortened URL, it will redirect me to my original link.</ul>
+    h3 Example creation usage:
+    code.
+        https://little-url.herokuapp.com/new/https://www.google.com
+    br
+    code.
+        https://little-url.herokuapp.com/new/http://freecodecamp.com/news
+    h3 Example creation output
+    code.
+      {
+        "original_url":"https://www.google.com/",
+        "short_url":"https://little-url.herokuapp.com/2871"
+      }
+    h3 Usage:
+    code https://little-url.herokuapp.com/2871
+    h3 Will redirect to:
+    code.
+        https://www.google.com/
