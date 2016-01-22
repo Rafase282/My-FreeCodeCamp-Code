@@ -7,8 +7,7 @@ If you are also part of the camp or would like to contribute in any way then fee
 
 If you find this useful then follow and start it, feel free to share it also.
 
-If you want to contribute to the repo in general with fixes such as typos, better explanations or anything other than replacing my code solutions then follow this guide.
-[How To Contribute To The Repository.](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Contribute-To-The-Wiki)
+If you want to contribute to the repo in general with fixes such as typos, better explanations or anything other than replacing my code solutions then follow this guide. [How To Contribute To The Repository.](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Contribute-To-The-Wiki)
 
 ## Contact me
 **Rafael Rodriguez**
@@ -22,7 +21,7 @@ If you want to contribute to the repo in general with fixes such as typos, bette
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-The curriculum changed so I'm still working on the **Voting App**, if you know react then feel free to help me..
+The curriculum changed once again, I'm mainly working on the API before I go back to the basejumps.
 
 ## Wiki Status:
 I'm currently working on the **Basejump: Build a Voting App**.
