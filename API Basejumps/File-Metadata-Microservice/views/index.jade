@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+  
+    if (err)
+        div
+            h2(style = "color: red;")= err
+  
+    img(src="https://avatars0.githubusercontent.com/Rafase282?&s=128" alt="My Face")
+    p
+      a(href="mailto:rafase282@gmail.com") 
+        i(class="fa fa-envelope fa-fw")
+      a(href="https://github.com/Rafase282" target="_blank") 
+        i(class="fa fa-github fa-fw")
+      a(href="https://www.linkedin.com/in/rafase282" target="_blank") 
+        i(class="fa fa-linkedin")
+      a(href="http://codepen.io/Rafase282" target="_blank") 
+        i(class="fa fa-codepen")
+      a(href="https://rafase282.wordpress.com/" target="_blank") 
+        i(class="fa fa-wordpress")
+      a(href="http://www.freecodecamp.com/rafase282" target="_blank")
+        i(class="fa fa-fire fa-fw")
+    p Created by Rafael (Rafase282) Rodriguez.
+    h1(class="header")
+      | FreeCodeCamp API: File Metadata Microservice
+    blockquote
+      p User stories:
+      ol
+        li I can submit a FormData object that includes a file upload.
+        li When I submit something, I will receive the file size in bytes within the JSON response.
+        li Hint: You may want to use this package:
+           a(href="https://www.npmjs.com/package/multer" target='_blank')  Multer
+    h2 Upload file
+    form(role="form", action="/upload", method="post", enctype="multipart/form-data")
+        div(class="form-group")
+            label Upload File
+            input(type="file", name="userFile", id="myfile")
+            input(type='submit', name='send', id='sendFile')

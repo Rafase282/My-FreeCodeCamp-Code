@@ -1,0 +1,34 @@
+{
+  "name": "file-meta-r282",
+  "version": "1.0.0",
+  "description": "File Metadata Microservice API",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "mongoose": "^4.3.7",
+    "multer": "^1.1.0",
+    "npmlog": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafase282/File-Metadata-Microservice.git"
+  },
+  "keywords": [
+    "r282",
+    "File-Metadata"
+  ],
+  "author": "Rafael (Rafase282) Rodriguez",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Rafase282/File-Metadata-Microservice/issues"
+  },
+  "homepage": "https://github.com/Rafase282/File-Metadata-Microservice#readme"
+}

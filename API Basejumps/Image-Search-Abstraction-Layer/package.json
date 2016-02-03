@@ -1,0 +1,36 @@
+{
+  "name": "img-sal-r282",
+  "version": "1.0.0",
+  "description": "FreecodeCamp Image Search Abstration Layer API",
+  "main": "server.js",
+  "dependencies": {
+    "bing.search": "^1.0.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "mongoose": "^4.3.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafase282/Image-Search-Abstraction-Layer.git"
+  },
+  "keywords": [
+    "R282",
+    "Abstraction",
+    "Layer",
+    "API",
+    "FCC"
+  ],
+  "author": "Rafael (Rafase282)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Rafase282/Image-Search-Abstraction-Layer/issues"
+  },
+  "homepage": "https://github.com/Rafase282/Image-Search-Abstraction-Layer#readme"
+}
