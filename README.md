@@ -21,10 +21,10 @@ If you want to contribute to the repo in general with fixes such as typos, bette
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-I'm thinking about working on the Data Visualization before I work on teh dynamic web apps. This means learnign **saas, D3, react**
+I'm thinking about working on the Data Visualization before I work on the dynamic web apps. This means learning **sass, D3, react**
 
 ## Wiki Status:
-I'm currently working on the **Basejump: Build a Voting App**.
+I have done everything that I completed codewise, so i will be working in sync with the coding part..
 
 ### Completed:
 1. HTML5 and CSS
