@@ -21,7 +21,7 @@ If you want to contribute to the repo in general with fixes such as typos, bette
 - The Project [page](http://rafase282.github.io/My-FreeCodeCamp-Code) Feel free to share it.
 
 ## Code Status:
-The curriculum changed once again, I'm mainly working on the API before I go back to the basejumps.
+I'm thinking about working on the Data Visualization before I work on teh dynamic web apps. This means learnign **saas, D3, react**
 
 ## Wiki Status:
 I'm currently working on the **Basejump: Build a Voting App**.
@@ -45,13 +45,13 @@ I'm currently working on the **Basejump: Build a Voting App**.
 16. Intermediate Front End Development Projects
 17. Node.js and Express.js
 18. MongoDB
+19. API Projects
 
 ### To-DO:
 1. Dynamic Web Applications
 2. Data Visualization Certification
-3. API Projects
-4. Full Stack Development Certification
-5. Coding Interview Preparation
+3. Full Stack Development Certification
+4. Coding Interview Preparation
 
 ## Contribute to my wiki.
 If you would like to contribute then feel free to clone, fork, create a branch, add or edit content and submit a pull request to this repo [https://github.com/Rafase282/MyFCCWiki](https://github.com/Rafase282/MyFCCWiki) then I will check it out and merge it. Then push it to the live wiki. This also could serve as a  repo for only the wiki if you want to keep your own but do not want to also clone my code.
