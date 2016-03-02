@@ -19,8 +19,7 @@ http://www.freecodecamp.com/rafase282
 */
 
 function reverseString(str) {
-  var strReverse = str.split('').reverse().join('');
-  return strReverse;
+  return str.split('').reverse().join('');
 }
 
 reverseString('hello');
