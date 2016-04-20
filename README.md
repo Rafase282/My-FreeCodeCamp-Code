@@ -7,7 +7,7 @@ If you are also part of the camp or would like to contribute in any way then fee
 
 If you find this useful then follow and start it, feel free to share it also.
 
-If you want to contribute to the repo in general with fixes such as typos, better explanations or anything other than replacing my code solutions then follow this guide. [How To Contribute To The Repository.](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/How-To-Contribute-To-The-Wiki)
+If you want to contribute to the repo in general with fixes such as typos, better explanations or anything other than replacing my code solutions then follow this guide. [How To Contribute To The Repository.](https://github.com/FreeCodeCamp/FreeCodeCamp/wiki/Wiki-Contribute-Local-GUI)
 
 ## Contact me
 **Rafael Rodriguez**
