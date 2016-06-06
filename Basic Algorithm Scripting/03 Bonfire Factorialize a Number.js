@@ -19,22 +19,11 @@ Arithmetic Operators
 Code by Rafael Rodriguez
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
-
-function factorialize(num) {
-  var factorial = 1;
-  for (var n = 2; n <= num; n++) {
-    factorial = factorial * n;
-  }
-
-  return factorial;
-}
-
-factorialize(5);
 */
 
 //With recursion
 function factorialize(num) {
-  if (num === 0) {
+  if (num < 2) {
     return 1;
   }
   return num * factorialize(num - 1);
