@@ -22,3 +22,12 @@ function end(str, target) {
 }
 
 end('Bastian', 'n');
+
+// Using regex
+
+function confirmEnding(str, target) {
+  var re = new RegExp(target + '$');
+  return re.test(str);
+}
+
+confirmEnding("Bastian", "n");
