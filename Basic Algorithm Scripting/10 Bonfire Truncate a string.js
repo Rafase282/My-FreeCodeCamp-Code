@@ -1,12 +1,13 @@
 /* Bonfire: Truncate a string
 Difficulty: 1/5
 
-Truncate a string (first argument) if it is longer than the given maximum string length (second
-argument). Return the truncated string with a '...' ending.
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
-Note that the three dots at the end add to the string length.
+Note that inserting the three dots to the end will add to the string length.
 
-Remember to use RSAP if you get stuck. Try to pair program. Write your own code.
+However, if the given maximum string length num is less than or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.
+
+Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
 Here are some helpful links:
 
@@ -17,14 +18,17 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
-function truncate(str, num) {
-  var truncd = '';
-  if (str.length > num) {
-    truncd = str.slice(0, num - 3) + '...';
-    return truncd;
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if (str.length > num && num > 3) {
+    return str.slice(0, (num - 3)) + '...';
+  } else if (str.length > num && num <= 3) {
+    return str.slice(0, num) + '...';
+  } else {
+    return str;
   }
 
-  return str;
 }
 
-truncate('A-tisket a-tasket A green and yellow basket', 11);
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
