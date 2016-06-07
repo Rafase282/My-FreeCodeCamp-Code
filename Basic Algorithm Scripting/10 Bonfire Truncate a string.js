@@ -21,10 +21,11 @@ http://www.freecodecamp.com/rafase282
 
 function truncateString(str, num) {
   // Clear out that junk in your trunk
-  if (str.length > num) {
-    return num > 3 ? str.slice(0, (num - 3)) + '...' : str.slice(0, num) + '...';
-  } else {
+
+  if (str.length <= num) {
     return str;
+  } else {
+    return str.slice(0, num > 3 ? num - 3 : num) + '...';
   }
 }
 
