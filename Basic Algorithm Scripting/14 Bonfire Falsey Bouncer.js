@@ -26,3 +26,11 @@ function bouncer(arr) {
 }
 
 bouncer([7, 'ate', '', false, 9]);
+
+//  advanced solution.
+
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
