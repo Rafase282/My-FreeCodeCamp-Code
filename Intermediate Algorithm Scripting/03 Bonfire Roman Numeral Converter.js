@@ -11,35 +11,23 @@ Here are some helpful links:
 
 Array.splice() Array.indexOf() Array.join()
 
-Code by Rafael Rodriguez
-rafase282@gmail.com
-http://www.freecodecamp.com/rafase282
+Code by Rana Amrit Parth
+ramrit9@gmail.com
+http://www.freecodecamp.com/ranaamritparth
 */
 
-var convert = function(num) {
+var numeralCodes = [["","I","II","III","IV","V","VI","VII","VIII","IX"],         // Ones
+                    ["","X","XX","XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],   // Tens
+                    ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"],          //Hundreds
+                    ["","M","MM","MMM"]];        // Thousands
 
-  // Create arrays with default conversion with matching indices.
-  var decimalValue = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000];
-  var romanNumeral = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M'];
-
-  // Create a copy of num to work on and an empty string variable for the final roman number
-  var numCopy = num;
-  var romanized = '';
-
-  // While the decimal number is greater than 0,
-  while (numCopy > 0) {
-    // Loop through the indices of the decimalValue array.
-    for (var index = 0; index < decimalValue.length; index++) {
-      // Get the maximum decimal number less or equal then the decimal number.
-      if (+decimalValue[index] <= numCopy && +decimalValue[+index + 1] > numCopy) {
-        // Add the Roman numeral & decrease numCopy by the decimal equivalent.
-        romanized += romanNumeral[index];
-        numCopy -= decimalValue[index];
-      }
-    }
+function convertToRoman(num) {
+  var numeral = "";
+  var digits = num.toString().split('').reverse();
+  for (var i=0; i < digits.length; i++){
+    numeral = numeralCodes[i][parseInt(digits[i])] + numeral;
   }
+  return numeral;
+}
 
-  return romanized;
-};
-
-convert(36);
+convertToRoman(36);
