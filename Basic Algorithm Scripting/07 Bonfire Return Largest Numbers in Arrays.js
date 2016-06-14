@@ -22,31 +22,6 @@ http://www.freecodecamp.com/rafase282
 */
 
 function largestOfFour(arr) {
-  var results = [];
-  for (var n = 0; n < arr.length; n++) {
-    var largestNumber = 0;
-    for (var sb = 0; sb < arr[n].length; sb++) {
-      if (arr[n][sb] > largestNumber) {
-        largestNumber = arr[n][sb];
-      }
-    }
-
-    results[n] = largestNumber;
-  }
-
-  return results;
-}
-
-largestOfFour([
-  [13, 27, 18, 26],
-  [4, 5, 1, 3],
-  [32, 35, 37, 39],
-  [1000, 1001, 857, 1]
-]);
-
-// Alternative
-
-function largestOfFour(arr) {
   // go throw each array and reduce or sort in descending order and return index 0
   return arr.map((list) => list.reduce((a, b) => a > b ? a : b));
 }
