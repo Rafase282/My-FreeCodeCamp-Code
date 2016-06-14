@@ -15,24 +15,13 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
-function chunk(arr, size) {
 
-  var temp = [];
-  var result = [];
-
-  for (var a = 0; a < arr.length; a++) {
-    if (a % size !== size - 1)
-      temp.push(arr[a]);
-    else {
-      temp.push(arr[a]);
-      result.push(temp);
-      temp = [];
-    }
+function chunkArrayInGroups(arr, size) {
+  var arr2 = [];
+  for (var i = 0; i < arr.length; i += size) {
+    arr2.push(arr.slice(i, size + i));
   }
-
-  if (temp.length !== 0)
-    result.push(temp);
-  return result;
+  return arr2;
 }
 
-chunk(['a', 'b', 'c', 'd'], 2);
+chunkArrayInGroups(["a", "b", "c", "d"], 2);

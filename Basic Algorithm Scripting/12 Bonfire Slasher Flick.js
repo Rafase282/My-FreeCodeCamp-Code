@@ -14,6 +14,7 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
+// For Modifying the original array use splice, slice if you don't want to modify the original array.
 function slasher(arr, howMany) {
   return arr.slice(howMany);
 }
