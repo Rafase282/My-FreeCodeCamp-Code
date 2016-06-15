@@ -16,12 +16,20 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
+// Using  Array.prototype.slice.call()
 function destroyer(arr) {
-  var args = Array.prototype.slice.call(arguments);
-  args.splice(0, 1);
+  var args = Array.prototype.slice.call(arguments).splice(1);
   return arr.filter(function(element) {
     return args.indexOf(element) === -1;
   });
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+// Using Array.from()
+function destroyer(arr) {
+  var args = Array.from(arguments).splice(1);
+  return arr.filter((arg) => args.indexOf(arg) === -1);
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);

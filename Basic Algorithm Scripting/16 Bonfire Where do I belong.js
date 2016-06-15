@@ -34,3 +34,21 @@ function where(arr, num) {
 }
 
 where([40, 60], 50);
+
+// Newer solution
+
+function getIndexToIns(arr, num) {
+  // Sort number array
+  function minToMax(arr) {
+    return arr.sort((curr, next) => curr > next);
+  };
+  // Find right index
+  var index = minToMax(arr)
+    .findIndex(function(n) {
+      return num <= n;
+    });
+  // Returns proper answer
+  return index === -1 ? arr.length : index;
+}
+
+getIndexToIns([40, 60], 500);
