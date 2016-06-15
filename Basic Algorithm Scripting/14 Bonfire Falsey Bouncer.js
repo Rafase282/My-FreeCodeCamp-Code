@@ -17,6 +17,7 @@ http://www.freecodecamp.com/rafase282
 */
 
 function bouncer(arr) {
+  // Boolean is a function so it acts as a callback here instead of Boolean(arg)
   return arr.filter(Boolean);
 }
 
