@@ -17,19 +17,6 @@ http://www.freecodecamp.com/rafase282
 */
 
 function bouncer(arr) {
-  function isTruthy(arg) {
-    return Boolean(arg);
-  }
-
-  var filteredArray = arr.filter(isTruthy);
-  return filteredArray;
-}
-
-bouncer([7, 'ate', '', false, 9]);
-
-//  advanced solution.
-
-function bouncer(arr) {
   return arr.filter(Boolean);
 }
 
