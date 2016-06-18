@@ -18,35 +18,10 @@ rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
 
-function where(arr, num) {
-  // Sort alphabetically
-  arr.sort(function(a, b) {
-    return a - b;
-  });
-
-  // Check for each element if it is greater than num and returnt he index if it is.
-  for (var a = 0; a < arr.length; a++) {
-    if (arr[a] >= num)
-      return parseInt(a);
-  }
-
-  return arr.length;
-}
-
-where([40, 60], 50);
-
-// Newer solution
-
 function getIndexToIns(arr, num) {
-  // Sort number array
-  function minToMax(arr) {
-    return arr.sort((curr, next) => curr > next);
-  };
-  // Find right index
-  var index = minToMax(arr)
-    .findIndex(function(n) {
-      return num <= n;
-    });
+  // sort and find right index
+  var index = arr.sort((curr, next) => curr > next)
+    .findIndex((currNum)=> num <= currNum);
   // Returns proper answer
   return index === -1 ? arr.length : index;
 }
