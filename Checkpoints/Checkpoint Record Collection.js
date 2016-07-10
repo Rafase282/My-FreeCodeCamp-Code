@@ -58,6 +58,8 @@ function update(id, prop, value) {
   } else if (prop !== 'tracks') {
     collection[id][prop] = value;
   } else {
+    if(typeof collection[id][prop] == 'undefined')
+     collection[id][prop] = [];
     collection[id][prop].push(value);
   }
 
