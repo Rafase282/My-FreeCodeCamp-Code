@@ -19,35 +19,27 @@ Code by Rafael Rodriguez
 rafase282@gmail.com
 http://www.freecodecamp.com/rafase282
 */
-
-function pair(str) {
-  // Return each strand as an array of two elements, the original and the pair.
-  var paired = [];
-
-  // Function to check with strand to pair.
-  var search = function(char) {
-    switch (char) {
-      case 'A':
-        paired.push(['A', 'T']);
-        break;
-      case 'T':
-        paired.push(['T', 'A']);
-        break;
-      case 'C':
-        paired.push(['C', 'G']);
-        break;
-      case 'G':
-        paired.push(['G', 'C']);
-        break;
-    }
-  };
-
-  // Loops through the input and pair.
-  for (var i = 0; i < str.length; i++) {
-    search(str[i]);
+/**
+ * [pairElement DNA pairs]
+ * @param  {[type]} str [string of letters]
+ * @return {[type]}  array of array of pairs   [description]
+ */
+function pairElement(str) {
+  //write an object to show pairs.
+  var pairs = {'A':'T','T':'A','G':'C','C':'G'};
+  //empty array to push
+  var arr = [];
+  //decalre variables at top of function
+  var i = 0;
+  //loop the string
+  for (i; i < str.length; i+=1){
+    //push str[i] + it's matching pair from object as an array.
+    arr.push([str[i],pairs[str[i]]]);
   }
-
-  return paired;
+  //return array
+  return arr;
 }
 
-pair('GCG');
+pairElement("GCG");
+//github ryanbas21
+//ryan basmajian
