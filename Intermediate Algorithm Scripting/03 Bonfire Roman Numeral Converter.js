@@ -30,7 +30,7 @@ var convert = function(num) {
   while (numCopy > 0) {
     // Loop through the indices of the decimalValue array.
     for (var index = 0; index < decimalValue.length; index++) {
-      // Get the maximum decimal number less or equal then the decimal number.
+      // Get the maximum decimal number less or equal than the decimal number.
       if (+decimalValue[index] <= numCopy && +decimalValue[+index + 1] > numCopy) {
         // Add the Roman numeral & decrease numCopy by the decimal equivalent.
         romanized += romanNumeral[index];
