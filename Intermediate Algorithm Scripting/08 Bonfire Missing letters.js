@@ -55,3 +55,16 @@ function fearNotLetter(str) {
 }
 
 fearNotLetter('abce');
+
+//Another solution
+function fearNotLetter2(str) {
+  for(var i = 0; i < str.length-1; i++){
+    //Check if letters are missing in between.
+    if(str.charCodeAt(i + 1) - str.charCodeAt(i) !== 1){
+      return String.fromCharCode(str.charCodeAt(i) + 1);
+    }
+  }
+  return undefined;
+}
+
+fearNotLetter2("abce");
