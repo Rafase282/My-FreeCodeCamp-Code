@@ -32,7 +32,7 @@ function translate(str) {
   if (str[0].match(regex)) {
     pigLatin = str + 'way';
   } else {
-    // Find how many consonants before the firs vowel.
+    // Find how many consonants before the first vowel.
     var vowelIndice = str.indexOf(str.match(regex)[0]);
 
     // Take the string from the first vowel to the last char
