@@ -21,7 +21,7 @@ function search() {
       // First we clear the children from our class to make sure no previous results are showing.
       $('.results').empty();
 
-      // Then we also clear the array withthe results before providing new information.
+      // Then we also clear the array with the results before providing new information.
       arrResults.length = 0;
       var resArr = data.query.search;
 
@@ -36,7 +36,7 @@ function search() {
     }
   });
 
-  // This will handle when to display results based on the searc bar.
+  // This will handle when to display results based on the search bar.
   if ($('#search').val().length > 0) {
     $('.articles').css('display', 'none');
 
@@ -45,7 +45,7 @@ function search() {
     $('.articles').css('display', 'block');
   }
 
-  // This make thigns tick with each key stroke
+  // This make things tick with each key stroke
   $('#search').unbind('keyup');
   $('#search').keyup(function() {
     search();
