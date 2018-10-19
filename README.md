@@ -55,3 +55,4 @@ I have done everything that I completed codewise, so i will be working in sync w
 
 ## Contribute to my wiki.
 If you would like to contribute then feel free to clone, fork, create a branch, add or edit content and submit a pull request to this repo [https://github.com/Rafase282/MyFCCWiki](https://github.com/Rafase282/MyFCCWiki) then I will check it out and merge it. Then push it to the live wiki. This also could serve as a  repo for only the wiki if you want to keep your own but do not want to also clone my code.
+## My changes
