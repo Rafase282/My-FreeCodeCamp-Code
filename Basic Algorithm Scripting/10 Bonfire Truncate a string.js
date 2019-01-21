@@ -19,10 +19,10 @@ http://www.freecodecamp.com/rafase282
 */
 
 function truncateString(str, num) {
-  if (str.length <= num) {
-    return str;
-  } else {
-    return str.slice(0, num > 3 ? num - 3 : num) + '...';
+  var truncd = '';
+  if (str.length > num) {
+      truncd = str.slice(0,num-3) + '...';
+      return truncd;
   }
 }
 
